@@ -1,0 +1,2 @@
+# Distributed_Complexity_of_k_Maximal_Independent_Set_Verification
+ M2佐藤の修論用リポジトリ
