@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  10 DEC 2020 00:31
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  11 DEC 2020 00:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -271,10 +271,10 @@ Overfull \vbox (779.99704pt too high) has occurred while \output is active []
 Here is how much of TeX's memory you used:
  1361 strings out of 479956
  20820 string characters out of 5887570
- 309320 words of memory out of 5000000
+ 313320 words of memory out of 5000000
  18591 multiletter control sequences out of 15000+600000
  549170 words of font info for 69 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  66i,12n,72p,254b,299s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on syuron_abst_M2sato.dvi (1 page, 7092 bytes).
+Output written on syuron_abst_M2sato.dvi (1 page, 10544 bytes).
