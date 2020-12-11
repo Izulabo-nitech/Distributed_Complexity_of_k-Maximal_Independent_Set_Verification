@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  11 DEC 2020 12:50
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  12 DEC 2020 03:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -208,8 +208,9 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \colbreak@box=\box112
 \mc@col@check@num=\count199
 )
+\c@dfn=\count266
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 2
-3.
+5.
 
 (c:/texlive/2020/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -217,41 +218,41 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 (c:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 File: l3backend-dvips.def 2020-09-24 L3 backend support: dvips
 \l__pdf_internal_box=\box113
-\g__pdf_backend_object_int=\count266
+\g__pdf_backend_object_int=\count267
 \l__pdf_backend_content_box=\box114
 \l__pdf_backend_model_box=\box115
-\g__pdf_backend_annotation_int=\count267
-\g__pdf_backend_link_int=\count268
-\g__pdf_backend_link_sf_int=\count269
+\g__pdf_backend_annotation_int=\count268
+\g__pdf_backend_link_int=\count269
+\g__pdf_backend_link_sf_int=\count270
 )
 (./syuron_abst_M2sato.aux)
 \openout1 = `syuron_abst_M2sato.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 \big@size=\dimen180
 
 (c:/texlive/2020/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd)
 (c:/texlive/2020/texmf-dist/tex/latex/psnfss/omlztmcm.fd)
 (c:/texlive/2020/texmf-dist/tex/latex/psnfss/omsztmcm.fd)
 (c:/texlive/2020/texmf-dist/tex/latex/psnfss/omxztmcm.fd)
-Overfull \hbox (9.04193pt too wide) in paragraph at lines 24--24
+Overfull \hbox (9.04193pt too wide) in paragraph at lines 26--26
 [] [] 
  []
 
@@ -280,12 +281,12 @@ Overfull \vbox (779.99704pt too high) has occurred while \output is active []
 
 ] (./syuron_abst_M2sato.aux) ) 
 Here is how much of TeX's memory you used:
- 1361 strings out of 479956
- 20820 string characters out of 5887570
- 314320 words of memory out of 5000000
- 18591 multiletter control sequences out of 15000+600000
+ 1369 strings out of 479956
+ 20879 string characters out of 5887570
+ 315362 words of memory out of 5000000
+ 18599 multiletter control sequences out of 15000+600000
  549170 words of font info for 69 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  66i,12n,72p,254b,299s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on syuron_abst_M2sato.dvi (2 pages, 11844 bytes).
+Output written on syuron_abst_M2sato.dvi (2 pages, 12500 bytes).
