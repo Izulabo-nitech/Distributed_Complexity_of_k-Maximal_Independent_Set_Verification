@@ -11,4 +11,21 @@ Yuval Efron, Ofer Grossman, and Seri Khoury.
   independent set in congest.
 \newblock {\em arXiv preprint arXiv:2003.07427}, 2020.
 
+\bibitem{ghaffari2013distributed}
+Mohsen Ghaffari and Fabian Kuhn.
+\newblock Distributed minimum cut approximation.
+\newblock In {\em International Symposium on Distributed Computing}, pages
+  1--15. Springer, 2013.
+
+\bibitem{fischer2018possibilities}
+Orr Fischer, Tzlil Gonen, Fabian Kuhn, and Rotem Oshman.
+\newblock Possibilities and impossibilities for distributed subgraph detection.
+\newblock In {\em Proceedings of the 30th on Symposium on Parallelism in
+  Algorithms and Architectures}, pages 153--162, 2018.
+
+\bibitem{czumaj2020detecting}
+Artur Czumaj and Christian Konrad.
+\newblock Detecting cliques in congest networks.
+\newblock {\em Distributed Computing}, 33(6):533--543, 2020.
+
 \end{thebibliography}
