@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  12 DEC 2020 03:13
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  12 DEC 2020 19:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -268,7 +268,7 @@ Overfull \vbox (779.99704pt too high) has occurred while \output is active []
 [1
 
 
-]
+] (./syuron_abst_M2sato.bbl)
 Overfull \hbox (9.04193pt too wide) has occurred while \output is active
  []
  []
@@ -281,12 +281,12 @@ Overfull \vbox (779.99704pt too high) has occurred while \output is active []
 
 ] (./syuron_abst_M2sato.aux) ) 
 Here is how much of TeX's memory you used:
- 1369 strings out of 479956
- 20879 string characters out of 5887570
- 315362 words of memory out of 5000000
- 18599 multiletter control sequences out of 15000+600000
+ 1378 strings out of 479956
+ 21032 string characters out of 5887570
+ 315418 words of memory out of 5000000
+ 18605 multiletter control sequences out of 15000+600000
  549170 words of font info for 69 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  66i,12n,72p,254b,299s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on syuron_abst_M2sato.dvi (2 pages, 12500 bytes).
+Output written on syuron_abst_M2sato.dvi (2 pages, 13100 bytes).

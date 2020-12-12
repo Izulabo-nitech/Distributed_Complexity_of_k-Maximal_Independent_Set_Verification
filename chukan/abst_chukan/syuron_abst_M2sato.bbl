@@ -1,0 +1,14 @@
+\begin{thebibliography}{1}
+
+\bibitem{kawarabayashi2019improved}
+Ken-ichi Kawarabayashi, Seri Khoury, Aaron Schild, and Gregory Schwartzman.
+\newblock Improved distributed approximation to maximum independent set.
+\newblock {\em arXiv preprint arXiv:1906.11524}, 2019.
+
+\bibitem{efron2020beyond}
+Yuval Efron, Ofer Grossman, and Seri Khoury.
+\newblock Beyond alice and bob: Improved inapproximability for maximum
+  independent set in congest.
+\newblock {\em arXiv preprint arXiv:2003.07427}, 2020.
+
+\end{thebibliography}
