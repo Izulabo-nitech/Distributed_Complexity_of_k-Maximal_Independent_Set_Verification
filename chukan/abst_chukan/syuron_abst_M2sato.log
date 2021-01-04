@@ -1,8 +1,8 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  14 DEC 2020 13:08
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  23 DEC 2020 14:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**syuron_abst_M2sato.tex
+**syuron_abst_M2sato
 (./syuron_abst_M2sato.tex
 pLaTeX2e <2020-10-01>+1 (based on LaTeX2e <2020-10-01> patch level 2)
 L3 programming layer <2020-10-27> xparse <2020-03-03> (./abstract.cls
@@ -304,6 +304,6 @@ Here is how much of TeX's memory you used:
  18768 multiletter control sequences out of 15000+600000
  549484 words of font info for 70 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 66i,13n,72p,235b,318s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 66i,13n,72p,231b,318s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on syuron_abst_M2sato.dvi (2 pages, 21816 bytes).
