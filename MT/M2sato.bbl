@@ -1,0 +1,36 @@
+\begin{thebibliography}{1}
+
+\bibitem{kawarabayashi2019improved}
+Ken-ichi Kawarabayashi, Seri Khoury, Aaron Schild, and Gregory Schwartzman.
+\newblock Improved distributed approximation to maximum independent set.
+\newblock {\em arXiv preprint arXiv:1906.11524}, 2019.
+
+\bibitem{efron2020beyond}
+Yuval Efron, Ofer Grossman, and Seri Khoury.
+\newblock Beyond alice and bob: Improved inapproximability for maximum
+  independent set in congest.
+\newblock {\em arXiv preprint arXiv:2003.07427}, 2020.
+
+\bibitem{ghaffari2013distributed}
+Mohsen Ghaffari and Fabian Kuhn.
+\newblock Distributed minimum cut approximation.
+\newblock In {\em International Symposium on Distributed Computing}, pages
+  1--15. Springer, 2013.
+
+\bibitem{fischer2018possibilities}
+Orr Fischer, Tzlil Gonen, Fabian Kuhn, and Rotem Oshman.
+\newblock Possibilities and impossibilities for distributed subgraph detection.
+\newblock In {\em Proceedings of the 30th on Symposium on Parallelism in
+  Algorithms and Architectures}, pages 153--162, 2018.
+
+\bibitem{czumaj2020detecting}
+Artur Czumaj and Christian Konrad.
+\newblock Detecting cliques in congest networks.
+\newblock {\em Distributed Computing}, 33(6):533--543, 2020.
+
+\bibitem{kalyanasundaram1992probabilistic}
+Bala Kalyanasundaram and Georg Schintger.
+\newblock The probabilistic communication complexity of set intersection.
+\newblock {\em SIAM Journal on Discrete Mathematics}, 5(4):545--557, 1992.
+
+\end{thebibliography}

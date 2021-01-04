@@ -1,7 +1,7 @@
 \documentclass{thesis}
 \bibliographystyle{unsrt}
 \input{jdummy.def} 				% ƒtƒHƒ“ƒgŠÖ˜A‚ÌƒGƒ‰[‘Îô(‚ç‚µ‚¢)
-\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{graphicx, color}
 \usepackage{amsmath}			% mathŒn
 \usepackage{amssymb}			% mathŒn
 %\usepackage{float}				% }•\‚Ì‘}“ü‰ÓŠ‚ðŒÅ’è‚·‚é[H]Žw’è
@@ -61,36 +61,128 @@
 \chapter{‚Í‚¶‚ß‚É}
 
 \section{Œ¤‹†”wŒi}
-aaaaaa
+•ªŽUƒOƒ‰ƒtƒAƒ‹ƒSƒŠƒYƒ€‚Æ‚Í,ŒvŽZ‹@‚ð’¸“_,•Ó‚ð’ÊMƒŠƒ“ƒN‚Æ‚Ý‚È‚µ‚Äƒlƒbƒgƒ[ƒN‚ðƒ‚ƒfƒ‹‰»‚µ‚½ƒOƒ‰ƒtã‚É‚¨‚¢‚Ä,
+‚»‚Ìƒlƒbƒgƒ[ƒNŽ©g‚ð“ü—Í‚Æ‚µ‚Ä—lX‚È–â‘è‚ð‰ð‚­˜g‘g‚Ý‚Å‚ ‚é.•ªŽUƒAƒ‹ƒSƒŠƒYƒ€‚É‚¨‚¯‚é‘ã•\“I‚Èƒ‚ƒfƒ‹‚Ì
+‚Ð‚Æ‚Â‚Æ‚µ‚Ä$CONGEST$ƒ‚ƒfƒ‹‚ª‘¶Ý‚·‚é.$CONGEST$ƒ‚ƒfƒ‹‚É‚¨‚¢‚Ä,Šeƒm[ƒh‚Í“¯Šú‚µ‚Ä“¯‚¶ƒAƒ‹ƒSƒŠƒYƒ€‚ð
+ŽÀs‚µ‚Ä“ü—ÍƒOƒ‰ƒtã‚Ì–â‘è‚ð‰ðŒˆ‚·‚é.Šeƒm[ƒh‚ÍŠeƒ‰ƒEƒ“ƒh‚Å(i)$b$ƒrƒbƒg‚ÌƒƒbƒZ[ƒW‚ð—×Úƒm[ƒh‚É‘—M
+(ii)—×Úƒm[ƒh‚©‚çƒƒbƒZ[ƒW‚ðŽóM(iii)“à•”ŒvŽZ‚Ì3‚Â‚Ì“®ì‚ð‚·‚é.•W€“I‚É‚Í,$b = \log n$‚ð‘z’è‚·‚é.
+$CONGEST$ƒ‚ƒfƒ‹‚É‚¨‚¢‚Ä,‚ ‚é1‚Â‚Ìƒm[ƒh‚ÉƒOƒ‰ƒt‘S‘Ì‚Ìƒgƒ|ƒƒW‚Ìî•ñ‚ðW‚ß,‚»‚Ìƒm[ƒhã‚Å
+’€ŽŸƒAƒ‹ƒSƒŠƒYƒ€‚ðŽÀs‚·‚é‚Æ‚¢‚¤‘f–p‚ÈƒAƒvƒ[ƒ`‚©‚çŽ©–¾‚É$O (n^{2})$ƒ‰ƒEƒ“ƒh‚ÌãŠE‚ð“¾‚é‚±‚Æ‚ª‚Å‚«‚é.
+$CONGEST$ƒ‚ƒfƒ‹‚É‚¨‚¯‚é‰ºŠE‚ÌØ–¾‚Å‚Í,‰ºŠE‚ð‚±‚Ì$n^{2}$‚É‚Ç‚ê‚¾‚¯‹ß‚Ã‚¯‚é‚±‚Æ‚ª‚Å‚«‚é‚©‚É‹»–¡‚ª‚à‚½‚ê‚Ä‚¢‚é.
 
-\section{ŠÖ˜AŒ¤‹†}
-bbbbb
+ƒlƒbƒgƒ[ƒNã‚ÌÅ‘å“Æ—§W‡‚ð”­Œ©‚·‚éÅ‘å“Æ—§W‡–â‘è‚É‘Î‚·‚é”‘½‚­‚Ì•ªŽUƒOƒ‰ƒtƒAƒ‹ƒSƒŠƒYƒ€‚ª
+Œ¤‹†‚³‚ê‚Ä‚¢‚é.
+%Še’¸“_‚ª—×Ú‚µ‚Ä‚¢‚È‚¢’¸“_•”•ªW‡‚ð“Æ—§W‡‚Æ‚¢‚¢,Å‘å“Æ—§W‡‚Æ‚Í’¸“_”‚ªÅ‚à‘½‚¢“Æ—§W‡‚Å‚ ‚é.
+‘å‚«‚ÈƒTƒCƒY‚Ì“Æ—§W‡‚ÍŒoÏŠw,ŒvŽZ¶•¨Šw,•„†—˜_,ŽÀŒ±Œv‰æ–@‚È‚Ç—lX‚È•ª–ì‚Ö‚Ì‰ž—p‚É—p‚¢‚ç‚ê‚é \cite{kawarabayashi2019improved} ‚ª,‚»‚à‚»‚àÅ‘å“Æ—§W‡–â‘è‚ÍNPŠ®‘S‚Å‚ ‚è,’¸“_”$n$‚É‘Î‚µ‚Ä
+$n$‚Ì‘½€Ž®ŽžŠÔ‚Å‰ð‚­‚±‚Æ‚Í,‚»‚Ì‹ßŽ—‚ðŠÜ‚ß‚Äâ–]“I‚Å‚ ‚é‚Æ‚³‚ê‚Ä‚¢‚é.“à•”ŒvŽZ‚ÉŽw”ŽžŠÔ‚©‚©‚é‚±‚Æ‚ð
+‹–‚µ‚½$CONGEST$ƒ‚ƒfƒ‹‚Ì‰º‚Åƒ‰ƒEƒ“ƒh”‚ð$n$‚Ì‘½€Ž®‚Å‚¨‚³‚¦‚é‚æ‚¤‚ÈÅ‘å“Æ—§W‡–â‘è‚Ì•¡ŽG«‚ÌŒ‹‰Ê‚Í
+‚¢‚­‚Â‚©’m‚ç‚ê‚Ä‚¢‚é \cite{kawarabayashi2019improved},  \cite{efron2020beyond}‚ª,
+“à•”ŒvŽZ‚ÉŽw”ŽžŠÔ‚©‚©‚é‚±‚Æ‚ð‹–—e‚µ‚Ä•ªŽUƒOƒ‰ƒtƒAƒ‹ƒSƒŠƒYƒ€‚Ì•¡ŽG«‚Ì‹c˜_‚ðs‚¤‚±‚Æ‚Ì‘Ã“–«‚É‚Í
+‚â‚â‹^–â‚ªŽc‚é.‚»‚±‚Å¡‰ñ,‰äX‚ÍÅ‘å“Æ—§W‡‚Ì‹ÇŠÅ“K‰ð‚Å‚ ‚é$k$-‹É‘å“Æ—§W‡
+($k$-Maximal Independet Set, $k$-MIS)‚É‚Â‚¢‚Äl‚¦‚é.
+%“Æ—§W‡‚Ì‚¤‚¿,$k$ŒÂ‚Ì’¸“_‚ð‚»‚ÌW‡‚©‚çŽæ‚èœ‚¢‚Ä“Æ—§W‡‚ðˆÛŽ‚µ‚½‚Ü‚Ü$k + 1$ŒÂˆÈã‚Ì’¸“_‚ð
+%’Ç‰Á‚·‚é‚±‚Æ‚ª‚Å‚«‚È‚¢‚Æ‚«,‚»‚Ì“Æ—§W‡‚ð$k$-MIS‚Æ‚¢‚¢,
+ƒlƒbƒgƒ[ƒNã‚Ì$k$-MIS‚ð”­Œ©‚·‚é$k$-MIS–â‘è‚ÍW’†Œ^ƒAƒ‹ƒSƒŠƒYƒ€‚É‚æ‚Á‚Ä$O(n^{k + 2})$ŽžŠÔ‚Å
+‰ð‚­‚±‚Æ‚ª‚Å‚«,$k = O(1)$‚Ì‚Æ‚«$n$‚Ì‘½€Ž®ŽžŠÔ‚É‚È‚é‚½‚ß,ã‹L‚Ì‹^–â“_‚ð‰ðŒˆ‚·‚é‚±‚Æ‚ª‚Å‚«‚é.
+
+¡‰ñ‚Í$k$-MIS‚ÌŒŸØ–â‘è(verification)‚É’…–Ú‚µ,‚»‚Ì•¡ŽG«‚É‚Â‚¢‚Ä‹c˜_‚ðs‚¤.
+$k$-MISŒŸØ–â‘è‚Æ‚Íƒlƒbƒgƒ[ƒNã‚É“Æ—§W‡‚ª—^‚¦‚ç‚ê,‚»‚ê‚ª$k$-MIS‚©‚Ç‚¤‚©‚ð”»’è‚·‚é–â‘è‚Å‚ ‚é.
+$k$-MIS–â‘è‚É‘Î‚·‚é‘f–p‚È‹ÇŠ’TõƒAƒ‹ƒSƒŠƒYƒ€‚Í,‚ ‚é1‚Â‚Ì“Æ—§W‡‚©‚çƒXƒ^[ƒg‚µ, \\
+(I)Œ»Ý‚Ìó‘Ô‚ª$k$-MIS‚Å‚ ‚é‚©”»’è. \\
+(II)yes‚Å‚ ‚ê‚Î‚»‚ê‚ðo—Í,no‚Å‚ ‚ê‚Î‰ð‚ðXV \\
+‚Æ‚¢‚¤ƒtƒF[ƒY‚ðŒJ‚è•Ô‚·.$k$-MISŒŸØ–â‘è‚Íã‹L‚Ì(I)‚É‘Î‰ž‚µ‚Ä‚¨‚è,$k$-MIS–â‘è‚ÆŠÖ˜A•t‚¢‚½–â‘è‚Æ‚Æ‚ç‚¦‚é‚±‚Æ‚ª‚Å‚«‚é.
+
+¡‰ñ,‰äX‚Í‹É‘å“Æ—§W‡ŒŸØ–â‘è‚É‘Î‚·‚é‚¢‚­‚Â‚©‚Ì•¡ŽG«‚ðŽ¦‚µ‚½.
+Å‰‚É,1-MISŒŸØ–â‘è‚ª$O(1)$ƒ‰ƒEƒ“ƒh‚Å‰ð‚¯‚é‚±‚Æ‚ðØ–¾‚µ‚½.
+ŽŸ‚É,2-MISŒŸØ–â‘è‚É‘Î‚·‚é$\tilde{\Omega} (\sqrt{n})$ƒ‰ƒEƒ“ƒh‚Ì‰ºŠE‚Æ
+3-MISŒŸØ–â‘è‚É‘Î‚·‚é$\tilde{\Omega} (n)$ƒ‰ƒEƒ“ƒh‚Ì‰ºŠE‚ðØ–¾‚µ‚½.
+ÅŒã‚É,$k$-MISŒŸØ–â‘è($k = 4l + 5, l \geq 1$)‚É‘Î‚·‚é$\tilde{\Omega} (n^{2 - \frac{1}{l + 1}})$ƒ‰ƒEƒ“ƒh‚Ì‰ºŠE‚ðØ–¾‚µ‚½.
+“Á‚É,‰ºŠE‚ÌØ–¾‚ÌƒAƒCƒfƒA‚Í2ŽÒŠÔ’ÊM‚Ì˜g‘g‚Ý‚É‚¨‚¯‚éŒð³”»’è–â‘è‚©‚ç‚Ì‹A’…‚ÉŠî‚Ã‚¢‚Ä‚¢‚é.
+
+\section{ŠÖ˜AŒ¤‹†} %“r’†
+$CONGEST$ƒ‚ƒfƒ‹‚É‚¨‚¯‚éÅ‘å“Æ—§W‡–â‘è‚Ì’ÊM•¡ŽG«‚Æ‚µ‚Ä‚Í,’¸“_‚ÌÅ‘åŽŸ”‚ð$\Delta$‚Æ‚µ‚½‚Æ‚«,
+Å‘åd‚Ý•t‚«“Æ—§W‡‚Ì$(1 + \epsilon) \cdot \Delta$-‹ßŽ—‚ð‚Šm—¦‚ÅŒ©‚Â‚¯‚éƒAƒ‹ƒSƒŠƒYƒ€‚É‘Î‚·‚é
+$(\frac{poly(\log \log n)}{\epsilon})$ƒ‰ƒEƒ“ƒh‚ÌãŠE \cite{kawarabayashi2019improved} ‚â,
+Å‘å“Æ—§W‡‚Ì$(\frac{1}{2} + \epsilon)$-‹ßŽ—‚ðŒ©‚Â‚¯‚éƒAƒ‹ƒSƒŠƒYƒ€‚É‘Î‚·‚é
+$\Omega (\frac{n}{(\log n)^{3}})$ƒ‰ƒEƒ“ƒh‚Ì‰ºŠE,$(\frac{3}{4} + \epsilon)$-‹ßŽ—‚ðŒ©‚Â‚¯‚éƒAƒ‹ƒSƒŠƒYƒ€‚É‘Î‚·‚é
+$\Omega (\frac{n^{2}}{(\log n)^{3}})$ƒ‰ƒEƒ“ƒh‚Ì‰ºŠE \cite{efron2020beyond} ‚ª’m‚ç‚ê‚Ä‚¢‚é.
+ 
+–{Œ¤‹†‚Ì‰ºŠE‚ÉŠÖ‚·‚éŒ‹‰Ê‚Í2ŽÒŠÔ’ÊM‚Ì˜g‘g‚Ý‚É‚¨‚¯‚éŒð³”»’è–â‘è‚©‚ç‚Ì‹A’…‚ÉŠî‚Ã‚¢‚Ä‚¢‚é‚ª,
+Œð³”»’è–â‘è‚©‚ç‚Ì‹A’…‚É‚æ‚Á‚Ä‰ºŒÀ‚ðŽ¦‚·‚Æ‚¢‚¤Ø–¾•û–@‚Í‘½‚­‚Ì–â‘è‚É‘Î‚µ‚Ä—p‚¢‚ç‚ê‚Ä‚¢‚é.—á‚¦‚Î,
+Å¬ƒJƒbƒg”­Œ© \cite{ghaffari2013distributed} ‚â•”•ªƒOƒ‰ƒtŒŸo \cite{fischer2018possibilities} ,
+‹ßŽ—Å‘åƒNƒŠ[ƒNŒŸo \cite{czumaj2020detecting} ‚Æ‚¢‚Á‚½‚³‚Ü‚´‚Ü‚È–â‘è‚É‘Î‚·‚é‰ºŠE‚ÌØ–¾‚ª‚³‚ê‚Ä‚¢‚é.
 
 \section{–{Œ¤‹†‚Ì¬‰Ê}
-ccccc
+¡‰ñ,‰äX‚Í‹É‘å“Æ—§W‡ŒŸØ–â‘è‚É‘Î‚·‚é‚¢‚­‚Â‚©‚Ì•¡ŽG«‚ðŽ¦‚µ‚½.
+Å‰‚É,1-MISŒŸØ–â‘è‚ª$O(1)$ƒ‰ƒEƒ“ƒh‚Å‰ð‚¯‚é‚±‚Æ‚ðØ–¾‚µ‚½.
+ŽŸ‚É,2-MISŒŸØ–â‘è‚É‘Î‚·‚é$\tilde{\Omega} (\sqrt{n})$ƒ‰ƒEƒ“ƒh‚Ì‰ºŠE‚Æ
+3-MISŒŸØ–â‘è‚É‘Î‚·‚é$\tilde{\Omega} (n)$ƒ‰ƒEƒ“ƒh‚Ì‰ºŠE‚ðØ–¾‚µ‚½.
+ÅŒã‚É,$k$-MISŒŸØ–â‘è($k = 4l + 5, l \geq 1$)‚É‘Î‚·‚é$n^{2 - \frac{1}{l + 1}}$ƒ‰ƒEƒ“ƒh‚Ì‰ºŠE‚ðØ–¾‚µ‚½.
 
 \section{˜_•¶‚Ì\¬}
 –{˜_•¶‚Í‘S5Í‚Å\¬‚³‚ê‚é.‘æ2Í‚Å‚ÍƒOƒ‰ƒt‚Ì\‘¢‚Æ—pŒê‚Ì’è‹`‚ð‚µ‚Ä‚¢‚é.
-‘æ3Í‚Å‚Í1-MISŒŸØ–â‘è‚Ì1ƒ‰ƒEƒ“ƒhƒAƒ‹ƒSƒŠƒYƒ€‚ð’ñˆÄ‚µ‚Ä‚¢‚é.
-‘æ4Í‚Å‚Í2-MISŒŸØ–â‘è‚Ì‰ºŒÀ‚Æ3-MISŒŸØ–â‘è‚Ì‰ºŒÀ‚ð’ñˆÄ,‚»‚ê‚ð$k$-MIS‚Ö‚Ìˆê”Ê‰»‚ðs‚Á‚Ä‚¢‚é.
+‘æ3Í‚Å‚Í1-MISŒŸØ–â‘è‚É‘Î‚·‚é$O(1)$ƒ‰ƒEƒ“ƒhƒAƒ‹ƒSƒŠƒYƒ€‚É‚Â‚¢‚Äq‚×‚Ä‚¢‚é.
+‘æ4Í‚Å‚Ík-MISŒŸØ–â‘è($k = 2, 3, 4l + 5( l \geq 1)$)‚É‘Î‚·‚é‰ºŠE‚É‚Â‚¢‚Äq‚×‚Ä‚¢‚é.
 ‘æ5Í‚Å‚Í‚Ü‚Æ‚ß‚É‚Â‚¢‚Äq‚×‚Ä‚¢‚é.
-
-\newpage
 
 \chapter{”’è‹`}
 
-\section*{CONGESTƒ‚ƒfƒ‹}
-lognƒrƒbƒg
+\subsection*{$CONGEST$ƒ‚ƒfƒ‹}
+–{e‚Ål‚¦‚é$CONGEST$ƒ‚ƒfƒ‹‚Í,’Pƒ–³ŒüƒOƒ‰ƒt˜AŒ‹ƒOƒ‰ƒt$G = (V, E)$‚É‚æ‚è•\Œ»‚³‚ê‚é.‚±‚±‚Å$V$‚Íƒm[ƒh‚ÌW‡‚Å
+$|V| = n$‚Æ‚µ,$E$‚Í’ÊMƒŠƒ“ƒN‚ÌW‡‚Å‚ ‚é.$CONGEST$ƒ‚ƒfƒ‹‚Å‚ÍŒvŽZ‹@‚Íƒ‰ƒEƒ“ƒh‚É]‚Á‚Ä“¯Šú‚µ‚Ä“®ì‚·‚é‚à‚Ì‚Æ‚·‚é.
+1ƒ‰ƒEƒ“ƒh“à‚Å,—×Ú’¸“_‚Ö‚ÌƒƒbƒZ[ƒW‘—M,—×Ú’¸“_‚©‚ç‚ÌƒƒbƒZ[ƒWŽóM,“à•”ŒvŽZ‚ðs‚¤.Še•Ó‚Í’PˆÊƒ‰ƒEƒ“ƒh‚ ‚½‚è
+$O(\log n)$ƒrƒbƒg‚ð‘o•ûŒü‚É“`‘—‰Â”\‚Å‚ ‚è,Šeƒm[ƒh‚Í“¯ˆêƒ‰ƒEƒ“ƒh‚ÉˆÙ‚È‚éÚ‘±•Ó‚ÉˆÙ‚È‚éƒƒbƒZ[ƒW‚ð‘—M‰Â”\‚Å‚ ‚é.
+‚Ü‚½,Šeƒm[ƒh‚É‚Í$O(\log n)$ƒrƒbƒg‚ÌŽ©‘R”’l‚É‚æ‚éID‚ª•t—^‚³‚ê‚Ä‚¨‚è,Ž©g‚Ì—×Úƒm[ƒh‚·‚×‚Ä‚ÌID‚ðŠù’m‚Å‚ ‚é‚Æ‚·‚é.
+Šeƒm[ƒh‚ÍƒOƒ‰ƒt‚Ìƒgƒ|ƒƒW‚ÉŠÖ‚·‚éŽ–‘O’mŽ¯‚ðŽ‚½‚È‚¢‚à‚Ì‚Æ‚·‚é.
 
-\section*{2ŽÒŠÔ’ÊM•¡ŽG«}
-˜_•¶‚ÌŒ‹˜_‚Í2ŽÒŠÔ’ÊM•¡ŽG«‚ÌƒtƒŒ[ƒ€ƒ[ƒN‚Æ,‚±‚ÌƒtƒŒ[ƒ€ƒ[ƒN‚ÌŒð³”»’è–â‘è‚Ö‚Ì‹A’…‚ð—p‚¢‚Ä‚¢‚é.
+\subsection*{2ŽÒŠÔ’ÊM•¡ŽG«}
+2ŽÒŠÔ’ÊM•¡ŽG«‚Ì˜g‘g‚Ý‚Å‚Í,ƒAƒŠƒX‚Æƒ{ƒu‚Ì“ñl‚ÌƒvƒŒƒCƒ„[‚ª‚»‚ê‚¼‚ê$k$ƒrƒbƒg‚Ì0/1‚Ìƒf[ƒ^—ñ‚Å\¬‚³‚ê‚é
+ƒvƒ‰ƒCƒx[ƒg‚È“ü—Í$x$‚¨‚æ‚Ñ$y$‚ðŽ‚Á‚Ä‚¢‚é‚Æ‚·‚é.ƒvƒŒƒCƒ„[‚Ì–Ú•W‚Í,Œ‹‡ŠÖ”$f(x, y)$‚ðŒvŽZ‚·‚é‚±‚Æ‚Å‚ ‚è,
+•¡ŽG«‚ÌŽÚ“x‚Æ‚µ‚Ä$f(x, y)$‚ðŒvŽZ‚·‚é‚½‚ß‚ÉƒAƒŠƒX‚Æƒ{ƒu‚ª’ÊM‚É‚æ‚Á‚ÄŒðŠ·‚·‚é•K—v‚Ì‚ ‚éƒrƒbƒg”‚ª—p‚¢‚ç‚ê‚é.
 
-\section*{$k$-‹É‘å“Æ—§W‡(Maximal Independent Set, MIS)}
-‚·‚×‚Ä‚Ì’¸“_‚ª“¯‚¶•Ó‚ð‹¤—L‚µ‚Ä‚¢‚È‚¢‚Æ‚«“Æ—§W‡.
-$k$-MIS‚Æ‚Í$k$ŒÂ“Æ—§W‡‚ÅŽæ‚èœ‚¢‚Ä‚à’¸“_‚ð’Ç‰Á‚Å‚«‚È‚¢‚Æ‚«.
+‚±‚Ì˜g‘g‚Ý‚É‚¨‚¯‚éd—v‚È–â‘è‚Æ‚µ‚Ä,Œð³”»’è–â‘è(set-disjointness)‚ª‚ ‚é.‚±‚Ì–â‘è‚Å‚Í,ƒAƒŠƒX‚Æƒ{ƒu‚Í
+‚»‚ê‚¼‚ê$x \in \{0, 1\}^{k}$‚Æ$y \in \{0, 1\}^{k}$‚ð“ü—Í‚Æ‚µ‚ÄŽ‚¿,–Ú“I‚Í
+$DISJ_{k} (x, y) :=\bigvee_{i = 1}^{k} x_{i} \land y_{i}$‚ðŒvŽZ‚·‚é‚±‚Æ‚Å‚ ‚é.$k$ƒrƒbƒg‚ÌŒð³”»’è–â‘è‚ð‰ð‚­‚½‚ß‚É,
+ƒAƒŠƒX‚Æƒ{ƒu‚Í’ÊM‚É‚æ‚Á‚Ä$\Omega (k)$ƒrƒbƒgŒðŠ·‚·‚é•K—v‚ª‚ ‚é‚±‚Æ‚ª’m‚ç‚ê‚Ä‚¨‚è 
+\cite{kalyanasundaram1992probabilistic},‚±‚ÌŽ–ŽÀ‚ð—p‚¢‚ÄÅ¬ƒJƒbƒg”­Œ© \cite{ghaffari2013distributed} ‚â
+•”•ªƒOƒ‰ƒtŒŸo \cite{fischer2018possibilities} ,‹ßŽ—Å‘åƒNƒŠ[ƒNŒŸo \cite{czumaj2020detecting} ‚Æ‚¢‚Á‚½
+‚³‚Ü‚´‚Ü‚È–â‘è‚É‘Î‚·‚é‰ºŠE‚ÌØ–¾‚ª‚³‚ê‚Ä‚¢‚é.
 
-\section{MIS‚ÌŒŸØ–â‘è}
-ccccc
+$CONGEST$ƒ‚ƒfƒ‹‚É‚¨‚¢‚Ä,“ü—ÍƒOƒ‰ƒtã‚É“Á«$P$‚ª‚ ‚é‚©‚Ç‚¤‚©‚Ì”»’è‚É‘Î‚·‚é‰ºŒÀ‚ÌØ–¾‚ð
+2ŽÒŠÔŒð³”»’è–â‘è‚©‚ç‹A’…‚·‚éƒAƒvƒ[ƒ`‚ÍˆÈ‰º‚Ì‚Æ‚¨‚è‚Å‚ ‚é.
+Å‰‚ÉƒAƒŠƒX‚Æƒ{ƒu‚Í“ÁŽê‚ÈƒOƒ‰ƒt$G = (V, E)$‚Ì\’z‚Æ$G$‚ð$G_{A}$‚Æ$G_{B}$‚É•ªŠ„‚·‚éƒJƒbƒg•Ó$C$‚ÌŒˆ’è‚ðs‚¤.
+ŽŸ‚É,ƒAƒŠƒX‚Æƒ{ƒu‚Í“ü—Í•¶Žš—ñ‚ÉŠî‚Ã‚¢‚Ä‚»‚ê‚¼‚ê$G_{A}$‚Æ$G_{B}$‚É•Ó$E_{A}$‚Æ$E_{B}$‚ð’Ç‰Á‚·‚é.
+‚±‚Ì‚Æ‚«,$DISJ_{k} (x, y)=1$‚Ì‚Æ‚«‚Ì‚Ý,‰½‚ç‚©‚Ì“Á«$P$(—á‚¦‚Î,$P$:uƒOƒ‰ƒt‚É—^‚¦‚ç‚ê‚½MIS‚ª2-MIS‚Å‚È‚¢v)‚ðŽ‚Â‚æ‚¤‚É
+•Ó‚ð’Ç‰Á‚·‚é.‚Ü‚½,ƒJƒbƒg•Ó$C$‚Í“ü—Í•¶Žš—ñ‚ÉˆË‘¶‚µ‚È‚¢‚æ‚¤‚É‚·‚é.ƒOƒ‰ƒt$G$‚É•Ó‚ð’Ç‰Á‚µ‚½ƒOƒ‰ƒt‚ð$G' = (V', E')$‚Æ‚·‚é‚Æ
+$V' = V, E' = E \cap (E_{A} \cap E_{B})$•\‚·‚±‚Æ‚ª‚Å‚«‚é.ƒOƒ‰ƒt$G'$‚Ì\‘¢‚ÌŠT—v‚ð} \ref{Dif_Gx} ‚ÉŽ¦‚·.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=120mm]{Dif_Gx.png}
+\end{center}
+\caption{G' = (V, E')}
+\label{Dif_Gx}
+\end{figure}
+
+ƒAƒŠƒX‚Æƒ{ƒu‚Í,“ü—ÍƒOƒ‰ƒtã‚É“Á«$P$‚ª‚ ‚é‚©‚ð”»’è‚·‚é•ªŽUƒAƒ‹ƒSƒŠƒYƒ€‚ðƒVƒ~ƒ…ƒŒ[ƒg‚Å‚«‚é.
+2ŽÒŠÔ’ÊM•¡ŽG«ƒ‚ƒfƒ‹‚Å‚ÌƒVƒ~ƒ…ƒŒ[ƒg‚Í,ŽŸ‚Ì‚æ‚¤‚ÉŽÀs‚³‚ê‚é.$G_{A}$’†‚Ì•Ó‚Å‘—M‚³‚ê‚éƒƒbƒZ[ƒW,‚ ‚é‚¢‚Í
+$G_{B}$’†‚Ì•Ó‚Å‘—M‚³‚ê‚éƒƒbƒZ[ƒW‚Í,ƒAƒŠƒX‚Æƒ{ƒu‚ª‚»‚ê‚¼‚ê‚¨ŒÝ‚¢‚Æ’ÊM‚¹‚¸‚ÉƒVƒ~ƒ…ƒŒ[ƒg‚Å‚«‚é.ƒJƒbƒg•Ó$C$‚ð’Ê‚¶‚Ä
+‘—M‚³‚ê‚éƒƒbƒZ[ƒW‚É‘Î‚µ‚Ä‚Í,‚¨ŒÝ‚¢î•ñ‚ðŒðŠ·‚·‚é•K—v‚ª‚ ‚é.$CONGEST$ƒ‚ƒfƒ‹‚É‚¨‚¢‚ÄƒOƒ‰ƒtã‚É“Á«$P$‚ª
+‚ ‚é‚©‚Ç‚¤‚©‚ð$r$ƒ‰ƒEƒ“ƒh‚Å”»’è‚·‚éƒAƒ‹ƒSƒŠƒYƒ€$\mathcal{A}$‚ª‘¶Ý‚µ‚½‚Æ‚·‚é‚Æ,ƒAƒŠƒX‚Æƒ{ƒu‚Í“Á«$P$‚Ì”»’è‚Ì‚½‚ß‚É
+$O(r \cdot |C| \cdot b)$ƒrƒbƒg’ÊM‚µ‚½‚±‚Æ‚É‚È‚é.‚±‚ê‚Í,Šeƒ‰ƒEƒ“ƒh‚Å,ƒAƒ‹ƒSƒŠƒYƒ€‚ªŠe•Ó‚Å$O(b)$ƒrƒbƒg‚Ì’ÊM‚ð
+s‚Á‚Ä‚¢‚é‚©‚ç‚Å‚ ‚é.‚±‚ÌƒOƒ‰ƒt‚É‚¨‚¢‚ÄƒAƒ‹ƒSƒŠƒYƒ€$\mathcal{A}$‚ðŽÀs‚·‚é‚Æ“¯Žž‚É2ŽÒŠÔŒð³”»’è–â‘è‚à‰ð‚¯‚Ä‚¢‚é‚±‚Æ‚É‚È‚é.—á‚¦‚ÎƒAƒ‹ƒSƒŠƒYƒ€‚ðŽÀs‚µ‚½Œ‹‰Ê,“ü—ÍƒOƒ‰ƒt‚É“Á«$P$‚ª‚ ‚é‚Æ”»’è‚³‚ê‚ê‚Î$DISJ_{k} (x, y)=1$‚Å‚ ‚é‚Æ‚í‚©‚é‚©‚ç‚Å‚ ‚é.
+Œð³”»’è–â‘è‚Ì’ÊM•¡ŽG«‚æ‚èƒAƒŠƒX‚Æƒ{ƒu‚Í­‚È‚­‚Æ‚à$\Omega (k)$ƒrƒbƒg‚Í’ÊM‚µ‚Ä‚¢‚é‚Í‚¸‚Å‚ ‚é.
+‚µ‚½‚ª‚Á‚Ä,$CONGEST$ƒ‚ƒfƒ‹‚É‚¨‚¢‚Ä‚Æ“Á«$P$‚ª‚ ‚é‚©‚Ç‚¤‚©‚ð”»’è‚·‚é”CˆÓ‚ÌƒAƒ‹ƒSƒŠƒYƒ€‚É‘Î‚µ‚Ä
+$r = \Omega (k / |C| \cdot b)$ƒ‰ƒEƒ“ƒh‚Ì‰ºŠE‚ð“¾‚é‚±‚Æ‚ª‚Å‚«‚é.ƒJƒbƒg•Ó‚Ì‘å‚«‚³‚ª¬‚³‚­‚È‚é‚Ù‚Ç‰ºŠE‚ª‹­‚­‚È‚é.
+
+\subsection*{$k$-‹É‘å“Æ—§W‡}
+\begin{definition}
+$I$‚ª$k$-‹É‘å“Æ—§W‡ $ \Leftrightarrow$ \\
+\begin{math}
+\lnot \left( \exists I' \subseteq I |I'| = k,  \\ \exists S \subseteq V |S|\geq k + 1, (I\setminus I')\cap S‚ª“Æ—§W‡ \right)
+\end{math}
+\end{definition}
+‚Â‚Ü‚è,‚ ‚é“Æ—§W‡$I$‚É‘Î‚µ‚Ä,ƒTƒCƒY$k$‚Ì$I$‚Ì•”•ªW‡$I'$‚ðŽæ‚èœ‚¢‚ÄƒTƒCƒY$k + 1$ˆÈã‚Ì$V$‚Ì•”•ªW‡$S$‚ð‚­‚Á‚Â‚¯‚½‚à‚Ì‚ªV‚½‚È“Æ—§W‡‚É‚È‚è“¾‚È‚¢‚Æ‚«,$I$‚ð$k$-MIS‚Æ’è‹`‚·‚é.
 
 \newpage
 
@@ -103,7 +195,57 @@ ddddd
 eeeee 
 
 \section{3-MISŒŸØ–â‘è‚Ì‰ºŒÀ}
-eeeee 
+
+3-MISŒŸØ–â‘è‚ðŒð³”»’è–â‘è‚©‚ç‹A’…‚·‚é—¬‚ê‚ÍŽŸ‚Ì‚Æ‚¨‚è‚Å‚ ‚é.Å‰‚ÉƒAƒŠƒX‚Æƒ{ƒu‚Í“ÁŽê‚ÈƒOƒ‰ƒt$G = (V, E)$‚Ì\’z‚Æ
+$G$‚ð$G_{A}$‚Æ$G_{B}$‚É•ªŠ„‚·‚éƒJƒbƒg•Ó$C$‚ÌŒˆ’è‚ðs‚¤.ŽŸ‚É,ƒAƒŠƒX‚Æƒ{ƒu‚Í“ü—Í•¶Žš—ñ‚ÉŠî‚Ã‚¢‚Ä
+‚»‚ê‚¼‚ê$G_{A}$‚Æ$G_{B}$‚É•Ó$E_{A}$‚Æ$E_{B}$‚ð’Ç‰Á‚·‚é.‚±‚±‚Å,ƒJƒbƒg•Ó$C$‚Í“ü—Í•¶Žš—ñ‚ÉˆË‘¶‚µ‚È‚¢.ƒOƒ‰ƒt$G$‚É•Ó‚ð’Ç‰Á‚µ‚½ƒOƒ‰ƒt‚ð
+$G' = (V', E')$‚Æ‚·‚é‚Æ$V' = V, E' = E \cap (E_{A} \cap E_{B})$•\‚·‚±‚Æ‚ª‚Å‚«,u$G'$’†‚É—^‚¦‚ç‚ê‚Ä‚¢‚é“Æ—§W‡‚ª,
+$DISJ_{N \times N} (x, y) = 1$‚Ì‚Æ‚«‚Ì‚Ý3-MIS‚Å‚È‚¢v‚Æ‚¢‚¤“Á«‚ðŽ‚Â‚æ‚¤‚É\’z‚ðs‚¤.ƒOƒ‰ƒt$G'$‚ð} \ref{3MIS}‚ÉŽ¦‚·. 
+\newpage
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=120mm]{3MIS.png}
+\end{center}
+\caption{G' = (V, E')}
+\label{3MIS}
+\end{figure}
+
+}’†‚Ì’¸“_‚Ì‚¤‚¿,ŠDF‚Ì‚à‚Ì‚Í“Æ—§W‡‚ÉŠÜ‚Ü‚ê‚é’¸“_‚Æ‚·‚é.}’†‚ÅÈ—ª‚³‚ê‚Ä‚¢‚é•Ó‚ÍŽŸ‚Ì‚Æ‚¨‚è‚Å‚ ‚é.
+\begin{itemize}
+\item $A^{1}, A^{2}, B^{1}, B^{2}$‚Í$N$’¸“_‚ÌƒNƒŠ[ƒN$K_{N}$
+%\item $\forall i, j((a_{i}^{1}, a_{j}^{1}), (a_{i}^{2}, a_{j}^{2}), (b_{i}^{1}, b_{j}^{1}), (b_{i}^{2}, b_{j}^{2})) \in E$
+\item $\forall i((a_{i}^{1}, c_{i}^{1}), (a_{i}^{2}, c_{i}^{2}), (b_{i}^{1}, c_{i}^{1}), (b_{i}^{2}, c_{i}^{2})) \in E$
+\item $\forall i((a_{i}^{1}, s), (a_{i}^{2}, s), (b_{i}^{1}, s), (b_{i}^{2}, s)) \in E$
+\item $(a_{i}^{1}, a_{j}^{2}) \in E_{A} \Leftrightarrow x_{i, j} = 0$, $(b_{i}^{1}, b_{j}^{2}) \in E_{B} \Leftrightarrow y_{i, j} = 0$
+\end{itemize}
+
+‚±‚ÌƒOƒ‰ƒt‚ªã‹L‚Ì“Á«‚ð–ž‚½‚µ‚Ä‚¢‚é‚±‚Æ‚ðŽ¦‚·‚½‚ß‚É,ŽŸ‚Ì2“_‚ðŠm”F‚·‚é. \\
+(i)$DISJ_{N \times N} (x, y) = 1$‚Ì‚Æ‚«,ƒOƒ‰ƒt‚É—^‚¦‚ç‚ê‚Ä‚¢‚é“Æ—§W‡‚ª3-MIS‚Å‚È‚¢: 
+$X_{i, j} = Y_{i, j} =1$‚Æ‚·‚é‚Æ,$s$‚Æ$c_{i}^{1}$‚Æ$c_{j}^{2}$‚Ì3“_‚ðŽæ‚èœ‚¢‚Ä$a_{i}^{1}$, $b_{i}^{1}$, $a_{j}^{2}$, $c_{j}^{2}$‚Ì
+4“_‚ð’Ç‰Á‚Å‚«‚é‚±‚Æ‚©‚çŠm”F‚Å‚«‚é. \\
+(ii)$DISJ_{N \times N} (x, y) = 0$‚Ì‚Æ‚«,ƒOƒ‰ƒt‚É—^‚¦‚ç‚ê‚Ä‚¢‚é“Æ—§W‡‚ª3-MIS: 
+ƒOƒ‰ƒt‚É—^‚¦‚ç‚ê‚Ä‚¢‚é“Æ—§W‡‚ª3-MIS‚Å‚È‚¢‚Æ‰¼’è‚·‚é.‚±‚Ì‚Æ‚«,‚ ‚é3“_‚ðŽæ‚èœ‚­‚±‚Æ‚Å“Æ—§W‡‚É’Ç‰Á‚Å‚«‚é4“_‚ª‘¶Ý‚·‚é‚ª,
+$A^{1}, A^{2}, B^{1}, B^{2}$‚ª‚»‚ê‚¼‚êƒNƒŠ[ƒN‚Å‚ ‚é‚½‚ß,4“_‚ð’Ç‰Á‚·‚é‚½‚ß‚É‚Í‚»‚ê‚¼‚ê‚©‚ç1“_‚ð‘I‚Ô•K—v‚ª‚ ‚é.
+$c_{i}^{1}$‚ðŽæ‚èœ‚¢‚Ä$a_{i}^{1}$‚Æ$b_{i}^{1}$‚ð’Ç‰Á‚µ,,$c_{j}^{2}$‚ðŽæ‚èœ‚¢‚Ä,$a_{j}^{2}$‚Æ$b_{j}^{2}$‚ð“Æ—§W‡‚É’Ç‰Á‚µ‚½‚Æ‚·‚é.
+$a_{i}^{1}$‚Æ$a_{i}^{2}$‚ª—¼•û‚Æ‚à’Ç‰Á‚Å‚«‚é‚Ì‚Í$x_{i, j} = 1$‚Ì‚Æ‚«‚Ì‚Ý‚Å‚ ‚è,$b_{i}^{1}$‚Æ$b_{i}^{2}$‚ª—¼•û‚Æ‚à’Ç‰Á‚Å‚«‚é‚Ì‚Í
+$y_{i, j} = 1$‚Ì‚Æ‚«‚Ì‚Ý‚Å‚ ‚é‚ª,‚±‚ê‚Í$DISJ_{N \times N} (x, y) = 0$‚É–µ‚‚·‚é.‚µ‚½‚ª‚Á‚ÄƒOƒ‰ƒt‚É—^‚¦‚ç‚ê‚Ä‚¢‚é“Æ—§W‡‚Í3-MIS‚Å‚ ‚é.
+
+¡‰ñ,$N \times N$ƒrƒbƒg‚ÌŒð³”»’èƒCƒ“ƒXƒ^ƒ“ƒX‚ðƒOƒ‰ƒt‚É–„‚ßž‚ñ‚Å‚¨‚è,ƒJƒbƒg•Ó‚ÌƒTƒCƒY$|C| = 4N$‚Å‚ ‚é‚±‚Æ‚ª‚í‚©‚é.
+ƒAƒŠƒX‚Æƒ{ƒu‚Í,‚±‚ÌƒOƒ‰ƒtã‚É—^‚¦‚ç‚ê‚½“Æ—§W‡‚ª3-MIS‚Å‚ ‚é‚©‚Ç‚¤‚©‚ð”»’è‚·‚é•ªŽUƒAƒ‹ƒSƒŠƒYƒ€‚ðƒVƒ~ƒ…ƒŒ[ƒg‚Å‚«‚é.
+2ŽÒŠÔ’ÊM•¡ŽG«ƒ‚ƒfƒ‹‚Å‚ÌƒVƒ~ƒ…ƒŒ[ƒg‚Í,ŽŸ‚Ì‚æ‚¤‚ÉŽÀs‚³‚ê‚é.$G_{A}$’†‚Ì•Ó‚Å‘—M‚³‚ê‚éƒƒbƒZ[ƒW,‚ ‚é‚¢‚Í
+$G_{B}$’†‚Ì•Ó‚Å‘—M‚³‚ê‚éƒƒbƒZ[ƒW‚Í,ƒAƒŠƒX‚Æƒ{ƒu‚ª‚»‚ê‚¼‚ê‚¨ŒÝ‚¢‚Æ’ÊM‚¹‚¸‚ÉƒVƒ~ƒ…ƒŒ[ƒg‚Å‚«‚é.ƒJƒbƒg•Ó$C$‚ð’Ê‚¶‚Ä
+‘—M‚³‚ê‚éƒƒbƒZ[ƒW‚É‘Î‚µ‚Ä‚Í,‚¨ŒÝ‚¢î•ñ‚ðŒðŠ·‚·‚é•K—v‚ª‚ ‚é.$CONGEST$ƒ‚ƒfƒ‹‚É‚¨‚¢‚ÄƒOƒ‰ƒtã‚É—^‚¦‚ç‚ê‚½
+“Æ—§W‡‚ª3-MIS‚Å‚ ‚é‚©‚Ç‚¤‚©‚ð$r$ƒ‰ƒEƒ“ƒh‚Å”»’è‚·‚éƒAƒ‹ƒSƒŠƒYƒ€$\mathcal{A}$‚ª‘¶Ý‚µ‚½‚Æ‚·‚é‚Æ,ƒAƒŠƒX‚Æƒ{ƒu‚Í
+$O(r \cdot |C| \cdot b)$ƒrƒbƒg’ÊM‚µ‚½‚±‚Æ‚É‚È‚é.‚±‚ÌƒOƒ‰ƒt‚É‚¨‚¢‚ÄƒAƒ‹ƒSƒŠƒYƒ€$\mathcal{A}$‚ðŽÀs‚·‚é‚Æ“¯Žž‚É
+2ŽÒŠÔŒð³”»’è–â‘è‚à‰ð‚¯‚Ä‚¢‚é‚±‚Æ‚É‚È‚é‚Ì‚Å,Œð³”»’è–â‘è‚Ì’ÊM•¡ŽG«‚æ‚èƒAƒŠƒX‚Æƒ{ƒu‚Í­‚È‚­‚Æ‚à
+$\Omega (N \times N)$ƒrƒbƒg‚Í’ÊM‚µ‚Ä‚¢‚é‚Í‚¸‚Å‚ ‚é.‚µ‚½‚ª‚Á‚Ä,$r = \Omega (N/4b) = \tilde{\Omega}(n)$ƒ‰ƒEƒ“ƒh‚Ì
+‰ºŠE‚ð“¾‚é‚±‚Æ‚ª‚Å‚«‚é.
+
+\section{¡Œã‚Ì‰Û‘è}
+Œ»Ý,3-MISŒŸØ–â‘è‚É‘Î‚·‚é$\tilde{\Omega}(n)$ƒ‰ƒEƒ“ƒh‚Ì‰ºŠE‚ðˆê”Ê‚Ì$k$‚ÉŠg’£‚Å‚«‚È‚¢‚©ŒŸ“¢’†‚Å‚ ‚é.
+‚»‚ê‚É‰Á‚¦‚Ä,3‚Â‚ÌŒ‹‰Ê‚É‘Î‚·‚é’¼Š´“I‚ÈØ–¾‚ªŽv‚¢•‚‚©‚ñ‚Å‚¢‚é’ö“x‚É‚Æ‚Ç‚Ü‚Á‚Ä‚¢‚é‚Ì‚Å,
+‚»‚ê‚ð’èŽ®‰»‚µ‚ÄƒtƒH[ƒ}ƒ‹‚ÈØ–¾‚ð‘‚­‚±‚Æ‚ª‚Å‚«‚é‚æ‚¤‚É‚·‚é•K—v‚ª‚ ‚é.
 
 \section{$k$-MISŒŸØ–â‘è‚Ì‰ºŒÀ}
 eeeee 
@@ -122,7 +264,7 @@ eeeee
 
 \newpage
 
-%\bibliography{b4sato}
+\bibliography{M2sato}
 
 \begin{comment}
 
@@ -378,7 +520,19 @@ $v$‚©‚ç‚Ì‹——£ˆÈŠO‚Ì•Ê‚ÌƒAƒvƒ[ƒ`‚É‚æ‚Á‚Ä$O(n^{k}2^{\sqrt{m}})$‚Ì‹«ŠE‚ð“Ë”j‚·‚é‚
 
 \newpage
 
-%\bibliography{b4sato}
+\bibliography{M2sato}
+
+\subsection*{$k$-‹É‘å“Æ—§W‡2}
+\begin{definition}
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=120mm]{Dif_MIS.png}
+\end{center}
+\end{figure}
+
+\end{definition}
+‚Â‚Ü‚èarufourusdafafsdadfaf$I$‚Å‚ ‚é.
 \end{comment}
 
 \end{document}
