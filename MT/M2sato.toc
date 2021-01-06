@@ -7,10 +7,10 @@
 \contentsline {chapter}{\numberline {第3章}1-MIS検証問題の1ラウンドアルゴリズム}{7}
 \contentsline {chapter}{\numberline {第4章}$k$-MIS検証問題の下限}{8}
 \contentsline {section}{\numberline {4.1}2-MIS検証問題の下限}{8}
-\contentsline {section}{\numberline {4.2}3-MIS検証問題の下限}{8}
-\contentsline {section}{\numberline {4.3}今後の課題}{10}
-\contentsline {section}{\numberline {4.4}$k$-MIS検証問題の下限}{10}
-\contentsline {chapter}{\numberline {第5章}まとめと今後の課題}{11}
-\contentsline {section}{\numberline {5.1}まとめ}{11}
-\contentsline {chapter}{\numberline {}謝辞}{12}
-\contentsline {chapter}{\numberline {}参考文献}{13}
+\contentsline {section}{\numberline {4.2}3-MIS検証問題の下限}{11}
+\contentsline {section}{\numberline {4.3}$k$-MIS検証問題の下限}{13}
+\contentsline {chapter}{\numberline {第5章}まとめと今後の課題}{14}
+\contentsline {section}{\numberline {5.1}まとめ}{14}
+\contentsline {section}{\numberline {5.2}今後の課題}{14}
+\contentsline {chapter}{\numberline {}謝辞}{15}
+\contentsline {chapter}{\numberline {}参考文献}{16}

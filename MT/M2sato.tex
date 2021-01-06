@@ -131,9 +131,9 @@ $\Omega (\frac{n^{2}}{(\log n)^{3}})$ƒ‰ƒEƒ“ƒh‚Ì‰ºŠE \cite{efron2020beyond} ‚ª’m‚
 –{e‚Ål‚¦‚é$CONGEST$ƒ‚ƒfƒ‹‚Í,’Pƒ–³ŒüƒOƒ‰ƒt˜AŒ‹ƒOƒ‰ƒt$G = (V, E)$‚É‚æ‚è•\Œ»‚³‚ê‚é.‚±‚±‚Å$V$‚Íƒm[ƒh‚ÌW‡‚Å
 $|V| = n$‚Æ‚µ,$E$‚Í’ÊMƒŠƒ“ƒN‚ÌW‡‚Å‚ ‚é.$CONGEST$ƒ‚ƒfƒ‹‚Å‚ÍŒvŽZ‹@‚Íƒ‰ƒEƒ“ƒh‚É]‚Á‚Ä“¯Šú‚µ‚Ä“®ì‚·‚é‚à‚Ì‚Æ‚·‚é.
 1ƒ‰ƒEƒ“ƒh“à‚Å,—×Ú’¸“_‚Ö‚ÌƒƒbƒZ[ƒW‘—M,—×Ú’¸“_‚©‚ç‚ÌƒƒbƒZ[ƒWŽóM,“à•”ŒvŽZ‚ðs‚¤.Še•Ó‚Í’PˆÊƒ‰ƒEƒ“ƒh‚ ‚½‚è
-$O(\log n)$ƒrƒbƒg‚ð‘o•ûŒü‚É“`‘—‰Â”\‚Å‚ ‚è,Šeƒm[ƒh‚Í“¯ˆêƒ‰ƒEƒ“ƒh‚ÉˆÙ‚È‚éÚ‘±•Ó‚ÉˆÙ‚È‚éƒƒbƒZ[ƒW‚ð‘—M‰Â”\‚Å‚ ‚é.
-‚Ü‚½,Šeƒm[ƒh‚É‚Í$O(\log n)$ƒrƒbƒg‚ÌŽ©‘R”’l‚É‚æ‚éID‚ª•t—^‚³‚ê‚Ä‚¨‚è,Ž©g‚Ì—×Úƒm[ƒh‚·‚×‚Ä‚ÌID‚ðŠù’m‚Å‚ ‚é‚Æ‚·‚é.
-Šeƒm[ƒh‚ÍƒOƒ‰ƒt‚Ìƒgƒ|ƒƒW‚ÉŠÖ‚·‚éŽ–‘O’mŽ¯‚ðŽ‚½‚È‚¢‚à‚Ì‚Æ‚·‚é.
+$b$ƒrƒbƒg‚ð‘o•ûŒü‚É“`‘—‰Â”\‚Å‚ ‚è,Šeƒm[ƒh‚Í“¯ˆêƒ‰ƒEƒ“ƒh‚ÉˆÙ‚È‚éÚ‘±•Ó‚ÉˆÙ‚È‚éƒƒbƒZ[ƒW‚ð‘—M‰Â”\‚Å‚ ‚é.
+•W€“I‚É‚Í,$b = \log n$‚ð‘z’è‚·‚é.‚Ü‚½,Šeƒm[ƒh‚É‚Í$O(\log n)$ƒrƒbƒg‚ÌŽ©‘R”’l‚É‚æ‚éID‚ª•t—^‚³‚ê‚Ä‚¨‚è,
+Ž©g‚Ì—×Úƒm[ƒh‚·‚×‚Ä‚ÌID‚ðŠù’m‚Å‚ ‚é‚Æ‚·‚é.Šeƒm[ƒh‚ÍƒOƒ‰ƒt‚Ìƒgƒ|ƒƒW‚ÉŠÖ‚·‚éŽ–‘O’mŽ¯‚ðŽ‚½‚È‚¢‚à‚Ì‚Æ‚·‚é.
 
 \subsection*{2ŽÒŠÔ’ÊM•¡ŽG«}
 2ŽÒŠÔ’ÊM•¡ŽG«‚Ì˜g‘g‚Ý‚Å‚Í,ƒAƒŠƒX‚Æƒ{ƒu‚Ì“ñl‚ÌƒvƒŒƒCƒ„[‚ª‚»‚ê‚¼‚ê$k$ƒrƒbƒg‚Ì0/1‚Ìƒf[ƒ^—ñ‚Å\¬‚³‚ê‚é
@@ -190,18 +190,71 @@ $I$‚ª$k$-‹É‘å“Æ—§W‡ $ \Leftrightarrow$ \\
 ddddd
 
 \chapter{$k$-MISŒŸØ–â‘è‚Ì‰ºŒÀ}
+‚±‚ÌÍ‚Å‚Í,MISŒŸØ–â‘è‚Ì‰ºŠE‚É‚Â‚¢‚Ä‚Ì‹c˜_‚ðs‚¤.
+4.1ß‚Å‚Í,2-MISŒŸØ–â‘è‚Ì‰ºŠE‚É‚Â‚¢‚Ä‚Ì’è—‚Æ‚»‚ÌØ–¾‚ðq‚×‚é.
+4.2ß‚Å‚Í,3-MISŒŸØ–â‘è‚Ì‰ºŠE‚É‚Â‚¢‚Ä‚Ì’è—‚Æ‚»‚ÌØ–¾‚ðq‚×‚é.
+4.3ß‚Å‚Í,$k$-MISŒŸØ–â‘è($k = 4l + 5, l \geq 1$)‚Ì‰ºŠE‚É‚Â‚¢‚Ä‚Ì’è—‚Æ‚»‚ÌØ–¾‚ðq‚×‚é.
 
 \section{2-MISŒŸØ–â‘è‚Ì‰ºŒÀ}
-eeeee 
+‚±‚Ìß‚Å‚Í2-MISŒŸØ–â‘è‚Ì‰ºŠE‚É‚Â‚¢‚Ä‚Ì‹c˜_‚ðs‚¤.‹ï‘Ì“I‚É‚Í,ŽŸ‚Ì’è—‚ðØ–¾‚·‚é. 
+\begin{theorem}
+$CONGEST$ƒ‚ƒfƒ‹‚É‚¨‚¢‚Ä,2-MISŒŸØ–â‘è‚ð‰ð‚­‘S‚Ä‚ÌƒAƒ‹ƒSƒŠƒYƒ€‚Í$\tilde{\Omega} (\sqrt{n})$‚Ì’ÊMƒ‰ƒEƒ“ƒh”‚ð•K—v‚Æ‚·‚é.
+\end{theorem}
+\begin{prf*}
+‚Ü‚¸‰‚ß‚ÉƒAƒŠƒX‚Æƒ{ƒu‚ª\’z‚·‚éƒOƒ‰ƒt$G' = (V', E')$‚ð} \ref{2MIS}‚ÉŽ¦‚·. 
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=120mm]{2MIS.png}
+\end{center}
+\caption{G' = (V, E')}
+\label{2MIS}
+\end{figure}
+
+}’†‚Ì’¸“_‚Ì‚¤‚¿,ŠDF‚Ì‚à‚Ì‚Í“Æ—§W‡‚ÉŠÜ‚Ü‚ê‚é’¸“_‚Æ‚·‚é.}’†‚ÅÈ—ª‚³‚ê‚Ä‚¢‚é•Ó‚Æ$K_{W(y)}$‚Ì\‘¢‚ÍŽŸ‚Ì‚Æ‚¨‚è‚Å‚ ‚é.
+\begin{itemize}
+%\item $A^{1}, A^{2}, B^{1}, B^{2}$‚Í$N$’¸“_‚ÌƒNƒŠ[ƒN$K_{N}$
+%\item $\forall i, j((a_{i}^{1}, a_{j}^{1}), (a_{i}^{2}, a_{j}^{2}), (b_{i}^{1}, b_{j}^{1}), (b_{i}^{2}, b_{j}^{2})) \in E$
+\item $\forall i((a_{i}^{1}, b_{i}^{1}), (a_{i}^{2}, b_{i}^{2})) \in E$
+%\item $\forall i((a_{i}^{1}, s), (a_{i}^{2}, s), (b_{i}^{1}, s), (b_{i}^{2}, s)) \in E$
+\item $(a_{i}^{1}, a_{j}^{2}) \in E_{A} \Leftrightarrow x_{i, j} = 0$
+\item $W(y)$‚Í$y$’†‚ÉŠÜ‚Ü‚ê‚é1‚ÌŒÂ”‚ð•\‚·.$K_{W(y)}$‚Ì’¸“_$c_{i, j}$‚Í$y_{i, j} = 1$‚Å‚ ‚é‚æ‚¤‚È$(i, j)$‚Å
+ƒCƒ“ƒfƒbƒNƒX‚Ã‚¯‚³‚ê‚Ä‚¢‚é‚Æ‚·‚é.‚±‚Ì‚Æ‚«,$(c_{i, j}, b_{i}^{1}) \in E_{B}$ ‚©‚Â $(c_{i, j}, b_{j}^{2}) \in E_{B}$
+\end{itemize}
+
+%‚±‚±‚ç‚Ö‚ñ‚Í3MIS‚Ì‚â‚ÂƒRƒsƒy‚µ‚½‚¾‚¯‚È‚Ì‚Å‚Ü‚¾“r’†
+‚±‚ÌƒOƒ‰ƒt‚Í,u$G'$’†‚É—^‚¦‚ç‚ê‚Ä‚¢‚é“Æ—§W‡‚ª,$DISJ_{N \times N} (x, y) = 1$‚Ì‚Æ‚«‚Ì‚Ý2-MIS‚Å‚È‚¢v‚Æ‚¢‚¤“Á«‚ðŽ‚Â. 
+(‚È‚¨,$DISJ_{N \times N} (x, y) :=\bigvee_{i = 1}^{N} \bigvee_{j = 1}^{N} x_{i, j} \land y_{i, j}$‚Å’è‹`‚³‚ê‚é.)
+‚±‚ÌƒOƒ‰ƒt‚ªã‹L‚Ì“Á«‚ð–ž‚½‚µ‚Ä‚¢‚é‚±‚Æ‚ðŽ¦‚·‚½‚ß‚É,ŽŸ‚Ì2“_‚ðŠm”F‚·‚é. \\
+(i)$DISJ_{N \times N} (x, y) = 1$‚Ì‚Æ‚«,ƒOƒ‰ƒt‚É—^‚¦‚ç‚ê‚Ä‚¢‚é“Æ—§W‡‚ª2-MIS‚Å‚È‚¢: \\
+$x_{i, j} = y_{i, j} =1$‚Æ‚·‚é‚Æ,$s$‚Æ$c_{i}^{1}$‚Æ$c_{j}^{2}$‚Ì3“_‚ðŽæ‚èœ‚¢‚Ä$a_{i}^{1}$, $b_{i}^{1}$, $a_{j}^{2}$, $c_{j}^{2}$‚Ì
+4“_‚ð’Ç‰Á‚Å‚«‚é‚±‚Æ‚©‚çŠm”F‚Å‚«‚é. \\
+(ii)$DISJ_{N \times N} (x, y) = 0$‚Ì‚Æ‚«,ƒOƒ‰ƒt‚É—^‚¦‚ç‚ê‚Ä‚¢‚é“Æ—§W‡‚ª2-MIS‚Å‚ ‚é: \\ 
+ƒOƒ‰ƒt‚É—^‚¦‚ç‚ê‚Ä‚¢‚é“Æ—§W‡‚ª3-MIS‚Å‚È‚¢‚Æ‰¼’è‚·‚é.‚±‚Ì‚Æ‚«,‚ ‚é3“_‚ðŽæ‚èœ‚­‚±‚Æ‚Å“Æ—§W‡‚É’Ç‰Á‚Å‚«‚é4“_‚ª‘¶Ý‚·‚é‚ª,
+$A^{1}, A^{2}, B^{1}, B^{2}$‚ª‚»‚ê‚¼‚êƒNƒŠ[ƒN‚Å‚ ‚é‚½‚ß,4“_‚ð’Ç‰Á‚·‚é‚½‚ß‚É‚Í‚»‚ê‚¼‚ê‚©‚ç1“_‚ð‘I‚Ô•K—v‚ª‚ ‚é.
+$c_{i}^{1}$‚ðŽæ‚èœ‚¢‚Ä$a_{i}^{1}$‚Æ$b_{i}^{1}$‚ð’Ç‰Á‚µ,,$c_{j}^{2}$‚ðŽæ‚èœ‚¢‚Ä,$a_{j}^{2}$‚Æ$b_{j}^{2}$‚ð“Æ—§W‡‚É’Ç‰Á‚µ‚½‚Æ‚·‚é.
+$a_{i}^{1}$‚Æ$a_{i}^{2}$‚ª—¼•û‚Æ‚à’Ç‰Á‚Å‚«‚é‚Ì‚Í$x_{i, j} = 1$‚Ì‚Æ‚«‚Ì‚Ý‚Å‚ ‚è,$b_{i}^{1}$‚Æ$b_{i}^{2}$‚ª—¼•û‚Æ‚à’Ç‰Á‚Å‚«‚é‚Ì‚Í
+$y_{i, j} = 1$‚Ì‚Æ‚«‚Ì‚Ý‚Å‚ ‚é‚ª,‚±‚ê‚Í$DISJ_{N \times N} (x, y) = 0$‚É–µ‚‚·‚é.‚µ‚½‚ª‚Á‚ÄƒOƒ‰ƒt‚É—^‚¦‚ç‚ê‚Ä‚¢‚é“Æ—§W‡‚Í3-MIS‚Å‚ ‚é.
+
+¡‰ñ,$N \times N$ƒrƒbƒg‚ÌŒð³”»’èƒCƒ“ƒXƒ^ƒ“ƒX‚ðƒOƒ‰ƒt‚É–„‚ßž‚ñ‚Å‚¨‚è,ƒJƒbƒg•Ó‚ÌƒTƒCƒY$|C| = 4N$‚Å‚ ‚é‚±‚Æ‚ª‚í‚©‚é.
+‚µ‚½‚ª‚Á‚Ä,$CONGEST$ƒ‚ƒfƒ‹‚É‚¨‚¢‚ÄƒOƒ‰ƒtã‚É—^‚¦‚ç‚ê‚½“Æ—§W‡‚ª3-MIS‚Å‚ ‚é‚©‚Ç‚¤‚©‚ð$r$ƒ‰ƒEƒ“ƒh‚Å”»’è‚·‚é
+ƒAƒ‹ƒSƒŠƒYƒ€$\mathcal{A}$‚ª‘¶Ý‚µ‚½‚Æ‚·‚é‚Æ,ƒAƒŠƒX‚Æƒ{ƒu‚Í$O(r \cdot |C| \cdot b)$ƒrƒbƒg’ÊM‚µ‚½‚±‚Æ‚É‚È‚é.
+‚±‚ÌƒOƒ‰ƒt‚É‚¨‚¢‚ÄƒAƒ‹ƒSƒŠƒYƒ€$\mathcal{A}$‚ðŽÀs‚·‚é‚Æ“¯Žž‚É2ŽÒŠÔŒð³”»’è–â‘è‚à‰ð‚¯‚Ä‚¢‚é‚±‚Æ‚É‚È‚é‚Ì‚Å,
+Œð³”»’è–â‘è‚Ì’ÊM•¡ŽG«‚æ‚èƒAƒŠƒX‚Æƒ{ƒu‚Í­‚È‚­‚Æ‚à$\Omega (N \times N)$ƒrƒbƒg‚Í’ÊM‚µ‚Ä‚¢‚é‚Í‚¸‚Å‚ ‚é.
+‚æ‚Á‚Ä,$r = \Omega (N/4b) = \tilde{\Omega}(N)$ƒ‰ƒEƒ“ƒh‚Ì‰ºŠE‚ð“¾‚é‚±‚Æ‚ª‚Å‚«‚é.}\ref{3-MIS}‚©‚ç‚í‚©‚é’Ê‚è,
+$A^{1}, A^{2}, B^{1}, B^{2}, C^{1}, C^{2}$‚Í$N$’¸“_‚Å\¬‚³‚ê‚Ä‚¨‚è,ƒOƒ‰ƒt‘S‘Ì‚Ì’¸“_”$n$‚Í$n = 6N +1$‚Å‚ ‚é.
+‚µ‚½‚ª‚Á‚Ä$N = \Omega(n)$‚É‚È‚é‚½‚ß,$\tilde{\Omega}(n)$ƒ‰ƒEƒ“ƒh‚Ì‰ºŠE‚ð“¾‚é‚±‚Æ‚ª‚Å‚«‚é. 
+\end{prf*}
+\newpage
 
 \section{3-MISŒŸØ–â‘è‚Ì‰ºŒÀ}
+‚±‚Ìß‚Å‚Í3-MISŒŸØ–â‘è‚Ì‰ºŠE‚É‚Â‚¢‚Ä‚Ì‹c˜_‚ðs‚¤.‹ï‘Ì“I‚É‚Í,ŽŸ‚Ì’è—‚ðØ–¾‚·‚é.
+\begin{theorem}
+$CONGEST$ƒ‚ƒfƒ‹‚É‚¨‚¢‚Ä,3-MISŒŸØ–â‘è‚ð‰ð‚­‘S‚Ä‚ÌƒAƒ‹ƒSƒŠƒYƒ€‚Í$\tilde{\Omega} (n)$‚Ì’ÊMƒ‰ƒEƒ“ƒh”‚ð•K—v‚Æ‚·‚é.
+\end{theorem}
 
-3-MISŒŸØ–â‘è‚ðŒð³”»’è–â‘è‚©‚ç‹A’…‚·‚é—¬‚ê‚ÍŽŸ‚Ì‚Æ‚¨‚è‚Å‚ ‚é.Å‰‚ÉƒAƒŠƒX‚Æƒ{ƒu‚Í“ÁŽê‚ÈƒOƒ‰ƒt$G = (V, E)$‚Ì\’z‚Æ
-$G$‚ð$G_{A}$‚Æ$G_{B}$‚É•ªŠ„‚·‚éƒJƒbƒg•Ó$C$‚ÌŒˆ’è‚ðs‚¤.ŽŸ‚É,ƒAƒŠƒX‚Æƒ{ƒu‚Í“ü—Í•¶Žš—ñ‚ÉŠî‚Ã‚¢‚Ä
-‚»‚ê‚¼‚ê$G_{A}$‚Æ$G_{B}$‚É•Ó$E_{A}$‚Æ$E_{B}$‚ð’Ç‰Á‚·‚é.‚±‚±‚Å,ƒJƒbƒg•Ó$C$‚Í“ü—Í•¶Žš—ñ‚ÉˆË‘¶‚µ‚È‚¢.ƒOƒ‰ƒt$G$‚É•Ó‚ð’Ç‰Á‚µ‚½ƒOƒ‰ƒt‚ð
-$G' = (V', E')$‚Æ‚·‚é‚Æ$V' = V, E' = E \cap (E_{A} \cap E_{B})$•\‚·‚±‚Æ‚ª‚Å‚«,u$G'$’†‚É—^‚¦‚ç‚ê‚Ä‚¢‚é“Æ—§W‡‚ª,
-$DISJ_{N \times N} (x, y) = 1$‚Ì‚Æ‚«‚Ì‚Ý3-MIS‚Å‚È‚¢v‚Æ‚¢‚¤“Á«‚ðŽ‚Â‚æ‚¤‚É\’z‚ðs‚¤.ƒOƒ‰ƒt$G'$‚ð} \ref{3MIS}‚ÉŽ¦‚·. 
-\newpage
+\begin{prf*}
+‚Ü‚¸‰‚ß‚ÉƒAƒŠƒX‚Æƒ{ƒu‚ª\’z‚·‚éƒOƒ‰ƒt$G' = (V', E')$‚ð} \ref{3MIS}‚ÉŽ¦‚·. 
 
 \begin{figure}[ht]
 \begin{center}
@@ -220,11 +273,12 @@ $DISJ_{N \times N} (x, y) = 1$‚Ì‚Æ‚«‚Ì‚Ý3-MIS‚Å‚È‚¢v‚Æ‚¢‚¤“Á«‚ðŽ‚Â‚æ‚¤‚É\’z‚
 \item $(a_{i}^{1}, a_{j}^{2}) \in E_{A} \Leftrightarrow x_{i, j} = 0$, $(b_{i}^{1}, b_{j}^{2}) \in E_{B} \Leftrightarrow y_{i, j} = 0$
 \end{itemize}
 
+‚±‚ÌƒOƒ‰ƒt‚Í,u$G'$’†‚É—^‚¦‚ç‚ê‚Ä‚¢‚é“Æ—§W‡‚ª,$DISJ_{N \times N} (x, y) = 1$‚Ì‚Æ‚«‚Ì‚Ý3-MIS‚Å‚È‚¢v‚Æ‚¢‚¤“Á«‚ðŽ‚Â. 
 ‚±‚ÌƒOƒ‰ƒt‚ªã‹L‚Ì“Á«‚ð–ž‚½‚µ‚Ä‚¢‚é‚±‚Æ‚ðŽ¦‚·‚½‚ß‚É,ŽŸ‚Ì2“_‚ðŠm”F‚·‚é. \\
-(i)$DISJ_{N \times N} (x, y) = 1$‚Ì‚Æ‚«,ƒOƒ‰ƒt‚É—^‚¦‚ç‚ê‚Ä‚¢‚é“Æ—§W‡‚ª3-MIS‚Å‚È‚¢: 
-$X_{i, j} = Y_{i, j} =1$‚Æ‚·‚é‚Æ,$s$‚Æ$c_{i}^{1}$‚Æ$c_{j}^{2}$‚Ì3“_‚ðŽæ‚èœ‚¢‚Ä$a_{i}^{1}$, $b_{i}^{1}$, $a_{j}^{2}$, $c_{j}^{2}$‚Ì
+(i)$DISJ_{N \times N} (x, y) = 1$‚Ì‚Æ‚«,ƒOƒ‰ƒt‚É—^‚¦‚ç‚ê‚Ä‚¢‚é“Æ—§W‡‚ª3-MIS‚Å‚È‚¢: \\
+$x_{i, j} = y_{i, j} =1$‚Æ‚·‚é‚Æ,$s$‚Æ$c_{i}^{1}$‚Æ$c_{j}^{2}$‚Ì3“_‚ðŽæ‚èœ‚¢‚Ä$a_{i}^{1}$, $b_{i}^{1}$, $a_{j}^{2}$, $c_{j}^{2}$‚Ì
 4“_‚ð’Ç‰Á‚Å‚«‚é‚±‚Æ‚©‚çŠm”F‚Å‚«‚é. \\
-(ii)$DISJ_{N \times N} (x, y) = 0$‚Ì‚Æ‚«,ƒOƒ‰ƒt‚É—^‚¦‚ç‚ê‚Ä‚¢‚é“Æ—§W‡‚ª3-MIS: 
+(ii)$DISJ_{N \times N} (x, y) = 0$‚Ì‚Æ‚«,ƒOƒ‰ƒt‚É—^‚¦‚ç‚ê‚Ä‚¢‚é“Æ—§W‡‚ª3-MIS‚Å‚ ‚é: \\ 
 ƒOƒ‰ƒt‚É—^‚¦‚ç‚ê‚Ä‚¢‚é“Æ—§W‡‚ª3-MIS‚Å‚È‚¢‚Æ‰¼’è‚·‚é.‚±‚Ì‚Æ‚«,‚ ‚é3“_‚ðŽæ‚èœ‚­‚±‚Æ‚Å“Æ—§W‡‚É’Ç‰Á‚Å‚«‚é4“_‚ª‘¶Ý‚·‚é‚ª,
 $A^{1}, A^{2}, B^{1}, B^{2}$‚ª‚»‚ê‚¼‚êƒNƒŠ[ƒN‚Å‚ ‚é‚½‚ß,4“_‚ð’Ç‰Á‚·‚é‚½‚ß‚É‚Í‚»‚ê‚¼‚ê‚©‚ç1“_‚ð‘I‚Ô•K—v‚ª‚ ‚é.
 $c_{i}^{1}$‚ðŽæ‚èœ‚¢‚Ä$a_{i}^{1}$‚Æ$b_{i}^{1}$‚ð’Ç‰Á‚µ,,$c_{j}^{2}$‚ðŽæ‚èœ‚¢‚Ä,$a_{j}^{2}$‚Æ$b_{j}^{2}$‚ð“Æ—§W‡‚É’Ç‰Á‚µ‚½‚Æ‚·‚é.
@@ -232,29 +286,27 @@ $a_{i}^{1}$‚Æ$a_{i}^{2}$‚ª—¼•û‚Æ‚à’Ç‰Á‚Å‚«‚é‚Ì‚Í$x_{i, j} = 1$‚Ì‚Æ‚«‚Ì‚Ý‚Å‚ ‚è,$
 $y_{i, j} = 1$‚Ì‚Æ‚«‚Ì‚Ý‚Å‚ ‚é‚ª,‚±‚ê‚Í$DISJ_{N \times N} (x, y) = 0$‚É–µ‚‚·‚é.‚µ‚½‚ª‚Á‚ÄƒOƒ‰ƒt‚É—^‚¦‚ç‚ê‚Ä‚¢‚é“Æ—§W‡‚Í3-MIS‚Å‚ ‚é.
 
 ¡‰ñ,$N \times N$ƒrƒbƒg‚ÌŒð³”»’èƒCƒ“ƒXƒ^ƒ“ƒX‚ðƒOƒ‰ƒt‚É–„‚ßž‚ñ‚Å‚¨‚è,ƒJƒbƒg•Ó‚ÌƒTƒCƒY$|C| = 4N$‚Å‚ ‚é‚±‚Æ‚ª‚í‚©‚é.
-ƒAƒŠƒX‚Æƒ{ƒu‚Í,‚±‚ÌƒOƒ‰ƒtã‚É—^‚¦‚ç‚ê‚½“Æ—§W‡‚ª3-MIS‚Å‚ ‚é‚©‚Ç‚¤‚©‚ð”»’è‚·‚é•ªŽUƒAƒ‹ƒSƒŠƒYƒ€‚ðƒVƒ~ƒ…ƒŒ[ƒg‚Å‚«‚é.
-2ŽÒŠÔ’ÊM•¡ŽG«ƒ‚ƒfƒ‹‚Å‚ÌƒVƒ~ƒ…ƒŒ[ƒg‚Í,ŽŸ‚Ì‚æ‚¤‚ÉŽÀs‚³‚ê‚é.$G_{A}$’†‚Ì•Ó‚Å‘—M‚³‚ê‚éƒƒbƒZ[ƒW,‚ ‚é‚¢‚Í
-$G_{B}$’†‚Ì•Ó‚Å‘—M‚³‚ê‚éƒƒbƒZ[ƒW‚Í,ƒAƒŠƒX‚Æƒ{ƒu‚ª‚»‚ê‚¼‚ê‚¨ŒÝ‚¢‚Æ’ÊM‚¹‚¸‚ÉƒVƒ~ƒ…ƒŒ[ƒg‚Å‚«‚é.ƒJƒbƒg•Ó$C$‚ð’Ê‚¶‚Ä
-‘—M‚³‚ê‚éƒƒbƒZ[ƒW‚É‘Î‚µ‚Ä‚Í,‚¨ŒÝ‚¢î•ñ‚ðŒðŠ·‚·‚é•K—v‚ª‚ ‚é.$CONGEST$ƒ‚ƒfƒ‹‚É‚¨‚¢‚ÄƒOƒ‰ƒtã‚É—^‚¦‚ç‚ê‚½
-“Æ—§W‡‚ª3-MIS‚Å‚ ‚é‚©‚Ç‚¤‚©‚ð$r$ƒ‰ƒEƒ“ƒh‚Å”»’è‚·‚éƒAƒ‹ƒSƒŠƒYƒ€$\mathcal{A}$‚ª‘¶Ý‚µ‚½‚Æ‚·‚é‚Æ,ƒAƒŠƒX‚Æƒ{ƒu‚Í
-$O(r \cdot |C| \cdot b)$ƒrƒbƒg’ÊM‚µ‚½‚±‚Æ‚É‚È‚é.‚±‚ÌƒOƒ‰ƒt‚É‚¨‚¢‚ÄƒAƒ‹ƒSƒŠƒYƒ€$\mathcal{A}$‚ðŽÀs‚·‚é‚Æ“¯Žž‚É
-2ŽÒŠÔŒð³”»’è–â‘è‚à‰ð‚¯‚Ä‚¢‚é‚±‚Æ‚É‚È‚é‚Ì‚Å,Œð³”»’è–â‘è‚Ì’ÊM•¡ŽG«‚æ‚èƒAƒŠƒX‚Æƒ{ƒu‚Í­‚È‚­‚Æ‚à
-$\Omega (N \times N)$ƒrƒbƒg‚Í’ÊM‚µ‚Ä‚¢‚é‚Í‚¸‚Å‚ ‚é.‚µ‚½‚ª‚Á‚Ä,$r = \Omega (N/4b) = \tilde{\Omega}(n)$ƒ‰ƒEƒ“ƒh‚Ì
-‰ºŠE‚ð“¾‚é‚±‚Æ‚ª‚Å‚«‚é.
-
-\section{¡Œã‚Ì‰Û‘è}
-Œ»Ý,3-MISŒŸØ–â‘è‚É‘Î‚·‚é$\tilde{\Omega}(n)$ƒ‰ƒEƒ“ƒh‚Ì‰ºŠE‚ðˆê”Ê‚Ì$k$‚ÉŠg’£‚Å‚«‚È‚¢‚©ŒŸ“¢’†‚Å‚ ‚é.
-‚»‚ê‚É‰Á‚¦‚Ä,3‚Â‚ÌŒ‹‰Ê‚É‘Î‚·‚é’¼Š´“I‚ÈØ–¾‚ªŽv‚¢•‚‚©‚ñ‚Å‚¢‚é’ö“x‚É‚Æ‚Ç‚Ü‚Á‚Ä‚¢‚é‚Ì‚Å,
-‚»‚ê‚ð’èŽ®‰»‚µ‚ÄƒtƒH[ƒ}ƒ‹‚ÈØ–¾‚ð‘‚­‚±‚Æ‚ª‚Å‚«‚é‚æ‚¤‚É‚·‚é•K—v‚ª‚ ‚é.
+‚µ‚½‚ª‚Á‚Ä,$CONGEST$ƒ‚ƒfƒ‹‚É‚¨‚¢‚ÄƒOƒ‰ƒtã‚É—^‚¦‚ç‚ê‚½“Æ—§W‡‚ª3-MIS‚Å‚ ‚é‚©‚Ç‚¤‚©‚ð$r$ƒ‰ƒEƒ“ƒh‚Å”»’è‚·‚é
+ƒAƒ‹ƒSƒŠƒYƒ€$\mathcal{A}$‚ª‘¶Ý‚µ‚½‚Æ‚·‚é‚Æ,ƒAƒŠƒX‚Æƒ{ƒu‚Í$O(r \cdot |C| \cdot b)$ƒrƒbƒg’ÊM‚µ‚½‚±‚Æ‚É‚È‚é.
+‚±‚ÌƒOƒ‰ƒt‚É‚¨‚¢‚ÄƒAƒ‹ƒSƒŠƒYƒ€$\mathcal{A}$‚ðŽÀs‚·‚é‚Æ“¯Žž‚É2ŽÒŠÔŒð³”»’è–â‘è‚à‰ð‚¯‚Ä‚¢‚é‚±‚Æ‚É‚È‚é‚Ì‚Å,
+Œð³”»’è–â‘è‚Ì’ÊM•¡ŽG«‚æ‚èƒAƒŠƒX‚Æƒ{ƒu‚Í­‚È‚­‚Æ‚à$\Omega (N \times N)$ƒrƒbƒg‚Í’ÊM‚µ‚Ä‚¢‚é‚Í‚¸‚Å‚ ‚é.
+‚æ‚Á‚Ä,$r = \Omega (N/4b) = \tilde{\Omega}(N)$ƒ‰ƒEƒ“ƒh‚Ì‰ºŠE‚ð“¾‚é‚±‚Æ‚ª‚Å‚«‚é.}\ref{3-MIS}‚©‚ç‚í‚©‚é’Ê‚è,
+$A^{1}, A^{2}, B^{1}, B^{2}, C^{1}, C^{2}$‚Í$N$’¸“_‚Å\¬‚³‚ê‚Ä‚¨‚è,ƒOƒ‰ƒt‘S‘Ì‚Ì’¸“_”$n$‚Í$n = 6N +1$‚Å‚ ‚é.
+‚µ‚½‚ª‚Á‚Ä$N = \Omega(n)$‚É‚È‚é‚½‚ß,$\tilde{\Omega}(n)$ƒ‰ƒEƒ“ƒh‚Ì‰ºŠE‚ð“¾‚é‚±‚Æ‚ª‚Å‚«‚é. 
+\end{prf*}
+\newpage
 
 \section{$k$-MISŒŸØ–â‘è‚Ì‰ºŒÀ}
-eeeee 
+‚±‚ÌƒZƒNƒVƒ‡ƒ“‚Å‚Í3-MISŒŸØ–â‘è‚Ì‰ºŠE‚É‚Â‚¢‚Ä‚Ì‹c˜_‚ðs‚¤.‹ï‘Ì“I‚É‚Í,ŽŸ‚Ì’è—‚ðØ–¾‚·‚é.
 
 \newpage
 
 \chapter{‚Ü‚Æ‚ß‚Æ¡Œã‚Ì‰Û‘è}
 \section{‚Ü‚Æ‚ß}
 
+\section{¡Œã‚Ì‰Û‘è}
+4.3ß‚Åˆê”Ê‚Ì$k$‚É‘Î‚·‚é$k$-MISŒŸØ–â‘è‚Ì‰ºŠE‚ðØ–¾‚µ‚½‚ª,$k = 4,...,8$‚É‚Â‚¢‚Ä‚ÍŒ»Ý
+3-MISŒŸØ–â‘è‚Æ“¯‚¶‰ºŠE‚µ‚©“¾‚ç‚ê‚Ä‚¢‚È‚¢.‚±‚Ì‰ºŠE‚ð‚æ‚èƒ^ƒCƒg‚É‚Å‚«‚é‚©‚ª¡Œã‚Ì‰Û‘è‚Å‚ ‚é.
 \newpage
 
 \chapter*{ŽÓŽ«}
@@ -268,24 +320,12 @@ eeeee
 
 \begin{comment}
 
-\chapter{‚Í‚¶‚ß‚É}
-
-\section{Œ¤‹†”wŒi}
-‹ß”N,ƒ\[ƒVƒƒƒ‹ƒlƒbƒgƒ[ƒN‚É‚¨‚¢‚Ä‘å‚«‚È‹ÃW«‚Ì‚ ‚é•”•ªƒOƒ‰ƒt‚ðŒ©‚Â‚¯‚é‚±‚Æ‚Í‘å‚«‚ÈŒ¤‹†‚Ì
-ƒgƒsƒbƒN‚Æ‚È‚Á‚Ä‚¢‚é.‚»‚Ì‰ž—p‚ÍƒAƒhƒzƒbƒNƒlƒbƒgƒ[ƒN \cite{chen2004clustering} ‚âƒf[ƒ^ƒ}ƒCƒjƒ“ƒO 
-\cite{washio2003state} ‚È‚Ç‘½Šò‚Ì•ª–ì‚É‚í‚½‚Á‚Ä‚¢‚é.‹ÃW«‚Ì‚ ‚é•”•ªƒOƒ‰ƒt‚Ì‚¤‚¿
-Å‚àˆê”Ê“I‚ÉŽg—p‚³‚ê‚Ä‚¢‚éƒ‚ƒfƒ‹‚ÍƒNƒŠ[ƒN‚Å‚ ‚é.ƒNƒŠ[ƒN‚Æ‚Í‘S‚Ä‚Ì2’¸“_ŠÔ‚É•Ó‚ª‚ ‚é
-•”•ªƒOƒ‰ƒt‚Å,Å‚à‹ÃW«‚Ì‚ ‚éƒOƒ‰ƒt‚Æ‚Ý‚é‚±‚Æ‚ª‚Å‚«‚é.ƒOƒ‰ƒt’†‚ÌÅ‚à‘å‚«‚¢ƒTƒCƒY‚ÌƒNƒŠ[ƒN‚ð
-Œ©‚Â‚¯‚éÅ‘åƒNƒŠ[ƒN–â‘è‚ÍƒOƒ‰ƒtƒAƒ‹ƒSƒŠƒYƒ€‚É‚¨‚¯‚éŠî–{“I‚È–â‘è‚Å‚ ‚é.‚µ‚©‚µ,ƒNƒŠ[ƒN‚Í
-§–ñ‚ªŒµ‚µ‚­ˆµ‚¢‚Ã‚ç‚¢–Ê‚ª‚ ‚é.‚»‚±‚Å,‚³‚Ü‚´‚Ü‚ÈƒNƒŠ[ƒN‚ÌŠÉ˜aƒ‚ƒfƒ‹‚ª’ñˆÄ‚³‚ê‚½.$k$-plex‚Í
-ƒNƒŠ[ƒN‚ÌŠÉ˜aƒ‚ƒfƒ‹‚Ìˆê‚Â‚Å‚ ‚è,•Ó‚Ì”‚ÉŠÖ‚µ‚ÄŠÉ˜a‚³‚ê‚Ä‚¨‚è$k=1$‚Ì‚Æ‚«1-plex‚ÍƒNƒŠ[ƒN‚Æ“¯
-‹`‚Å‚ ‚é.ƒOƒ‰ƒt’†‚ÌÅ‚à‘å‚«‚¢ƒTƒCƒY‚Ì$k$-plex‚ðŒ©‚Â‚¯‚é–â‘è‚ðÅ‘å$k$-plex–â‘è‚Æ‚¢‚¤.Å‘å
-$k$-plex–â‘è‚ÍNPŠ®‘S‚Å‚ ‚è,’¸“_”$n$‚É‘Î‚µ‚Ä$n$‚Ì‘½€Ž®ŽžŠÔ‚Å‰ð‚­‚±‚Æ‚ª‚Å‚«‚È‚¢‚±‚Æ‚ª
-’m‚ç‚ê‚Ä‚¢‚é.‚»‚±‚Å,Å‘å$k$-plex–â‘è‚ð‚‘¬‚É‰ð‚­‚½‚ß‚Ì‚³‚Ü‚´‚Ü‚ÈƒAƒ‹ƒSƒŠƒYƒ€‚ª’ñˆÄ‚³‚ê‚Ä‚¢‚é.
-
-¡‰ñ,‰äX‚ÍƒOƒ‰ƒt‚Ì•Ó‚Ì–{”$m$‚É‘Î‚µ‚ÄÅ‘å$k$-plex–â‘è‚ð$O(n^{k}2^{\sqrt{m}})$ŽžŠÔ‚Å‰ð‚­
-ƒAƒ‹ƒSƒŠƒYƒ€‚ð’ñˆÄ‚·‚é.‚±‚ÌƒAƒ‹ƒSƒŠƒYƒ€‚Í$m$‚Ì€Žw”ŽžŠÔ‚Å“®‚­‚½‚ß,•Ó‚Ì–{”‚ª­‚È‚¢,–§‚Å‚È‚¢
-ƒOƒ‰ƒt‚É‘Î‚·‚éÅ‘åk-plex‚Ì”­Œ©‚É—L—p‚Å‚ ‚é.  
+(ii)ƒOƒ‰ƒt‚É—^‚¦‚ç‚ê‚Ä‚¢‚é“Æ—§W‡‚ª3-MIS‚Å‚È‚¢‚Æ‚«,$DISJ_{N \times N} (x, y) = 1$‚Å‚ ‚é: \\ 
+ƒOƒ‰ƒt‚É—^‚¦‚ç‚ê‚Ä‚¢‚é“Æ—§W‡‚ª3-MIS‚Å‚È‚¢‚Æ‰¼’è‚·‚é.‚±‚Ì‚Æ‚«,‚ ‚é3“_‚ðŽæ‚èœ‚­‚±‚Æ‚Å“Æ—§W‡‚É’Ç‰Á‚Å‚«‚é4“_‚ª‘¶Ý‚·‚é‚ª,
+$A^{1}, A^{2}, B^{1}, B^{2}$‚ª‚»‚ê‚¼‚êƒNƒŠ[ƒN‚Å‚ ‚é‚½‚ß,4“_‚ð’Ç‰Á‚·‚é‚½‚ß‚É‚Í‚»‚ê‚¼‚ê‚©‚ç1“_‚ð‘I‚Ô•K—v‚ª‚ ‚é.
+$c_{i}^{1}$‚ðŽæ‚èœ‚¢‚Ä$a_{i}^{1}$‚Æ$b_{i}^{1}$‚ð’Ç‰Á‚µ,,$c_{j}^{2}$‚ðŽæ‚èœ‚¢‚Ä,$a_{j}^{2}$‚Æ$b_{j}^{2}$‚ð“Æ—§W‡‚É’Ç‰Á‚µ‚½‚Æ‚·‚é.
+$a_{i}^{1}$‚Æ$a_{i}^{2}$‚ª—¼•û‚Æ‚à’Ç‰Á‚Å‚«‚é‚Ì‚Í$x_{i, j} = 1$‚Ì‚Æ‚«‚Ì‚Ý‚Å‚ ‚è,$b_{i}^{1}$‚Æ$b_{i}^{2}$‚ª—¼•û‚Æ‚à’Ç‰Á‚Å‚«‚é‚Ì‚Í
+$y_{i, j} = 1$‚Ì‚Æ‚«‚Ì‚Ý‚Å‚ ‚é‚ª,‚±‚ê‚Í$DISJ_{N \times N} (x, y) = 0$‚É–µ‚‚·‚é.‚µ‚½‚ª‚Á‚ÄƒOƒ‰ƒt‚É—^‚¦‚ç‚ê‚Ä‚¢‚é“Æ—§W‡‚Í3-MIS‚Å‚ ‚é.
 
 \section{ŠÖ˜AŒ¤‹†}
 Å‘å$k$-plex–â‘è‚ð‰ð‚­‚½‚ß‚ÌƒAƒ‹ƒSƒŠƒYƒ€‚Æ‚µ‚Ä,ˆÈ‰º‚Ì‚æ‚¤‚È‚à‚Ì‚ªŒ¤‹†‚³‚ê‚Ä‚¢‚é.
@@ -303,18 +343,6 @@ $k$-plex–â‘è‚ÍNPŠ®‘S‚Å‚ ‚è,’¸“_”$n$‚É‘Î‚µ‚Ä$n$‚Ì‘½€Ž®ŽžŠÔ‚Å‰ð‚­‚±‚Æ‚ª‚Å‚«‚È‚¢‚
 ‚Ü‚½,•¡”‚Ìƒuƒ‰ƒ“ƒ`ƒ“ƒOƒ‹[ƒ‹‚ðŽ‚Á‚½branch-and-searchƒAƒ‹ƒSƒŠƒYƒ€‚É‚æ‚Á‚Ä
 Å‘å$k$-plex–â‘è‚ð$\sigma_{k}^{n}n^{O(1) }$ ($\sigma_{k} < 2$‚Í$k$‚ÉŠÖ‚·‚é’l)‚Å‰ð‚­
 ƒAƒ‹ƒSƒŠƒYƒ€‚ª‚ ‚é.‚±‚ê‚Í$2^{n}$‚Æ‚¢‚¤—˜_“IŒÀŠE‚ð”j‚Á‚½Å‰‚ÌƒAƒ‹ƒSƒŠƒYƒ€‚Å‚ ‚é. \cite{xiao2017fast} 
-
-\section{–{Œ¤‹†‚Ì¬‰Ê}
-–{Œ¤‹†‚Å‚Í,Šù‘¶‚Ì$2^{O(\sqrt{m})}$ŽžŠÔ‚ÌÅ‘åƒNƒŠ[ƒN–â‘è‚ÌƒAƒ‹ƒSƒŠƒYƒ€‚ð
-‰ž—p‚µ‚ÄÅ‘å2-plex–â‘è‚ð$n^{2}2^{O(\sqrt{m})}$‚Å‰ð‚­ƒAƒ‹ƒSƒŠƒYƒ€‚ð’ñˆÄ‚·‚é.
-‚³‚ç‚É‚»‚ÌƒAƒ‹ƒSƒŠƒYƒ€‚ðŠg’£‚³‚¹‚Ä,Å‘å$k$-plex–â‘è‚ð$O(n^{k}2^{\sqrt{m}})$‚Å
-‰ð‚­ƒAƒ‹ƒSƒŠƒYƒ€‚ð’ñˆÄ‚·‚é.
-
-\section{˜_•¶‚Ì\¬}
-–{˜_•¶‚Í‘S4Í‚Å\¬‚³‚ê‚é.‘æ2Í‚Å‚ÍƒOƒ‰ƒt‚Ì\‘¢‚Æ—pŒê‚Ì’è‹`‚ð‚µ‚Ä‚¢‚é.
-‘æ3Í‚Å‚ÍŠù‘¶‚ÌÅ‘åƒNƒŠ[ƒN–â‘è‚É‚¨‚¯‚éƒAƒ‹ƒSƒŠƒYƒ€‚Ì“±“ü‚Æ‚»‚ê‚ð
-‰ž—p‚µ‚½Å‘å2-plex–â‘è‚ÆÅ‘å$k$-plex–â‘è‚ÌƒAƒ‹ƒSƒŠƒYƒ€‚Ì’ñˆÄ‚ðs‚Á‚Ä‚¢‚é.
-‘æ4Í‚Å‚Í‚Ü‚Æ‚ß‚Æ¡Œã‚Ì‰Û‘è‚É‚Â‚¢‚Äq‚×‚Ä‚¢‚é.
 
 \newpage
 
