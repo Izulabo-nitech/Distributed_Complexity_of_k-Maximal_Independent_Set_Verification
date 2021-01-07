@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  7 JAN 2021 03:23
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  8 JAN 2021 01:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -292,14 +292,14 @@ File: 2MIS.png Graphic file (type bmp)
 
 ]
 
-LaTeX Warning: Reference `3-MIS' on page 9 undefined on input line 244.
+LaTeX Warning: Reference `2-MIS' on page 9 undefined on input line 246.
 
 [9] [10]
 File: 3MIS.png Graphic file (type bmp)
 <3MIS.png>
  [11]
 
-LaTeX Warning: Reference `3-MIS' on page 12 undefined on input line 293.
+LaTeX Warning: Reference `3-MIS' on page 12 undefined on input line 297.
 
 [12] [13]
 第 5 章
@@ -315,12 +315,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2908 strings out of 479956
- 37320 string characters out of 5887570
- 321927 words of memory out of 5000000
- 20068 multiletter control sequences out of 15000+600000
+ 2909 strings out of 479956
+ 37327 string characters out of 5887570
+ 322927 words of memory out of 5000000
+ 20069 multiletter control sequences out of 15000+600000
  564532 words of font info for 142 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  66i,6n,72p,257b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on M2sato.dvi (18 pages, 43604 bytes).
+Output written on M2sato.dvi (18 pages, 45064 bytes).
