@@ -1,645 +1,416 @@
-%%
-%% thesis.cls  $BB4O@%/%i%9%U%!%$%k(B Ver.TS  from ishii lab.'s thesis.cls    
 
-%% version
-%%    0.0b 2000/1/19
-%%           $B@P0f8&$N$b$N$r>/$7<jD>$7(B
-%%          $B!JF|K\8l%3%^%s%I$O5$$KF~$i$J$$$N$G0lIt<jD>$7!K(B
 
 \NeedsTeXFormat{pLaTeX2e}
-\ProvidesClass{thesis}
-  [1999/1/19 v0.2b Ishiilab Thesis Class]
-\newif\if@restonecol
-% $B;~4V4X78$N$b$N$@$m$&$+(B?
-\hour\time \divide\hour by 60\relax
-\@tempcnta\hour \multiply\@tempcnta 60\relax
-\minute\time \advance\minute-\@tempcnta
-% papersize $B$O(BA4$B$K8GDj(B
-\setlength\paperheight {297mm}
-\setlength\paperwidth  {210mm}
-% twocolumn$B%*%W%7%g%s(B
-\DeclareOption{onecolumn}{\@twocolumnfalse}
-\DeclareOption{twocolumn}{\@twocolumntrue}
-% $B?t3X4D6-(B $B%*%W%7%g%s(B
-\newif\if@enablejfam \@enablejfamtrue
-\DeclareOption{leqno}{\input{leqno.clo}}
-\DeclareOption{fleqn}{\input{fleqn.clo}}
-\DeclareOption{disablejfam}{\@enablejfamfalse}
-% draft($B9;@5(B) / final($B:G=*=PNO(B) $B%*%W%7%g%s(B
-\DeclareOption{draft}{\setlength\overfullrule{5pt}}
-\DeclareOption{final}{\setlength\overfullrule{0pt}}
-% $B%G%U%)%k%H(B $B$N(B $B%*%W%7%g%s(B
-\ExecuteOptions{final}
-\ProcessOptions\relax
+\ProvidesClass{thesis}[2021/01/06]
+\LoadClassWithOptions{jreport}
 
-% $B%U%)%s%H%5%$%:(B
-\newcounter{@paper}
-\newcommand{\@ptsize}{}
-\newif\if@landscape\@landscapefalse
-\newif\if@stysize \@stysizefalse
-\setcounter{@paper}{1}
-\input{jsize12.clo}
+\usepackage{color}
+%--------------------------------------------------------------------
+% 用紙設定
+%--------------------------------------------------------------------
 
-% $B%Z!<%8%l%$%"%&%H(B $B%Q%i%a!<%?(B
-\setlength\columnsep{2\Cwd}
-\setlength\columnseprule{0\p@}
-\setlength\lineskip{1\p@}
-\setlength\normallineskip{1\p@}
-\renewcommand{\baselinestretch}{}
-\setlength\parskip{0\p@ \@plus \p@}
-\setlength\parindent{1\Cwd}
-\@lowpenalty   51
-\@medpenalty  151
-\@highpenalty 301
-\setcounter{topnumber}{2}
-\setcounter{bottomnumber}{1}
-\setcounter{totalnumber}{3}
-\setcounter{dbltopnumber}{2}
-\renewcommand{\topfraction}{.7}
-\renewcommand{\bottomfraction}{.3}
-\renewcommand{\textfraction}{.2}
-\renewcommand{\floatpagefraction}{.5}
-\renewcommand{\dbltopfraction}{.7}
-\renewcommand{\dblfloatpagefraction}{.5}
+\setlength{\hoffset}{0pt}
 
-% page style
-\def\ps@myheadings{\let\ps@jpl@in\ps@plain%
-  \let\@oddfoot\@empty\let\@evenfoot\@empty
-  \def\@evenhead{{\Large\thepage}\hfil\leftmark}%
-  \def\@oddhead{{\rightmark}\hfil{\Large\thepage}}%
-  \let\@mkboth\@gobbletwo
-  \let\chaptermark\@gobble
-  \let\sectionmark\@gobble
-}
+% ページ数の位置が名工大の論文用紙とマッチするように調整した
+\setlength{\voffset}{-10pt}
 
-% titlepage $B4D6-(B
-\newenvironment{titlepage}
-  {%
-   \if@twocolumn\@restonecoltrue\onecolumn
-   \else\@restonecolfalse\newpage\fi
-   \thispagestyle{empty}%
-   \setcounter{page}\z@
-  }%
-  {\if@restonecol\twocolumn\else\newpage\fi
-  }
-\def\p@thanks#1{\footnotemark
-  \protected@xdef\@thanks{\@thanks
-    \protect{\noindent$\m@th^\thefootnote$~#1\protect\par}}}
+\setlength{\oddsidemargin}{22pt}
+\setlength{\topmargin}{-42pt}
+\setlength{\headheight}{12pt}
 
-\newcommand{\maketitle}{%
-  \begin{titlepage}
-    \renewcommand{\baselinestretch}{0.7}
-    \begin{center}
+% 論文用紙の枠線からいい感じに距離をとった
+\setlength{\headsep}{65pt}
+
+% 論文用紙の枠線からいい感じに距離をとった
+\setlength{\textheight}{675pt}
+
+\setlength{\textwidth}{455pt}
+\setlength{\marginparwidth}{60pt}
+\setlength{\marginparsep}{0pt}
+\setlength{\footskip}{30pt}
+\setlength{\marginparpush}{7pt}
+\setlength{\paperwidth}{597pt}
+\setlength{\paperheight}{845pt}
+
+\newcommand{\Hline}{\noalign{\hrule height1pt}}
+\newcommand{\Vline}{@{~\vrule width1pt}}
+
+
+%--------------------------------------------------------------------
+% 見出しのどのレベルまで番号付けをするかを設定
+%--------------------------------------------------------------------
+
+\setcounter{secnumdepth}{3}
+
+
+%--------------------------------------------------------------------
+% 関連図書 -> 参考文献
+%--------------------------------------------------------------------
+
+\renewcommand{\bibname}{参考文献}
+
+
+%--------------------------------------------------------------------
+% ページ番号
+%--------------------------------------------------------------------
+
+\def\ps@headnombre{\let\@mkboth\@gobbletwo
+    \let\ps@jpl@in\ps@headnombre
+  \def\@evenhead{\thepage\hfil}%
+%  \def\@oddhead{\hfil\thepage}%
+  \def\@oddhead{\hfil\Large\thepage}%
+  \let\@oddfoot\@empty\let\@evenfoot\@empty}
+
+\def\ps@myheadings{\let\@mkboth\@gobbletwo
+    \let\ps@jpl@in\ps@headnombre
+  \def\@evenhead{\thepage\hfil}%
+%  \def\@oddhead{\hfil\thepage}%
+  \def\@oddhead{\hfil\Large\thepage}%
+  \let\@oddfoot\@empty\let\@evenfoot\@empty}
+
+
+%--------------------------------------------------------------------
+% 章の見出しを変更
+%--------------------------------------------------------------------
+
+% 章の最初の段落をインデントするように変更
+\renewcommand{\chapter}{%
+  \if@openright\cleardoublepage\else\clearpage\fi
+  \thispagestyle{jpl@in}%
+  \global\@topnum\z@
+%  \@afterindentfalse
+  \@afterindenttrue%
+  \secdef\@chapter\@schapter}
+
+% 改行を入れる
+\def\@makechapterhead#1{\hbox{}%
+% 見出しの高さを少し高くした
+	\vskip1\Cvs
+%%  \vskip2\Cvs
+%%  \vskip3.1\Cvs
+  {\parindent\z@
+   \raggedright
+   \reset@font\huge\bfseries
+   \leavevmode
+   \ifnum \c@secnumdepth >\m@ne
+%     \setlength\@tempdima{\linewidth}%
+%     \setbox\z@\hbox{\@chapapp\thechapter\@chappos\hskip1zw}%
+%     \addtolength\@tempdima{-\wd\z@}%
+%     \unhbox\z@\nobreak
+%     \vtop{\hsize\@tempdima#1}%
+     \setlength\@tempdima{\linewidth}%
+     \setbox\z@\hbox{\@chapapp\thechapter\@chappos}%
+     \unhbox\z@\nobreak
+     \vskip1.2\Cvs
+     \vtop{\hsize\@tempdima#1}%
+   \else
+     #1\relax
+   \fi}\nobreak\vskip2.5\Cvs}
+
+% 位置をちょい下に下げる
+% \def\@makeschapterhead#1{\hbox{}%
+% %  \vskip2\Cvs
+%   \vskip3.8\Cvs
+%   {\parindent\z@
+%    \raggedright
+%    \reset@font\huge\bfseries
+%    \leavevmode
+%    \setlength\@tempdima{\linewidth}%
+%    \vtop{\hsize\@tempdima#1}}\vskip2.5\Cvs}
+
+
+%--------------------------------------------------------------------
+% titlepage
+%--------------------------------------------------------------------
+
+% 泉研究室用に大幅に変更
+
+\if@titlepage
+\renewcommand{\maketitle}{
+	\begin{titlepage}
+		\renewcommand{\baselinestretch}{1}
+		\begin{minipage}{15cm}
+			\vspace{2cm}\mbox{\ \ }\\
+			% 卒業年度の計算
+			{\LARGE
+				\ifnum \@tempcnta > 0
+				\the\@tempcnta 年度 \\
+				\else \ifx \@master \@degree
+				\newcount\@gradyear
+				\@gradyear = 0
+				\advance \@gradyear \@enteryear
+				\advance \@gradyear 1
+				\the\@gradyear 年度 \\
+				\else \ifx \@doctor \@degree
+				\newcount\@gradyear
+				\@gradyear = 0
+				\advance \@gradyear \@enteryear
+				\advance \@gradyear 2
+				\the\@gradyear 年度 \\
+				\else \ifx \@undergraduate \@degree
+				\newcount\@gradyear
+				\@gradyear = 0
+				\advance \@gradyear \@enteryear
+				\advance \@gradyear 3
+				\the\@gradyear 年度 \\
+				\else
+				\textcolor{red}{20XX} 年度 \\
+				\fi \fi \fi \fi
+			}
+			
+			{\LARGE
+				\ifx \@master \@degree
+				修士論文
+				\else \ifx \@doctor \@degree
+				博士論文
+				\else \ifx \@undergraduate \@degree
+				卒業論文
+				\else
+				\textcolor{red}{宇宙論文}
+				\fi \fi \fi
+			}
+			\vspace{10mm}
+			\begin{center}
+				\Huge\@papertitleJP \\
+				\vspace{10mm}
+				{\LARGE
+				\ifx \@master \@degree
+				\@papertitleEN
+				\else \ifx \@doctor \@degree
+				\@papertitleEN
+				\else \ifx \@undergraduate \@degree
+
+				\else
+				\textcolor{red}{ERROR}
+				\fi \fi \fi
+			}
+				{\large
+				\ifx \@master \@degree
+				%
+				\else \ifx \@doctor \@degree
+				%
+				\else \ifx \@undergraduate \@degree
+				%
+				\else
+				\textcolor{red}{!Error:master,doctor,undergraduateのどれかを指定してください} \\
+				\fi \fi \fi
+				}
+			\end{center}
+		\end{minipage}
+		\begin{flushright}
+		\vspace{\stretch{1}}
       \begin{minipage}{15cm}
-        \vspace{2cm}\mbox{\ \ }\\
-        {\LARGE \@gradyear $BG/EY(B}\\
-        {\LARGE $B=$;NO@J8(B}\\
-        \vspace{0.5cm}\mbox{\ \ }\\
-        \begin{center}
-          {\Huge \@papertitle}
-        \end{center}
-      \end{minipage}
-    \end{center}
-    \vspace{5.0cm}\mbox{\ \ }\\
-    \begin{flushright}
-      {\large
-      \begin{minipage}{12cm}
         \begin{flushright}
-          \vspace{10mm}
-          \ $BL>8E209)6HBg3XBg3X1!(B \ \ \@department \\
-          \vspace{10mm}
-          $B=jB0(B: \ \@labo \\
-          \vspace{10mm}
-          \@enteryear $BG/EYF~3X(B \ \ \@IDnumber \ \ \@name
+					{\large
+						\ifx \@master \@degree
+						名古屋工業大学　大学院工学研究科　博士前期課程 \\
+						\else \ifx \@doctor \@degree
+						名古屋工業大学　大学院工学研究科　博士後期課程 \\
+						\else \ifx \@undergraduate \@degree
+							\ifx \@cs \@program
+								名古屋工業大学　高度工学教育課程　工学部第一部 \\
+							\else \ifx \@ce \@program
+								名古屋工業大学　創造工学教育課程 \\
+							\else
+								\textcolor{red}{Error} \\
+							\fi \fi
+						\else
+						\textcolor{red}{!Error:master,doctor,undergraduateのどれかを指定してください} \\
+						\fi \fi \fi
+					}
+					\vspace{4mm}
+					{\large
+						\ifx \@cs \@program
+							\ifx \@master \@degree
+								工学専攻　情報工学系プログラム \\
+							\else \ifx \@doctor \@degree
+								情報工学専攻 \\
+							\else \ifx \@undergraduate \@degree
+								情報工学科 \\
+							\else
+							 \textcolor{red}{Error} \\
+							\fi \fi \fi
+						\else \ifx \@ce \@program
+							\ifx \@master \@degree
+								工学専攻　創造工学プログラム \\
+							\else \ifx \@doctor \@degree
+							\else \ifx \@undergraduate \@degree
+								情報・社会コース \\
+							\else
+							 \textcolor{red}{Error} \\
+							\fi \fi \fi
+						\else
+						\textcolor{red}{!Error:cs,ceのどれかを指定してください} \\
+						\fi \fi
+					}
+          \vspace{4mm}
+          \large \@labo 研究室所属\\
+          \vspace{4mm}
+					\large \the\@enteryear 年度入学 \\
+					\vspace{4mm}
+					\large 学生番号：\@studentID \ \ 氏名：\@name
         \end{flushright}
       \end{minipage}
-      }
     \end{flushright}
-  \end{titlepage}
-
-% maketitle $B%3%^%s%I(B
-%        {\LARGE $BJ?@.(B \@gradyear $BG/EY(B}\\
-%        {\LARGE $BB46HO@J8(B}\\
-
-  \renewcommand{\baselinestretch}{1.5}
+	\end{titlepage}
 }
 
-% abstract $B4D6-(B
-\newenvironment{abstract}{%
-    \titlepage
-    \null\vfil
-    \@beginparpenalty\@lowpenalty
-    \begin{center}%
-      {\bfseries\abstractname}%
-      \@endparpenalty\@M
-    \end{center}}%
-    {\par\vfil\null\endtitlepage}
-\newcommand*{\chaptermark}[1]{}
-\setcounter{secnumdepth}{2}
+\newcommand{\enteryear}[1]{\newcount\@enteryear \@enteryear = #1}
+\newcommand{\gradyear}[1]{\@tempcnta = #1}
 
-% chapter & section $B%3%^%s%I(B
-\newcounter{chapter}
-\newcounter{section}[chapter]
-\newcounter{subsection}[section]
-\newcounter{subsubsection}[subsection]
-\newcounter{paragraph}[subsubsection]
-\newcounter{subparagraph}[paragraph]
-\renewcommand{\thechapter}{\@arabic\c@chapter}
-\renewcommand{\thesection}{\thechapter.\@arabic\c@section}
-\renewcommand{\thesubsection}{\thesection.\@arabic\c@subsection}
-\renewcommand{\thesubsubsection}{%
-   \thesubsection.\@arabic\c@subsubsection}
-\renewcommand{\theparagraph}{%
-   \thesubsubsection.\@arabic\c@paragraph}
-\renewcommand{\thesubparagraph}{%
-   \theparagraph.\@arabic\c@subparagraph}
-\newcommand{\@chapapp}{\prechaptername}
-\newcommand{\@chappos}{\postchaptername}
-\newcommand{\chapter}{%
-  \clearpage 
-  \thispagestyle{myheadings}%
-  \global\@topnum\z@
-  \@afterindenttrue
-  \secdef\@chapter\@schapter}
-\def\@chapter[#1]#2{%
-  \ifnum \c@secnumdepth >\m@ne
-    \refstepcounter{chapter}%
-    \typeout{\@chapapp\space\thechapter\space\@chappos}%
-    \addcontentsline{toc}{chapter}%
-      {\protect\numberline{\@chapapp\thechapter\@chappos}#1}%
-  \else
-    \addcontentsline{toc}{chapter}{#1}%
-  \fi
-  \chaptermark{#1}%
-  \addtocontents{lof}{\protect\addvspace{10\p@}}%
-  \addtocontents{lot}{\protect\addvspace{10\p@}}%
-  \@makechapterhead{#2}\@afterheading}
-\def\@makechapterhead#1{\hbox{}%
-  \vskip2\Cvs
-  {\parindent\z@
-   \raggedright
-   \reset@font\huge\bfseries
-   \ifnum \c@secnumdepth >\m@ne
-     \setbox\z@\hbox{\@chapapp\thechapter\@chappos\hskip1zw}%
-     \unhbox\z@\\
-     \vtop{\hsize\linewidth#1}%
-   \fi}\vskip3\Cvs}
-\newif\if@newschapter \@newschapterfalse
-\def\@schapter#1{%
-  \if@newschapter%
-    \addcontentsline{toc}{chapter}%
-      {\protect\numberline{}#1}%
-  \fi%
-  \@makeschapterhead{#1}\@afterheading
-}
-\def\@makeschapterhead#1{\hbox{}%
-  \vskip2\Cvs
-  {\parindent\z@
-   \raggedright
-   \reset@font\huge\bfseries
-   \setlength\@tempdima{\linewidth}%
-   \vtop{\hsize\@tempdima#1}}\vskip3\Cvs}
-\newcommand{\section}{\@startsection{section}{1}{\z@}%
-   {1.5\Cvs \@plus.5\Cdp \@minus.2\Cdp}%
-   {.5\Cvs \@plus.3\Cdp}%
-   {\reset@font\Large\bfseries}}
-\newcommand{\subsection}{\@startsection{subsection}{2}{\z@}%
-   {1.5\Cvs \@plus.5\Cdp \@minus.2\Cdp}%
-   {.5\Cvs \@plus.3\Cdp}%
-   {\reset@font\large\bfseries}}
-\newcommand{\subsubsection}{\@startsection{subsubsection}{3}{\z@}%
-   {1.5\Cvs \@plus.5\Cdp \@minus.2\Cdp}%
-   {.5\Cvs \@plus.3\Cdp}%
-   {\reset@font\normalsize\bfseries}}
-\newcommand{\paragraph}{\@startsection{paragraph}{4}{\z@}%
-   {3.25ex \@plus 1ex \@minus .2ex}%
-   {-1em}%
-   {\reset@font\normalsize\bfseries}}
-\newcommand{\subparagraph}{\@startsection{subparagraph}{5}{\z@}%
-   {3.25ex \@plus 1ex \@minus .2ex}%
-   {-1em}%
-   {\reset@font\normalsize\bfseries}}
-\newcommand{\appendix}{\par
-  \setcounter{chapter}{0}%
-  \setcounter{section}{0}%
-  \renewcommand{\@chapapp}{\appendixname}%
-  \renewcommand{\@chappos}\space%
-  \renewcommand{\thechapter}{\@Alph\c@chapter}}
-
-% enumerate $B4D6-(B
-\if@twocolumn
-  \setlength\leftmargini {2em}
-\else
-  \setlength\leftmargini {2.5em}
-\fi
-\setlength\leftmarginii  {2.2em}
-\setlength\leftmarginiii {1.87em}
-\setlength\leftmarginiv  {1.7em}
-\if@twocolumn
-  \setlength\leftmarginv {.5em}
-  \setlength\leftmarginvi{.5em}
-\else
-  \setlength\leftmarginv {1em}
-  \setlength\leftmarginvi{1em}
-\fi
-\setlength  \labelsep  {.5em}
-\setlength  \labelwidth{\leftmargini}
-\addtolength\labelwidth{-\labelsep}
-\@beginparpenalty -\@lowpenalty
-\@endparpenalty   -\@lowpenalty
-\@itempenalty     -\@lowpenalty
-\renewcommand{\theenumi}{\@arabic\c@enumi}
-\renewcommand{\theenumii}{\@alph\c@enumii}
-\renewcommand{\theenumiii}{\@roman\c@enumiii}
-\renewcommand{\theenumiv}{\@Alph\c@enumiv}
-\newcommand{\labelenumi}{\theenumi.}
-\newcommand{\labelenumii}{(\theenumii)}
-\newcommand{\labelenumiii}{\theenumiii.}
-\newcommand{\labelenumiv}{\theenumiv.}
-\renewcommand{\p@enumii}{\theenumi}
-\renewcommand{\p@enumiii}{\theenumi(\theenumii)}
-\renewcommand{\p@enumiv}{\p@enumiii\theenumiii}
-\renewenvironment{enumerate}
-  {\ifnum \@enumdepth >3\relax\@toodeep\else
-   \advance\@enumdepth\@ne
-   \edef\@enumctr{enum\romannumeral\the\@enumdepth}%
-   \list{\csname label\@enumctr\endcsname}{%
-         \ifnum \@listdepth=\@ne \topsep.5\normalbaselineskip
-           \else\topsep\z@\fi
-         \parskip\z@ \itemsep\z@ \parsep\z@
-         \labelwidth1zw \labelsep.3zw
-         \ifnum \@enumdepth=\@ne \leftmargin1zw\relax
-           \else\leftmargin\leftskip\fi
-         \advance\leftmargin 1zw
-         \usecounter{\@enumctr}%
-         \def\makelabel##1{\hss\llap{##1}}}%
-   \fi}{\endlist}
-
-% itemize $B4D6-(B
-\newcommand{\labelitemi}{\textbullet}
-\newcommand{\labelitemii}{%
-  \iftdir
-     {\textcircled{~}}
-  \else
-     {\normalfont\bfseries\textendash}
-  \fi
-}
-\newcommand{\labelitemiii}{\textasteriskcentered}
-\newcommand{\labelitemiv}{\textperiodcentered}
-\renewenvironment{itemize}
-  {\ifnum \@itemdepth >3\relax\@toodeep\else
-   \advance\@itemdepth\@ne
-   \edef\@itemitem{labelitem\romannumeral\the\@itemdepth}%
-   \expandafter
-   \list{\csname \@itemitem\endcsname}{%
-      \iftdir
-         \ifnum \@listdepth=\@ne \topsep.5\normalbaselineskip
-           \else\topsep\z@\fi
-         \parskip\z@ \itemsep\z@ \parsep\z@
-         \labelwidth1zw \labelsep.3zw
-         \ifnum \@itemdepth =\@ne \leftmargin1zw\relax
-           \else\leftmargin\leftskip\fi
-         \advance\leftmargin 1zw
-      \fi
-         \def\makelabel##1{\hss\llap{##1}}}%
-   \fi}{\endlist}
-
-% description $B4D6-(B
-\newenvironment{description}
-  {\list{}{\labelwidth\z@ \itemindent-\leftmargin
-   \iftdir
-     \leftmargin\leftskip \advance\leftmargin3\Cwd
-     \rightmargin\rightskip
-     \labelsep=1zw \itemsep\z@
-     \listparindent\z@ \topskip\z@ \parskip\z@ \partopsep\z@
-   \fi
-           \let\makelabel\descriptionlabel}}{\endlist}
-\newcommand{\descriptionlabel}[1]{%
-   \hspace\labelsep\normalfont\bfseries #1}
-
-% $B;m=8MQ4D6-(B
-\newenvironment{verse}
-  {\let\\\@centercr
-   \list{}{\itemsep\z@ \itemindent -1.5em%
-           \listparindent\itemindent
-           \rightmargin\leftmargin \advance\leftmargin 1.5em}%
-           \item\relax}{\endlist}
-
-% $B0zMQ(B $B4D6-(B
-\newenvironment{quotation}
-  {\list{}{\listparindent 1.5em%
-           \itemindent\listparindent
-           \rightmargin\leftmargin
-           \parsep\z@ \@plus\p@}%
-           \item\relax}{\endlist}
-\newenvironment{quote}
-  {\list{}{\rightmargin\leftmargin}%
-           \item\relax}{\endlist}
-
-% figure $B4D6-(B
-\newcounter{figure}[chapter]
-\renewcommand{\thefigure}{%
-  \ifnum\c@chapter>\z@\thechapter.\fi\@arabic\c@figure}
-\def\fps@figure{tbp}
-\def\ftype@figure{1}
-\def\ext@figure{lof}
-\def\fnum@figure{\figurename~\thefigure}
-\newenvironment{figure}
-               {\@float{figure}}
-               {\end@float}
-\newenvironment{figure*}
-               {\@dblfloat{figure}}
-               {\end@dblfloat}
-
-% table $B4D6-(B
-\newcounter{table}[chapter]
-\renewcommand{\thetable}{\thechapter.\@arabic\c@table}
-\def\fps@table{tbp}
-\def\ftype@table{2}
-\def\ext@table{lot}
-\def\fnum@table{\tablename~\thetable}
-\newenvironment{table}
-               {\@float{table}}
-               {\end@float}
-\newenvironment{table*}
-               {\@dblfloat{table}}
-               {\end@dblfloat}
-
-% caption paramaters
-\newlength\abovecaptionskip
-\newlength\belowcaptionskip
-\setlength\abovecaptionskip{10\p@}
-\setlength\belowcaptionskip{0\p@}
-\long\def\@makecaption#1#2{%
-  \vskip\abovecaptionskip
-  \iftdir\sbox\@tempboxa{#1\hskip1zw#2}%
-    \else\sbox\@tempboxa{#1: #2}%
-  \fi
-  \ifdim \wd\@tempboxa >\hsize
-    \iftdir #1\hskip1zw#2\relax\par
-      \else #1: #2\relax\par\fi
-  \else
-    \global \@minipagefalse
-    \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
-  \fi
-  \vskip\belowcaptionskip}
-\setlength\arraycolsep{5\p@}
-\setlength\tabcolsep{6\p@}
-\setlength\arrayrulewidth{.4\p@}
-\setlength\doublerulesep{2\p@}
-\setlength\tabbingsep{\labelsep}
-\skip\@mpfootins = \skip\footins
-\setlength\fboxsep{3\p@}
-\setlength\fboxrule{.4\p@}
-\@addtoreset{equation}{chapter}
-\renewcommand{\theequation}{%
-  \ifnum\c@chapter>\z@\thechapter.\fi \@arabic\c@equation}
-\if@enablejfam
-  \DeclareSymbolFont{mincho}{JY1}{mc}{m}{n}
-  \DeclareSymbolFontAlphabet{\mathmc}{mincho}
-  \SetSymbolFont{mincho}{bold}{JY1}{gt}{m}{n}
-  \DeclareMathAlphabet\mathgt{JY1}{gt}{m}{n}
-  \reDeclareMathAlphabet{\mathrm}{\@mathrm}{\@mathmc}
-  \reDeclareMathAlphabet{\mathbf}{\@mathbf}{\@mathgt}
-  \jfam\symmincho
-\else
-  \DeclareRobustCommand{\mathmc}{%
-    \@latex@error{Command \noexpand\mathmc invalid with\space
-       `disablejfam' class option.}\@eha
-  }
-  \DeclareRobustCommand{\mathgt}{%
-    \@latex@error{Command \noexpand\mathgt invalid with\space
-       `disablejfam' class option.}\@eha
-  }
-\fi
-
-% $B5l%U%)%s%HDj5A(B
-\DeclareOldFontCommand{\mc}{\normalfont\mcfamily}{\mathmc}
-\DeclareOldFontCommand{\gt}{\normalfont\gtfamily}{\mathgt}
-\DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
-\DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf}
-\DeclareOldFontCommand{\tt}{\normalfont\ttfamily}{\mathtt}
-\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
-\DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
-\DeclareOldFontCommand{\sl}{\normalfont\slshape}{\@nomath\sl}
-\DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
-\DeclareRobustCommand*{\cal}{\@fontswitch\relax\mathcal}
-\DeclareRobustCommand*{\mit}{\@fontswitch\relax\mathnormal}
-
-% table of contents ($BL\<!(B) 
-\setcounter{tocdepth}{3}
-\setcounter{secnumdepth}{3}
-\newcommand{\@pnumwidth}{1.55em}
-\newcommand{\@tocrmarg}{2.55em}
-\newcommand{\@dotsep}{4.5}
-\newdimen\toclineskip
-\setlength\toclineskip{\z@}
-\newdimen\@lnumwidth
-\def\numberline#1{\hbox to\@lnumwidth{#1\hfil}}
-\def\@dottedtocline#1#2#3#4#5{\ifnum #1>\c@tocdepth \else
-  \vskip\toclineskip \@plus.2\p@
-  {\leftskip #2\relax \rightskip \@tocrmarg \parfillskip -\rightskip
-    \parindent #2\relax\@afterindenttrue
-   \interlinepenalty\@M
-   \leavevmode
-   \@lnumwidth #3\relax
-   \advance\leftskip \@lnumwidth \hbox{}\hskip -\leftskip
-    {#4}\nobreak\leaders\hbox{$\m@th \mkern \@dotsep mu.\mkern \@dotsep
-       mu$}\hfill \nobreak\hbox to\@pnumwidth{%
-         \hss\reset@font\rmfamily \normalcolor #5}\par}\fi}
-\def\addcontentsline#1#2#3{%
-  \protected@write\@auxout
-    {\let\label\@gobble \let\index\@gobble \let\glossary\@gobble
-\@temptokena{\thepage}}%
-    {\string\@writefile{#1}%
-       {\protect\contentsline{#2}{#3}{\the\@temptokena}}}%
-}
-\newcommand{\tableofcontents}{%
-  \pagenumbering{roman}
-  \if@twocolumn\@restonecoltrue\onecolumn
-  \else\@restonecolfalse\fi
-  \chapter*{\contentsname
-    \@mkboth{\contentsname}{\contentsname}%
-  }\@starttoc{toc}%
-  \if@restonecol\twocolumn\fi
-  \newpage
-  \pagenumbering{arabic}
-  \@newschaptertrue
-}
-\newcommand*{\l@part}[2]{%
-  \ifnum \c@tocdepth >-2\relax
-    \addpenalty{-\@highpenalty}%
-    \addvspace{2.25em \@plus\p@}%
-    \begingroup
-    \parindent\z@\rightskip\@pnumwidth
-    \parfillskip-\@pnumwidth
-    {\leavevmode\large\bfseries
-     \setlength\@lnumwidth{4zw}%
-     #1\hfil\nobreak
-     \hbox to\@pnumwidth{\hss#2}}\par
-    \nobreak
-    \global\@nobreaktrue
-    \everypar{\global\@nobreakfalse\everypar{}}%
-     \endgroup
-  \fi}
-\newcommand*{\l@chapter}[2]{%
-  \ifnum \c@tocdepth >\m@ne
-    \addpenalty{-\@highpenalty}%
-    \addvspace{1.0em \@plus\p@}%
-    \begingroup
-      \parindent\z@ \rightskip\@pnumwidth \parfillskip-\rightskip
-      \leavevmode\bfseries
-      \setlength\@lnumwidth{4zw}%
-      \advance\leftskip\@lnumwidth \hskip-\leftskip
-      #1\nobreak\hfil\nobreak\hbox to\@pnumwidth{\hss#2}\par
-      \penalty\@highpenalty
-    \endgroup
-  \fi}
-\newcommand*{\l@section}{\@dottedtocline{1}{1.5em}{2.3em}}
-\newcommand*{\l@subsection}   {\@dottedtocline{2}{3.8em}{3.2em}}
-\newcommand*{\l@subsubsection}{\@dottedtocline{3}{7.0em}{4.1em}}
-\newcommand*{\l@paragraph}    {\@dottedtocline{4}{10em}{5em}}
-\newcommand*{\l@subparagraph} {\@dottedtocline{5}{12em}{6em}}
-\newcommand{\listoffigures}{%
-  \if@twocolumn\@restonecoltrue\onecolumn
-  \else\@restonecolfalse\fi
-  \chapter*{\listfigurename
-  \@mkboth{\listfigurename}{\listfigurename}}%
-  \@starttoc{lof}%
-  \if@restonecol\twocolumn\fi
-}
-\newcommand*{\l@figure}{\@dottedtocline{1}{1.5em}{2.3em}}
-\newcommand{\listoftables}{%
-  \if@twocolumn\@restonecoltrue\onecolumn
-  \else\@restonecolfalse\fi
-  \chapter*{\listtablename
-  \@mkboth{\listtablename}{\listtablename}}%
-  \@starttoc{lot}%
-  \if@restonecol\twocolumn\fi
-}
-\let\l@table\l@figure
-
-% bibliography $B4D6-(B ($B;29MJ88%(B)
-\newdimen\bibindent
-\setlength\bibindent{1.5em}
-\newcommand{\newblock}{\hskip .11em\@plus.33em\@minus.07em}
-\newenvironment{thebibliography}[1]
-{\chapter*{\bibname\@mkboth{\bibname}{\bibname}}%
-   \list{\@biblabel{\@arabic\c@enumiv}}%
-        {\settowidth\labelwidth{\@biblabel{#1}}%
-         \leftmargin\labelwidth
-         \advance\leftmargin\labelsep
-         \@openbib@code
-         \usecounter{enumiv}%
-         \let\p@enumiv\@empty
-         \renewcommand\theenumiv{\@arabic\c@enumiv}}%
-   \sloppy
-   \clubpenalty4000
-   \@clubpenalty\clubpenalty
-   \widowpenalty4000%
-   \sfcode`\.\@m}
-  {\def\@noitemerr
-    {\@latex@warning{Empty `thebibliography' environment}}%
-   \endlist}
-\let\@openbib@code\@empty
-
-% theindex $B4D6-(B ($B:w0z(B)
-\newenvironment{theindex}
-  {\if@twocolumn\@restonecolfalse\else\@restonecoltrue\fi
-   \columnseprule\z@ \columnsep 35\p@
-   \twocolumn[\@makeschapterhead{\indexname}]%
-   \@mkboth{\indexname}{\indexname}%
-   \thispagestyle{jpl@in}\parindent\z@
-   \parskip\z@ \@plus .3\p@\relax
-   \let\item\@idxitem}
-  {\if@restonecol\onecolumn\else\clearpage\fi}
-\newcommand{\@idxitem}{\par\hangindent 40\p@}
-\newcommand{\subitem}{\@idxitem \hspace*{20\p@}}
-\newcommand{\subsubitem}{\@idxitem \hspace*{30\p@}}
-\newcommand{\indexspace}{\par \vskip 10\p@ \@plus5\p@ \@minus3\p@\relax}
-
-\renewcommand{\footnoterule}{%
-  \kern-3\p@
-  \hrule width .4\columnwidth
-  \kern 2.6\p@}
-\@addtoreset{footnote}{chapter}
-\newcommand\@makefntext[1]{\parindent 1em
-  \noindent\hbox to 1.8em{\hss\@makefnmark}#1}
-\newif\if$B@>Nq(B \$B@>Nq(Bfalse
-\def\$B@>Nq(B{\$B@>Nq(Btrue}
-\def\$BOBNq(B{\$B@>Nq(Bfalse}
-\def\today{{%
-  \iftdir
-    \if$B@>Nq(B
-      \kansuji\number\year $BG/(B
-      \kansuji\number\month $B7n(B
-      \kansuji\number\day $BF|(B
-    \else \@tempcnta\year
-      \advance\@tempcnta-1988 $BJ?@.(B
-      \ifnum \@tempcnta =1 $B85(B\else\kansuji\number\@tempcnta\fi $BG/(B
-      \kansuji\number\month $B7n(B\kansuji\number\day $BF|(B
-    \fi
-  \else
-    \if$B@>Nq(B
-      \number\year\, $BG/(B\hspace{.5em}\nobreak
-      \number\month\, $B7n(B\hspace{.5em}\nobreak
-      \number\day\, $BF|(B
-    \else \@tempcnta\year
-      \advance\@tempcnta-1988 $BJ?@.(B
-      \ifnum \@tempcnta =1 $B85(B\else\number\@tempcnta\fi
-        \, $BG/(B\hspace{.5em}\nobreak
-      \number\month\, $B7n(B\hspace{.5em}\nobreak\number\day\, $BF|(B
-    \fi
-  \fi}}
-
-% $B=PNOJ8;zNs(B
-\newcommand{\prechaptername}{$BBh(B}
-\newcommand{\postchaptername}{$B>O(B}
-\newcommand{\contentsname}{$BL\(B $B<!(B}
-\newcommand{\listfigurename}{$B?^(B $BL\(B $B<!(B}
-\newcommand{\listtablename}{$BI=(B $BL\(B $B<!(B}
-\newcommand{\bibname}{$B;29MJ88%(B}
-\newcommand{\indexname}{$B:w(B $B0z(B}
-\newcommand{\figurename}{$B?^(B}
-\newcommand{\tablename}{$BI=(B}
-\newcommand{\appendixname}{$BIU(B $BO?(B}
-\newcommand{\abstractname}{$B35(B $BMW(B}
-
-% pagestyle
-\pagestyle{myheadings}
-\pagenumbering{arabic}
-\raggedbottom
-\if@twocolumn
-  \twocolumn
-  \sloppy
-  \flushbottom
-\else
-  \onecolumn
-\fi
-\if@twoside
-  \@mparswitchtrue
-\else
-  \@mparswitchfalse
-\fi
-
-\setlength{\topmargin}{-1.65cm}
-\setlength{\textwidth}{15.7cm}
-\setlength{\textheight}{23.5cm}
-\setlength{\oddsidemargin}{7.5mm}
-\setlength{\evensidemargin}{7.5mm}
-\setlength{\headheight}{6mm}
-\setlength{\headsep}{1.8cm}
-
-% $B?7Dj5A%3%^%s%I(B
-\newcommand{\papertitle}[1]{\def\@papertitle{#1}}  
+\newcommand{\papertitleJP}[1]{\def\@papertitleJP{#1}}
+\newcommand{\papertitleEN}[1]{\def\@papertitleEN{#1}}
 \newcommand{\name}[1]{\def\@name{#1}}
-\newcommand{\department}[1]{\def\@department{#1}}
 \newcommand{\labo}[1]{\def\@labo{#1}}
-\newcommand{\IDNumber}[1]{\def\@IDnumber{#1}}
-\newcommand{\enteryear}[1]{\def\@enteryear{#1}}
-\newcommand{\gradyear}[1]{\def\@gradyear{#1}}
-\renewcommand{\baselinestretch}{1.5}
-\endinput
+\newcommand{\studentID}[1]{\def\@studentID{#1}}
 
+\newcommand{\degree}[1]{\newcommand{\@degree}{#1}}
+\newcommand{\program}[1]{\newcommand{\@program}{#1}}
+
+\newcommand{\@master}{master}
+\newcommand{\@doctor}{doctor}
+\newcommand{\@undergraduate}{undergraduate}
+\newcommand{\@cs}{cs}
+\newcommand{\@ce}{ce}
+
+%--------------------------------------------------------------------
+% footnote.sty
+%--------------------------------------------------------------------
+%% 
+%% footnote.sty 						  by taro & itoken
 %%
-%% End of file `thesis.cls'.
+%% 注釈番号を日本語化し，仕切り線を任意に調節するスタイルファイル
+%%
+%% なお，このスタイルファイルはieicej.styから引用しています．
+%%
+
+\def\footnoterule{\kern-3\p@
+ \hrule height .1mm width \columnwidth %（.4）デフォルトの仕切り線の長さ
+ \kern 2.715\p@}
+
+\long\def\@makefntext#1{% \footnotesize
+ \parindent 1zw
+ \noindent\hbox{\kern-.5zw
+  （\@thefnmark{}）\kern-.5zw\makebox[1zw][c]{：}}#1}
+
+\def\@makefnmark{\hbox{$^{\mbox{\tiny \kern-.5zw
+  （\@thefnmark{}）\kern-.5zw}}$}}
+
+\def\thefootnote{\arabic{footnote}}
+
+
+%--------------------------------------------------------------------
+% citesort.sty
+%--------------------------------------------------------------------
+%% 
+%% citesort.sty                               by taro
+%%
+%% 参考文献番号の表記をかっこ良くするスタイルファイル
+%%
+%% 適用前 : 文献[1,4,5,6,7]によると・・・
+%% 適用後 : 文献[1],[4]～[7]によると・・・
+%%
+%% なお，このスタイルファイルはieicej.styから引用しています．
+%%
+
+\newcount\@minsofar
+\newcount\@min
+\newcount\@cite@temp
+\def\@citex[#1]#2{%
+\if@filesw \immediate \write \@auxout {\string \citation {#2}}\fi
+\@tempcntb\m@ne \let\@h@ld\relax \def\@citea{}%
+\@min\m@ne%
+\@cite{%
+  \@for \@citeb:=#2\do {\@ifundefined {b@\@citeb}%
+    {\@h@ld\@citea\@tempcntb\m@ne{\bf ?}%
+    \@warning {Citation `\@citeb ' on page \thepage \space undefined}}%
+{\@minsofar\z@ \@for \@scan@cites:=#2\do {%
+  \@ifundefined{b@\@scan@cites}%
+    {\@cite@temp\m@ne}
+    {\@cite@temp\number\csname b@\@scan@cites \endcsname \relax}%% <
+\ifnum\@cite@temp > \@min% select the next one to list
+    \ifnum\@minsofar = \z@
+      \@minsofar\number\@cite@temp
+      \edef\@scan@copy{\@scan@cites}\else
+    \ifnum\@cite@temp < \@minsofar %% >
+      \@minsofar\number\@cite@temp
+      \edef\@scan@copy{\@scan@cites}\fi\fi\fi}\@tempcnta\@min %% <
+  \ifnum\@minsofar > \z@ % some more
+    \advance\@tempcnta\@ne
+    \@min\@minsofar
+    \ifnum\@tempcnta=\@minsofar %   Number follows previous--hold on to it
+      \ifx\@h@ld\relax
+        \edef \@h@ld{\@citea\csname b@\@scan@copy\endcsname}%
+      \else
+       \edef\@h@ld{\ifmmode{]～[}\else]～[\fi\csname b@\@scan@copy\endcsname}%
+      \fi
+    \else \@h@ld\@citea\csname b@\@scan@copy\endcsname
+          \let\@h@ld\relax
+  \fi % no more
+\fi}%
+\def\@citea{],\penalty\@highpenalty\,[}}\@h@ld}{#1}}
+
+
+%--------------------------------------------------------------------
+% jdummy.def
+%--------------------------------------------------------------------
+
+\DeclareRelationFont{JY1}{mc}{it}{}{OT1}{cmr}{it}{}
+\DeclareRelationFont{JT1}{mc}{it}{}{OT1}{cmr}{it}{}
+\DeclareFontShape{JY1}{mc}{m}{it}{<5> <6> <7> <8> <9> <10> sgen*min
+    <10.95><12><14.4><17.28><20.74><24.88> min10
+    <-> min10}{}
+\DeclareFontShape{JT1}{mc}{m}{it}{<5> <6> <7> <8> <9> <10> sgen*tmin
+    <10.95><12><14.4><17.28><20.74><24.88> tmin10
+    <-> tmin10}{}
+\DeclareRelationFont{JY1}{mc}{sl}{}{OT1}{cmr}{sl}{}
+\DeclareRelationFont{JT1}{mc}{sl}{}{OT1}{cmr}{sl}{}
+\DeclareFontShape{JY1}{mc}{m}{sl}{<5> <6> <7> <8> <9> <10> sgen*min
+    <10.95><12><14.4><17.28><20.74><24.88> min10
+    <-> min10}{}
+\DeclareFontShape{JT1}{mc}{m}{sl}{<5> <6> <7> <8> <9> <10> sgen*tmin
+    <10.95><12><14.4><17.28><20.74><24.88> tmin10
+    <-> tmin10}{}
+\DeclareRelationFont{JY1}{mc}{sc}{}{OT1}{cmr}{sc}{}
+\DeclareRelationFont{JT1}{mc}{sc}{}{OT1}{cmr}{sc}{}
+\DeclareFontShape{JY1}{mc}{m}{sc}{<5> <6> <7> <8> <9> <10> sgen*min
+    <10.95><12><14.4><17.28><20.74><24.88> min10
+    <-> min10}{}
+\DeclareFontShape{JT1}{mc}{m}{sc}{<5> <6> <7> <8> <9> <10> sgen*tmin
+    <10.95><12><14.4><17.28><20.74><24.88> tmin10
+    <-> tmin10}{}
+\DeclareRelationFont{JY1}{gt}{it}{}{OT1}{cmbx}{it}{}
+\DeclareRelationFont{JT1}{gt}{it}{}{OT1}{cmbx}{it}{}
+\DeclareFontShape{JY1}{mc}{bx}{it}{<5> <6> <7> <8> <9> <10> sgen*goth
+    <10.95><12><14.4><17.28><20.74><24.88> goth10
+    <-> goth10}{}
+\DeclareFontShape{JT1}{mc}{bx}{it}{<5> <6> <7> <8> <9> <10> sgen*tgoth
+    <10.95><12><14.4><17.28><20.74><24.88> tgoth10
+    <-> tgoth10}{}
+\DeclareRelationFont{JY1}{gt}{sl}{}{OT1}{cmbx}{sl}{}
+\DeclareRelationFont{JT1}{gt}{sl}{}{OT1}{cmbx}{sl}{}
+\DeclareFontShape{JY1}{mc}{bx}{sl}{<5> <6> <7> <8> <9> <10> sgen*goth
+    <10.95><12><14.4><17.28><20.74><24.88> goth10
+    <-> goth10}{}
+\DeclareFontShape{JT1}{mc}{bx}{sl}{<5> <6> <7> <8> <9> <10> sgen*tgoth
+    <10.95><12><14.4><17.28><20.74><24.88> tgoth10
+    <-> tgoth10}{}
+\DeclareRelationFont{JY1}{gt}{sc}{}{OT1}{cmbx}{sc}{}
+\DeclareRelationFont{JT1}{gt}{sc}{}{OT1}{cmbx}{sc}{}
+\DeclareFontShape{JY1}{mc}{bx}{sc}{<5> <6> <7> <8> <9> <10> sgen*goth
+    <10.95><12><14.4><17.28><20.74><24.88> goth10
+    <-> goth10}{}
+\DeclareFontShape{JT1}{mc}{bx}{sc}{<5> <6> <7> <8> <9> <10> sgen*tgoth
+    <10.95><12><14.4><17.28><20.74><24.88> tgoth10
+    <-> tgoth10}{}
+\DeclareRelationFont{JY1}{gt}{it}{}{OT1}{cmr}{it}{}
+\DeclareRelationFont{JT1}{gt}{it}{}{OT1}{cmr}{it}{}
+\DeclareFontShape{JY1}{gt}{m}{it}{<5> <6> <7> <8> <9> <10> sgen*goth
+    <10.95><12><14.4><17.28><20.74><24.88> goth10
+    <-> goth10}{}
+\DeclareFontShape{JT1}{gt}{m}{it}{<5> <6> <7> <8> <9> <10> sgen*tgoth
+    <10.95><12><14.4><17.28><20.74><24.88> tgoth10
+    <-> tgoth10}{}
+%%%% end of jdummy.def
+
+\endinput
