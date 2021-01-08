@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  8 JAN 2021 01:01
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  8 JAN 2021 12:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,27 +6,49 @@ entering extended mode
 (./M2sato.tex
 pLaTeX2e <2020-10-01>+1 (based on LaTeX2e <2020-10-01> patch level 2)
 L3 programming layer <2020-10-27> xparse <2020-03-03> (./thesis.cls
-Document Class: thesis 1999/1/19 v0.2b Ishiilab Thesis Class
+Document Class: thesis 2021/01/06
+(c:/texlive/2020/texmf-dist/tex/platex/base/jreport.cls
+Document Class: jreport 2020/09/30 v1.8f Standard pLaTeX class
 \c@@paper=\count174
-(c:/texlive/2020/texmf-dist/tex/platex/base/jsize12.clo
-File: jsize12.clo 2020/09/30 v1.8f Standard pLaTeX file (size option)
+(c:/texlive/2020/texmf-dist/tex/platex/base/jsize10.clo
+File: jsize10.clo 2020/09/30 v1.8f Standard pLaTeX file (size option)
 )
-\c@chapter=\count175
-\c@section=\count176
-\c@subsection=\count177
-\c@subsubsection=\count178
-\c@paragraph=\count179
-\c@subparagraph=\count180
-\c@figure=\count181
-\c@table=\count182
+\c@part=\count175
+\c@chapter=\count176
+\c@section=\count177
+\c@subsection=\count178
+\c@subsubsection=\count179
+\c@paragraph=\count180
+\c@subparagraph=\count181
+\c@figure=\count182
+\c@table=\count183
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \symmincho=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
-(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 400.
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 704.
 \toclineskip=\dimen154
 \@lnumwidth=\dimen155
 \bibindent=\dimen156
+\heisei=\count184
+)
+(c:/texlive/2020/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
+
+(c:/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: dvips.def on input line 147.
+
+(c:/texlive/2020/texmf-dist/tex/latex/graphics-def/dvips.def
+File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
+)
+(c:/texlive/2020/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+))
+\@minsofar=\count185
+\@min=\count186
+\@cite@temp=\count187
 ) (./jdummy.def)
 (c:/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
@@ -52,17 +74,6 @@ File: dvipdfmx.def 2020/08/26 v5.0h Graphics/color driver for dvipdfmx
 \Gin@req@height=\dimen157
 \Gin@req@width=\dimen158
 )
-(c:/texlive/2020/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
-
-(c:/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package color Info: Driver file: dvipdfmx.def on input line 147.
-
-(c:/texlive/2020/texmf-dist/tex/latex/graphics/dvipsnam.def
-File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
-))
 (c:/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2020/09/23 v2.17i AMS math features
 \@mathmargin=\skip49
@@ -83,13 +94,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (c:/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count183
+\inf@bad=\count188
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count184
-\leftroot@=\count185
+\uproot@=\count189
+\leftroot@=\count190
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count186
-\DOTSCASE@=\count187
+\classnum@=\count191
+\DOTSCASE@=\count192
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -98,15 +109,15 @@ LaTeX Info: Redefining \cdots on input line 620.
 \big@size=\dimen161
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count188
-\c@MaxMatrixCols=\count189
+\macc@depth=\count193
+\c@MaxMatrixCols=\count194
 \dotsspace@=\muskip16
-\c@parentequation=\count190
-\dspbrk@lvl=\count191
+\c@parentequation=\count195
+\dspbrk@lvl=\count196
 \tag@help=\toks18
-\row@=\count192
-\column@=\count193
-\maxfields@=\count194
+\row@=\count197
+\column@=\count198
+\maxfields@=\count199
 \andhelp@=\toks19
 \eqnshift@=\dimen162
 \alignsep@=\dimen163
@@ -141,7 +152,7 @@ Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
  (c:/texlive/2020/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count195
+\c@float@type=\count266
 \float@exts=\toks22
 \float@box=\box66
 \@float@everytoks=\toks23
@@ -151,13 +162,13 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks24
-\c@algorithm=\count196
+\c@algorithm=\count267
 ) (./algorithmic.sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
-\c@ALC@unique=\count197
-\c@ALC@line=\count198
-\c@ALC@rem=\count199
-\c@ALC@depth=\count266
+\c@ALC@unique=\count268
+\c@ALC@line=\count269
+\c@ALC@rem=\count270
+\c@ALC@depth=\count271
 \ALC@tlm=\skip52
 \algorithmicindent=\skip53
 )
@@ -190,27 +201,31 @@ Package: amsthm 2020/05/29 v2.20.6
 \UL@skip=\skip57
 \UL@hook=\toks31
 \UL@height=\dimen168
-\UL@pe=\count267
+\UL@pe=\count272
 \UL@pixel=\dimen169
 \ULC@box=\box70
 Package: ulem 2019/11/18
 \ULdepth=\dimen170
 )
-\c@theorem=\count268
-\c@lemma=\count269
-\c@definition=\count270
-\c@fact=\count271
+\c@theorem=\count273
+\c@lemma=\count274
+\c@definition=\count275
+\c@fact=\count276
 
 (c:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 File: l3backend-dvips.def 2020-09-24 L3 backend support: dvips
 \l__pdf_internal_box=\box71
-\g__pdf_backend_object_int=\count272
+\g__pdf_backend_object_int=\count277
 \l__pdf_backend_content_box=\box72
 \l__pdf_backend_model_box=\box73
-\g__pdf_backend_annotation_int=\count273
-\g__pdf_backend_link_int=\count274
-\g__pdf_backend_link_sf_int=\count275
+\g__pdf_backend_annotation_int=\count278
+\g__pdf_backend_link_int=\count279
+\g__pdf_backend_link_sf_int=\count280
 )
+
+LaTeX Warning: Unused global option(s):
+    [12].
+
 (./M2sato.aux)
 \openout1 = `M2sato.aux'.
 
@@ -232,27 +247,29 @@ LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 37.
 LaTeX Font Info:    ... okay on input line 37.
 LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 37.
 LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 49.
+\@enteryear=\count281
+\@gradyear=\count282
+LaTeX Font Info:    Trying to load font information for U+msa on input line 51.
 
  (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 49.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 51.
 
 
 (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [0
+) [1
 
 ]
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <24.88> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 54.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <24.88> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 54.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <20.74> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 56.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <20.74> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 56.
  (./M2sato.toc
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 1.
 )
 \tf@toc=\write4
@@ -263,64 +280,65 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
 
 ]
 第 1 章
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 63.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 63.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 65.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 65.
 [1
 
-] [2] [3]
+] [2]
 第 2 章
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 130.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 130.
-[4
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 132.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 132.
+[3
 
 ]
 File: Dif_Gx.png Graphic file (type bmp)
 <Dif_Gx.png>
- [5] [6]
+ [4] [5]
 第 3 章
-[7
+[6
 
 ]
 第 4 章
 File: 2MIS.png Graphic file (type bmp)
 <2MIS.png>
-[8
+[7
 
 ]
 
-LaTeX Warning: Reference `2-MIS' on page 9 undefined on input line 246.
+LaTeX Warning: Reference `2-MIS' on page 8 undefined on input line 248.
 
-[9] [10]
+[8]
 File: 3MIS.png Graphic file (type bmp)
 <3MIS.png>
- [11]
+ [9]
 
-LaTeX Warning: Reference `3-MIS' on page 12 undefined on input line 297.
+LaTeX Warning: Reference `3-MIS' on page 10 undefined on input line 299.
 
-[12] [13]
+[10] [11]
 第 5 章
-[14
+[12
 
-] [15
+] [13
 
-] (./M2sato.bbl) Excluding 'comment' comment. [16
+] (./M2sato.bbl) Excluding 'comment' comment. [14
 
 ] (./M2sato.aux)
 
 LaTeX Warning: There were undefined references.
 
- ) 
+ )
+(\end occurred when \ifx on line 2 was incomplete) 
 Here is how much of TeX's memory you used:
- 2909 strings out of 479956
- 37327 string characters out of 5887570
- 322927 words of memory out of 5000000
- 20069 multiletter control sequences out of 15000+600000
- 564532 words of font info for 142 fonts, out of 8000000 for 9000
+ 3011 strings out of 479956
+ 38553 string characters out of 5887570
+ 325686 words of memory out of 5000000
+ 20160 multiletter control sequences out of 15000+600000
+ 565901 words of font info for 147 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 66i,6n,72p,257b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 66i,6n,72p,257b,413s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on M2sato.dvi (18 pages, 45064 bytes).
+Output written on M2sato.dvi (16 pages, 44064 bytes).
