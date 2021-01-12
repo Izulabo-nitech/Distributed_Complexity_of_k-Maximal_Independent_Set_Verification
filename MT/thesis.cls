@@ -207,7 +207,7 @@
 						\else \ifx \@doctor \@degree
 						名古屋工業大学　大学院工学研究科　博士後期課程 \\
 						\else \ifx \@undergraduate \@degree
-							\ifx \@cs \@program
+							\ifx \@newcs \@program
 								名古屋工業大学　高度工学教育課程　工学部第一部 \\
 							\else \ifx \@ce \@program
 								名古屋工業大学　創造工学教育課程 \\
@@ -220,16 +220,16 @@
 					}
 					\vspace{4mm}
 					{\large
-						\ifx \@cs \@program
+						\ifx \@newcs \@program
+							工学専攻　情報工学系プログラム \\
+						\else \ifx \@cs \@program
 							\ifx \@master \@degree
-								工学専攻　情報工学系プログラム \\
+								情報工学専攻 \\
 							\else \ifx \@doctor \@degree
 								情報工学専攻 \\
-							\else \ifx \@undergraduate \@degree
-								情報工学科 \\
 							\else
 							 \textcolor{red}{Error} \\
-							\fi \fi \fi
+							\fi \fi
 						\else \ifx \@ce \@program
 							\ifx \@master \@degree
 								工学専攻　創造工学プログラム \\
@@ -240,8 +240,8 @@
 							 \textcolor{red}{Error} \\
 							\fi \fi \fi
 						\else
-						\textcolor{red}{!Error:cs,ceのどれかを指定してください} \\
-						\fi \fi
+						\textcolor{red}{!Error:newcs, cs,ceのどれかを指定してください} \\
+						\fi \fi \fi
 					}
           \vspace{4mm}
           \large \@labo 研究室所属\\
@@ -271,6 +271,7 @@
 \newcommand{\@doctor}{doctor}
 \newcommand{\@undergraduate}{undergraduate}
 \newcommand{\@cs}{cs}
+\newcommand{\@newcs}{newcs}
 \newcommand{\@ce}{ce}
 
 %--------------------------------------------------------------------
