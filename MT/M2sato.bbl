@@ -5,17 +5,22 @@ Ken-ichi Kawarabayashi, Seri Khoury, Aaron Schild, and Gregory Schwartzman.
 \newblock Improved distributed approximation to maximum independent set.
 \newblock {\em arXiv preprint arXiv:1906.11524}, 2019.
 
+\bibitem{censor2017quadratic}
+Keren Censor-Hillel, Seri Khoury, and Ami Paz.
+\newblock Quadratic and near-quadratic lower bounds for the congest model.
+\newblock {\em arXiv preprint arXiv:1705.05646}, 2017.
+
 \bibitem{efron2020beyond}
 Yuval Efron, Ofer Grossman, and Seri Khoury.
 \newblock Beyond alice and bob: Improved inapproximability for maximum
   independent set in congest.
 \newblock {\em arXiv preprint arXiv:2003.07427}, 2020.
 
-\bibitem{ghaffari2013distributed}
-Mohsen Ghaffari and Fabian Kuhn.
-\newblock Distributed minimum cut approximation.
-\newblock In {\em International Symposium on Distributed Computing}, pages
-  1--15. Springer, 2013.
+\bibitem{sarma2012distributed}
+Atish~Das Sarma, Stephan Holzer, Liah Kor, Amos Korman, Danupon Nanongkai,
+  Gopal Pandurangan, David Peleg, and Roger Wattenhofer.
+\newblock Distributed verification and hardness of distributed approximation.
+\newblock {\em SIAM Journal on Computing}, 41(5):1235--1265, 2012.
 
 \bibitem{fischer2018possibilities}
 Orr Fischer, Tzlil Gonen, Fabian Kuhn, and Rotem Oshman.
