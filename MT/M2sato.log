@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  18 JAN 2021 00:24
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  19 JAN 2021 06:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -284,8 +284,8 @@ Excluding 'comment' comment. [1
 
 ] [2] [3]
 第 2 章
-File: Dif_Gx.png Graphic file (type bmp)
-<Dif_Gx.png>
+File: Gxy.png Graphic file (type bmp)
+<Gxy.png>
 [4
 
 ] [5] Excluding 'comment' comment. [6]
@@ -294,30 +294,45 @@ File: Dif_Gx.png Graphic file (type bmp)
 
 ]
 第 4 章
-File: 2MIS.png Graphic file (type bmp)
-<2MIS.png>
+File: 2_G.png Graphic file (type bmp)
+<2_G.png>
 [8
 
-] [9] [10]
-File: 3MIS.png Graphic file (type bmp)
-<3MIS.png>
- [11] [12] [13]
+]
+File: 2_Gxy.png Graphic file (type bmp)
+<2_Gxy.png>
+ [9] [10]
+File: 3_G.png Graphic file (type bmp)
+<3_G.png>
+ [11]
+File: 3_Gxy.png Graphic file (type bmp)
+<3_Gxy.png>
+ [12] [13]
+File: k_G.png Graphic file (type bmp)
+<k_G.png>
+ [14]
+File: k_Gxy.png Graphic file (type bmp)
+<k_Gxy.png>
+ [15]
+File: k_Gxyl.png Graphic file (type bmp)
+<k_Gxyl.png>
+ [16] [17]
 第 5 章
-[14
+[18
 
-] [15
+] [19
 
-] (./M2sato.bbl) Excluding 'comment' comment. [16
+] (./M2sato.bbl) [20
 
 ] (./M2sato.aux) )
 (\end occurred when \ifx on line 2 was incomplete) 
 Here is how much of TeX's memory you used:
- 2989 strings out of 479956
- 38354 string characters out of 5887570
- 326723 words of memory out of 5000000
- 20146 multiletter control sequences out of 15000+600000
+ 3019 strings out of 479956
+ 38764 string characters out of 5887570
+ 327723 words of memory out of 5000000
+ 20166 multiletter control sequences out of 15000+600000
  562777 words of font info for 135 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 66i,12n,72p,233b,413s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 66i,12n,72p,233b,417s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on M2sato.dvi (18 pages, 47224 bytes).
+Output written on M2sato.dvi (22 pages, 67152 bytes).

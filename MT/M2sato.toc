@@ -7,11 +7,11 @@
 \contentsline {section}{\numberline {2.1}$CONGEST$モデル}{4}{}%
 \contentsline {section}{\numberline {2.2}2者間通信複雑性}{4}{}%
 \contentsline {section}{\numberline {2.3}$k$-極大独立集合}{6}{}%
-\contentsline {chapter}{\numberline {第3章}1-MIS検証問題の1ラウンドアルゴリズム}{7}{}%
+\contentsline {chapter}{\numberline {第3章}1-MIS検証問題の$O(1)$ラウンドアルゴリズム}{7}{}%
 \contentsline {chapter}{\numberline {第4章}$k$-MIS検証問題の下界}{8}{}%
 \contentsline {section}{\numberline {4.1}2-MIS検証問題の下界}{8}{}%
 \contentsline {section}{\numberline {4.2}3-MIS検証問題の下界}{11}{}%
-\contentsline {section}{\numberline {4.3}$k$-MIS検証問題の下界}{13}{}%
-\contentsline {chapter}{\numberline {第5章}まとめと今後の課題}{14}{}%
-\contentsline {section}{\numberline {5.1}まとめ}{14}{}%
-\contentsline {section}{\numberline {5.2}今後の課題}{14}{}%
+\contentsline {section}{\numberline {4.3}$k$-MIS検証問題の下界}{14}{}%
+\contentsline {chapter}{\numberline {第5章}まとめと今後の課題}{18}{}%
+\contentsline {section}{\numberline {5.1}まとめ}{18}{}%
+\contentsline {section}{\numberline {5.2}今後の課題}{18}{}%
