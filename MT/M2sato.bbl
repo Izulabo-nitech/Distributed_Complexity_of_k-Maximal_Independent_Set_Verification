@@ -16,6 +16,11 @@ Yuval Efron, Ofer Grossman, and Seri Khoury.
   independent set in congest.
 \newblock {\em arXiv preprint arXiv:2003.07427}, 2020.
 
+\bibitem{haastad1999clique}
+Johan H{\aa}stad.
+\newblock Clique is hard to approximate withinn 1- $\varepsilon$.
+\newblock {\em Acta Mathematica}, 182(1):105--142, 1999.
+
 \bibitem{sarma2012distributed}
 Atish~Das Sarma, Stephan Holzer, Liah Kor, Amos Korman, Danupon Nanongkai,
   Gopal Pandurangan, David Peleg, and Roger Wattenhofer.

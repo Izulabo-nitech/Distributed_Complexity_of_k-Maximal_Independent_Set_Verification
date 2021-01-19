@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: M2sato.aux
 The style file: unsrt.bst
 Database file #1: M2sato.bib
-You've used 7 entries,
+You've used 8 entries,
             1791 wiz_defined-function locations,
-            488 strings with 4893 characters,
-and the built_in function-call counts, 1713 in all, are:
-= -- 146
-> -- 92
+            495 strings with 5012 characters,
+and the built_in function-call counts, 1935 in all, are:
+= -- 169
+> -- 96
 < -- 1
-+ -- 33
-- -- 26
-* -- 122
-:= -- 282
-add.period$ -- 21
-call.type$ -- 7
-change.case$ -- 7
++ -- 35
+- -- 27
+* -- 139
+:= -- 316
+add.period$ -- 24
+call.type$ -- 8
+change.case$ -- 8
 chr.to.int$ -- 0
-cite$ -- 7
-duplicate$ -- 72
-empty$ -- 155
-format.name$ -- 26
-if$ -- 371
+cite$ -- 8
+duplicate$ -- 81
+empty$ -- 179
+format.name$ -- 27
+if$ -- 419
 int.to.chr$ -- 0
-int.to.str$ -- 7
-missing$ -- 7
-newline$ -- 38
-num.names$ -- 7
-pop$ -- 18
+int.to.str$ -- 8
+missing$ -- 8
+newline$ -- 43
+num.names$ -- 8
+pop$ -- 19
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 36
+skip$ -- 39
 stack$ -- 0
-substring$ -- 113
-swap$ -- 17
+substring$ -- 138
+swap$ -- 18
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 16
-width$ -- 8
-write$ -- 76
+while$ -- 19
+width$ -- 9
+write$ -- 87

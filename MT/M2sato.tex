@@ -86,13 +86,18 @@ $O (n^{2})$ラウンドの上界を得ることができる.{\CONGEST}モデル�
 $n$の多項式時間で解くことは，その近似を含めて絶望的であるとされている．分散グラフアルゴリズムの文脈からは，
 各ノードのローカル計算において指数時間の計算を許した場合における計算ラウンド数の複雑性に関して近年
 議論が進んでおり，最大独立集合の発見あるいはその近似解の発見に対して上界，下界の両面から，いくつかの
-結果が知られている \cite{kawarabayashi2019improved}， \cite{efron2020beyond}．
+結果が知られている．
 (\Izumi{ここ，具体的にどのような上下界が得られているか説明を入れる})．
-逐次アルゴリズムにおける計算困難性から，指数時間を要する内部計算かかることを許容して分散グラフ
+例えば，{\CONGEST}モデルにおいて最大重み付き独立集合の$(1 + \epsilon) \cdot \Delta$-近似
+($\Delta$は頂点の最大次数) を高確率で$\left(poly(\log \log n)/\epsilon \right)$ラウンドで
+発見するアルゴリズム\cite{kawarabayashi2019improved} や，最大独立集合を発見するアルゴリズムに対する
+$\Omega \left(\frac{n^{2}}{(\log n)^{2}}\right)$ラウンドの下界 \cite{censor2017quadratic}，
+最大独立集合の$(\frac{3}{4} + \epsilon)$-近似を発見するアルゴリズムに対する
+$\Omega \left(\frac{n^{2}}{(\log n)^{3}}\right)$ラウンドの下界 \cite{efron2020beyond} などが知られている．
+逐次アルゴリズムにおける計算困難性から，指数時間を要する内部計算を許容して分散グラフ
 アルゴリズムの複雑性の議論を行うことの妥当性にはやや疑問が残る．
 
 \section{本研究の目的と結果}
-
 そこで今回，我々は最大独立集合の局所最適解である$k$-極大独立集合
 ($k$-Maximal Independet Set， $k$-MIS)について考える．
 \Izumi{$k$－MISはそれほど一般的な概念ではないので，ここにラフな説明ほしい}
@@ -101,11 +106,43 @@ $n$の多項式時間で解くことは，その近似を含めて絶望的で�
 与えられたグラフ$G=(V, E)$に対する$k$-MISの発見は，自然な局所探索により実現することが可能である．すなわち，
 $I$を現在構成されている独立点集合とすると，任意のサイズ$k$以下の部分集合$I' \subseteq I$ およびサイズ$k + 1$の
 部分集合$U \subseteq V\setminus I$について，$(I \setminus I') \cup U$が独立点集合となるかどうかを確認し，
-そのような$I'$, $U$が存在すれば$I$を更新することを繰り返すことで，最終的に$k$-MISを得ることができる．
+そのような$I'$，$U$が存在すれば$I$を更新することを繰り返すことで，最終的に$k$-MISを得ることができる．
 $k = O(1)$の場合この処理は$n$の多項式時間内で収まることが容易にわかる．一方で，この更新処理，すなわち，
 与えられた独立点集合$I$が既に$k$-MISを構成しているかどうか検証する問題が{\CONGEST}モデル上で効率的に
 解けるかどうかは明らかではない．そこで，本研究では$k$-MISの検証問題(verification)に着目し，その複雑性について
-議論を行う.具体的には，本研究はいかに挙げる結果を示す\Izumi{下に結果をitemizeの箇条書きでまとめる}．
+議論を行う．具体的には，本研究は以下に挙げる結果を示す\Izumi{下に結果をitemizeの箇条書きでまとめる}．
+\begin{itemize}
+\item {\CONGEST}モデルにおいて，1-MIS検証問題は$O(1)$ラウンドで解くことができる．
+\item {\CONGEST}モデルにおいて，2-MIS検証問題には$\tilde{\Omega} (\sqrt{n})$ラウンドの下界が存在する．
+\item {\CONGEST}モデルにおいて，3-MIS検証問題には$\tilde{\Omega} (n)$ラウンドの下界が存在する．
+\item {\CONGEST}モデルにおいて，任意の$l \geq 1$に対して$k = 4l + 5$としたときに$k$-MIS検証問題には
+$\Omega\left(n^{2 - \frac{1}{l+1}}/l\right)$ラウンドの下界が存在する．
+\end{itemize}
+
+\section{関連研究} 
+{\CONGEST}モデルにおける最大独立集合問題の通信複雑性としては，最大重み付き独立集合の
+$(1 + \epsilon) \cdot \Delta$-近似($\Delta$は頂点の最大次数) を高確率で見つける
+アルゴリズムに対する$\left(poly(\log \log n)/\epsilon \right)$ラウンドの上界
+\cite{kawarabayashi2019improved} や，最大独立集合を見つけるアルゴリズムに対する
+$\Omega \left(\frac{n^{2}}{(\log n)^{2}}\right)$ラウンドの下界 \cite{censor2017quadratic}，
+最大独立集合の$(\frac{1}{2} + \epsilon)$-近似を見つけるアルゴリズムに対する
+$\Omega \left(\frac{n}{(\log n)^{3}}\right)$ラウンドの下界，
+$(\frac{3}{4} + \epsilon)$-近似を見つけるアルゴリズムに対する
+$\Omega \left(\frac{n^{2}}{(\log n)^{3}}\right)$ラウンドの下界 \cite{efron2020beyond} が知られている．
+
+また集中型アルゴリズムについて，$P = NP$が成り立たない限り,任意の$\epsilon > 0$に対して
+最大独立集合の$n^{\frac{1}{2} - \epsilon}$近似を発見するアルゴリズムは存在しないことが知られている \cite{haastad1999clique}．
+ 
+本研究の下界に関する結果は2者間通信の枠組みにおける交叉判定問題からの帰着に基づいているが，
+交叉判定問題からの帰着によって下界を示すという証明方法は多くの問題に対して用いられている．
+一部の例として最小カット発見問題と最小全域木問題に対する$\Omega (D + \sqrt{n})$の下界
+($D$はグラフの直径) \cite{sarma2012distributed}や部分グラフ$H_{k}$検出問題に対する
+$\Omega \left(\frac{n^{2 - 1/k}}{bk}\right)$の下界 \cite{fischer2018possibilities}，
+近似最大クリーク$K_{l}$検出問題に対する$\Omega \left(\frac{n}{(l + \sqrt{n})b}\right)$の下界
+ \cite{czumaj2020detecting}などが挙げられる．
+
+\Izumi{集中型アルゴリズムの近似不可能性の結果も，具体的な近似率限界を挙げて説明する．また，CONGEST上の
+極大独立点集合の結果(すなわち0-MISの結果)も挙げること．ｓ}
 
 \section{本研究の成果}
 今回，我々は$k$-MIS検証問題に対するいくつかの複雑性を示した．その結果を表\ref{tab: k-MIS}にまとめた．
@@ -127,41 +164,6 @@ $\Omega\left(n^{2 - \frac{1}{l+1}}/l\right)$ラウンドの下界を証明した
     \label{tab: k-MIS}
   \end{center}
 \end{table}
-\begin{comment}
-\begin{table}[htb]
-  \begin{center}
-    \caption{本研究が示した$k$-MIS検証問題のラウンド複雑性}
-    \begin{tabular}{|c||c|c|c|c|} \hline
-      $k$ & 1 & 2 & 3 & $4l + 5$ \\ \hline
-      上界or下界 & 上界 & 下界 & 下界 & 下界 \\ \hline
-      結果 & $O(1)$ & $\tilde{\Omega} (\sqrt{n})$ & $\tilde{\Omega} (n)$ & $\Omega\left(n^{2 - \frac{1}{l+1}}/l\right)$ \\ \hline
-    \end{tabular}
-    \label{tab: k-MIS}
-  \end{center}
-\end{table}
-\end{comment}
-
-\section{関連研究} 
-$CONGEST$モデルにおける最大独立集合問題の通信複雑性としては，最大重み付き独立集合の
-$(1 + \epsilon) \cdot \Delta$-近似を高確率で見つけるアルゴリズムに対する
-$\left(\frac{poly(\log \log n)}{\epsilon}\right)$ラウンドの上界($\Delta$は頂点の最大次数) 
-\cite{kawarabayashi2019improved} や，最大独立集合を見つけるアルゴリズムに対する
-$\Omega \left(\frac{n^{2}}{(\log n)^{2}}\right)$ラウンドの下界 \cite{censor2017quadratic}，
-最大独立集合の$(\frac{1}{2} + \epsilon)$-近似を見つけるアルゴリズムに対する
-$\Omega \left(\frac{n}{(\log n)^{3}}\right)$ラウンドの下界，
-$(\frac{3}{4} + \epsilon)$-近似を見つけるアルゴリズムに対する
-$\Omega \left(\frac{n^{2}}{(\log n)^{3}}\right)$ラウンドの下界 \cite{efron2020beyond} が知られている．
- 
-本研究の下界に関する結果は2者間通信の枠組みにおける交叉判定問題からの帰着に基づいているが，
-交叉判定問題からの帰着によって下界を示すという証明方法は多くの問題に対して用いられている．
-一部の例として最小カット発見問題と最小全域木問題に対する$\Omega (D + \sqrt{n})$の下界
-($D$はグラフの直径) \cite{sarma2012distributed}や部分グラフ$H_{k}$検出問題に対する
-$\Omega \left(\frac{n^{2 - 1/k}}{bk}\right)$の下界 \cite{fischer2018possibilities}，
-近似最大クリーク$K_{l}$検出問題に対する$\Omega \left(\frac{n}{(l + \sqrt{n})b}\right)$の下界
- \cite{czumaj2020detecting}などが挙げられる．
-
-\Izumi{集中型アルゴリズムの近似不可能性の結果も，具体的な近似率限界を挙げて説明する．また，CONGEST上の
-極大独立点集合の結果(すなわち0-MISの結果)も挙げること．ｓ}
 
 
 \section{論文の構成}
