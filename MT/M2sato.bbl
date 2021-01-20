@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{kawarabayashi2019improved}
 Ken-ichi Kawarabayashi, Seri Khoury, Aaron Schild, and Gregory Schwartzman.
@@ -15,6 +15,25 @@ Yuval Efron, Ofer Grossman, and Seri Khoury.
 \newblock Beyond alice and bob: Improved inapproximability for maximum
   independent set in congest.
 \newblock {\em arXiv preprint arXiv:2003.07427}, 2020.
+
+\bibitem{luby1986simple}
+Michael Luby.
+\newblock A simple parallel algorithm for the maximal independent set problem.
+\newblock {\em SIAM journal on computing}, 15(4):1036--1053, 1986.
+
+\bibitem{rozhovn2020polylogarithmic}
+V{\'a}clav Rozho{\v{n}} and Mohsen Ghaffari.
+\newblock Polylogarithmic-time deterministic network decomposition and
+  distributed derandomization.
+\newblock In {\em Proceedings of the 52nd Annual ACM SIGACT Symposium on Theory
+  of Computing}, pages 350--363, 2020.
+
+\bibitem{balliu2019lower}
+Alkida Balliu, Sebastian Brandt, Juho Hirvonen, Dennis Olivetti, Mika{\"e}l
+  Rabie, and Jukka Suomela.
+\newblock Lower bounds for maximal matchings and maximal independent sets.
+\newblock In {\em 2019 IEEE 60th Annual Symposium on Foundations of Computer
+  Science (FOCS)}, pages 481--497. IEEE, 2019.
 
 \bibitem{haastad1999clique}
 Johan H{\aa}stad.

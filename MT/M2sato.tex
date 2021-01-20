@@ -22,6 +22,7 @@
 \headsep=1.4cm  %本文上にスペースを空けたい場合は 20mm にする
 
 \newcommand{\CONGEST}{\textsf{CONGEST}}
+\newcommand{\LOCAL}{\textsf{LOCAL}}
 
 % 定理環境
 \usepackage{amsthm} %定理用
@@ -128,7 +129,13 @@ $\Omega \left(\frac{n^{2}}{(\log n)^{2}}\right)$ラウンドの下界 \cite{cens
 最大独立集合の$(\frac{1}{2} + \epsilon)$-近似を見つけるアルゴリズムに対する
 $\Omega \left(\frac{n}{(\log n)^{3}}\right)$ラウンドの下界，
 $(\frac{3}{4} + \epsilon)$-近似を見つけるアルゴリズムに対する
-$\Omega \left(\frac{n^{2}}{(\log n)^{3}}\right)$ラウンドの下界 \cite{efron2020beyond} が知られている．
+$\Omega \left(\frac{n^{2}}{(\log n)^{3}}\right)$ラウンドの下界 \cite{efron2020beyond} が知られている．\\
+極大独立集合(0-MIS)問題の複雑性に関して，{\CONGEST}モデルにおいては$O(\log n)$ラウンドの
+乱択アルゴリズム\cite{luby1986simple}や$poly(\log n)$ラウンドの決定性アルゴリズム\cite{rozhovn2020polylogarithmic}が知られている．
+{\LOCAL}モデルにおいては$O(\log \Delta) + poly(\log \log n)$ラウンドの乱択アルゴリズムや
+$poly(\log n)$ラウンドの決定性アルゴリズム\cite{rozhovn2020polylogarithmic}，乱択アルゴリズムに対する
+$\Omega \left(\frac{\log \log n}{\log \log \log n} \right)$の下界や
+決定性アルゴリズムに対する$\Omega \left(\frac{\log n}{\log \log n} \right)$の下界\cite{balliu2019lower}が知られている．
 
 また集中型アルゴリズムについて，$P = NP$が成り立たない限り,任意の$\epsilon > 0$に対して
 最大独立集合の$n^{\frac{1}{2} - \epsilon}$近似を発見するアルゴリズムは存在しないことが知られている \cite{haastad1999clique}．
