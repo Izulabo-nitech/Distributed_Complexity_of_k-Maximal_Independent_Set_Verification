@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  20 JAN 2021 21:36
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  22 JAN 2021 01:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -195,62 +195,182 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@headsep=\skip56
 \dth@everypar=\toks30
 )
-(c:/texlive/2020/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box68
-\UL@hyphenbox=\box69
-\UL@skip=\skip57
-\UL@hook=\toks31
-\UL@height=\dimen168
-\UL@pe=\count272
-\UL@pixel=\dimen169
-\ULC@box=\box70
-Package: ulem 2019/11/18
-\ULdepth=\dimen170
-)
-\c@theorem=\count273
-\c@lemma=\count274
-\c@definition=\count275
-\c@fact=\count276
+(c:/texlive/2020/texmf-dist/tex/latex/breqn/breqn.sty
+(c:/texlive/2020/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-10-27 L3 programming layer (loader) 
 
 (c:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 File: l3backend-dvips.def 2020-09-24 L3 backend support: dvips
-\l__pdf_internal_box=\box71
-\g__pdf_backend_object_int=\count277
-\l__pdf_backend_content_box=\box72
-\l__pdf_backend_model_box=\box73
-\g__pdf_backend_annotation_int=\count278
-\g__pdf_backend_link_int=\count279
-\g__pdf_backend_link_sf_int=\count280
+\l__pdf_internal_box=\box68
+\g__pdf_backend_object_int=\count272
+\l__pdf_backend_content_box=\box69
+\l__pdf_backend_model_box=\box70
+\g__pdf_backend_annotation_int=\count273
+\g__pdf_backend_link_int=\count274
+\g__pdf_backend_link_sf_int=\count275
+))
+Package: breqn 2020/09/24 v0.98k Breaking equations
+
+(c:/texlive/2020/texmf-dist/tex/latex/breqn/flexisym.sty
+Package: flexisym 2020/09/24 v0.98k Make math characters macros
+LaTeX Info: Redefining \textprime on input line 299.
+LaTeX Info: Redefining \not on input line 357.
+
+(c:/texlive/2020/texmf-dist/tex/latex/breqn/cmbase.sym
+File: cmbase.sym 2007/12/19 v0.92
+LaTeX Info: Redefining \hbar on input line 324.
+LaTeX Info: Redefining \surd on input line 326.
+LaTeX Info: Redefining \angle on input line 334.
+LaTeX Info: Redefining \neq on input line 335.
+LaTeX Info: Redefining \mapsto on input line 336.
+LaTeX Info: Redefining \cong on input line 337.
+LaTeX Info: Redefining \notin on input line 340.
+LaTeX Info: Redefining \rightleftharpoons on input line 341.
+LaTeX Info: Redefining \doteq on input line 342.
+LaTeX Info: Redefining \hookrightarrow on input line 343.
+LaTeX Info: Redefining \hookleftarrow on input line 344.
+LaTeX Info: Redefining \bowtie on input line 345.
+LaTeX Info: Redefining \models on input line 346.
+LaTeX Info: Redefining \Longrightarrow on input line 347.
+LaTeX Info: Redefining \longrightarrow on input line 348.
+LaTeX Info: Redefining \Longleftarrow on input line 349.
+LaTeX Info: Redefining \longleftarrow on input line 350.
+LaTeX Info: Redefining \longmapsto on input line 351.
+LaTeX Info: Redefining \longleftrightarrow on input line 352.
+LaTeX Info: Redefining \Longleftrightarrow on input line 353.
+LaTeX Info: Redefining \cdots on input line 357.
+LaTeX Info: Redefining \vdots on input line 360.
+LaTeX Info: Redefining \ddots on input line 365.
 )
-(./M2sato.aux)
+(c:/texlive/2020/texmf-dist/tex/latex/breqn/mathstyle.sty
+Package: mathstyle 2020/09/24 v0.98k Tracking mathstyle implicitly
+LaTeX Info: Redefining \displaystyle on input line 95.
+LaTeX Info: Redefining \textstyle on input line 97.
+LaTeX Info: Redefining \scriptstyle on input line 99.
+LaTeX Info: Redefining \scriptscriptstyle on input line 101.
+LaTeX Info: Redefining \genfrac on input line 149.
+))
+(c:/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count276
+\calc@Bcount=\count277
+\calc@Adimen=\dimen168
+\calc@Bdimen=\dimen169
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count278
+\calc@Cskip=\skip59
+)
+\inf@bad=\count279
+\maxint=\count280
+\listwidth=\dimen170
+\eqnumsep=\dimen171
+\eqmargin=\dimen172
+\eqlinespacing=\skip60
+\eqlineskip=\skip61
+\eqlineskiplimit=\dimen173
+\eqbinoffset=\muskip17
+\eqdelimoffset=\muskip18
+\eqindentstep=\dimen174
+\eqstyle=\toks31
+\eqbreakdepth=\count281
+\eqinterlinepenalty=\count282
+\intereqpenalty=\count283
+\intereqskip=\skip62
+\prerelpenalty=\count284
+\prebinoppenalty=\count285
+\Dmedmuskip=\muskip19
+\Dthickmuskip=\muskip20
+\eqleftskip=\skip63
+\eqrightskip=\skip64
+\eq@vspan=\skip65
+\eq@binoffset=\muskip21
+\EQ@box=\box71
+\EQ@copy=\box72
+\EQ@numbox=\box73
+\eq@wdNum=\dimen175
+\GRP@numbox=\box74
+\grp@wdNum=\dimen176
+\eq@lines=\count286
+\eq@curline=\count287
+\eq@badness=\count288
+\EQ@vims=\count289
+\eq@dp=\dimen177
+\eq@wdL=\dimen178
+\eq@wdT=\dimen179
+\eq@wdMin=\dimen180
+\grp@wdL=\dimen181
+\grp@wdR=\dimen182
+\grp@wdT=\dimen183
+\eq@wdRmax=\dimen184
+\eq@firstht=\dimen185
+\eq@wdCond=\dimen186
+\eq@indentstep=\dimen187
+\eq@linewidth=\dimen188
+\grp@linewidth=\dimen189
+\eq@hshift=\dimen190
+\eq@given@sidespace=\dimen191
+\mathindent=\dimen192
+\eq@final@linecount=\count290
+\eq@wdR=\dimen193
+\EQ@continue=\toks32
+\lr@level=\count291
+\GRP@queue=\toks33
+\GRP@box=\box75
+\GRP@wholebox=\box76
+\darraycolsep=\skip66
+\cur@row=\count292
+\cur@col=\count293
+\conditionsep=\skip67
+)
+(c:/texlive/2020/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box77
+\UL@hyphenbox=\box78
+\UL@skip=\skip68
+\UL@hook=\toks34
+\UL@height=\dimen194
+\UL@pe=\count294
+\UL@pixel=\dimen195
+\ULC@box=\box79
+Package: ulem 2019/11/18
+\ULdepth=\dimen196
+)
+\c@theorem=\count295
+\c@lemma=\count296
+\c@definition=\count297
+\c@fact=\count298
+ (./M2sato.aux)
 \openout1 = `M2sato.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-\@enteryear=\count281
-\@gradyear=\count282
-LaTeX Font Info:    Trying to load font information for U+msa on input line 54.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+\@enteryear=\count299
+\@gradyear=\count300
+LaTeX Font Info:    Trying to load font information for U+msa on input line 56.
 
- (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 54.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 56.
 
 
 (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -259,9 +379,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <24.88> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 59.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 61.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <24.88> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 59.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 61.
  (./M2sato.toc
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
@@ -277,9 +397,9 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
 ]
 第 1 章
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 68.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 70.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 68.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 70.
 [1
 
 ] [2] [3] [4]
@@ -311,13 +431,19 @@ File: 3_Gxy.png Graphic file (type bmp)
  [14] [15]
 File: k_G.png Graphic file (type bmp)
 <k_G.png>
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 4
+97.
+
+(c:/texlive/2020/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 497.
  [16]
 File: k_Gxy.png Graphic file (type bmp)
 <k_Gxy.png>
- [17]
-File: k_Gxyl.png Graphic file (type bmp)
-<k_Gxyl.png>
- [18] [19]
+ [17] [18] [19]
+Excluding 'comment' comment.
 第 5 章
 [20
 
@@ -328,12 +454,12 @@ File: k_Gxyl.png Graphic file (type bmp)
 ]) [23] (./M2sato.aux) )
 (\end occurred when \ifx on line 2 was incomplete) 
 Here is how much of TeX's memory you used:
- 3030 strings out of 479956
- 38901 string characters out of 5887570
- 327747 words of memory out of 5000000
- 20176 multiletter control sequences out of 15000+600000
- 563084 words of font info for 136 fonts, out of 8000000 for 9000
+ 3836 strings out of 479956
+ 49436 string characters out of 5887570
+ 347639 words of memory out of 5000000
+ 20962 multiletter control sequences out of 15000+600000
+ 563378 words of font info for 137 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 66i,12n,72p,233b,417s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,13n,87p,236b,413s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on M2sato.dvi (25 pages, 81620 bytes).
+Output written on M2sato.dvi (25 pages, 82536 bytes).

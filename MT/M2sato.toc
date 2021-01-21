@@ -5,7 +5,7 @@
 \contentsline {section}{\numberline {1.4}本研究の成果}{3}{}%
 \contentsline {section}{\numberline {1.5}論文の構成}{4}{}%
 \contentsline {chapter}{\numberline {第2章}諸定義}{5}{}%
-\contentsline {section}{\numberline {2.1}$CONGEST$モデル}{5}{}%
+\contentsline {section}{\numberline {2.1}{\textsf {CONGEST}}モデル}{5}{}%
 \contentsline {section}{\numberline {2.2}2者間通信複雑性}{5}{}%
 \contentsline {section}{\numberline {2.3}$k$-極大独立集合}{7}{}%
 \contentsline {section}{\numberline {2.4}$k$-極大独立集合検証問題}{7}{}%

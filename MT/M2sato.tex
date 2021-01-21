@@ -13,6 +13,8 @@
 \usepackage{bm}					%太字形式のベクトル
 \usepackage{amsthm}			%定理用?
 
+\usepackage{breqn} %長い数式改行用
+
 %%% 泉先生がコメントをつける用 %%%
 \usepackage[normalem]{ulem}
 \usepackage{color}
@@ -181,9 +183,9 @@ $\Omega\left(n^{2 - \frac{1}{l+1}}/l\right)$ラウンドの下界を証明した
 
 \chapter{諸定義}
 
-\section{$CONGEST$モデル}
-本研究で考える$CONGEST$モデルは，単純無向連結グラフ$G = (V, E)$により表現される．ここで$V$はノードの集合で
-$|V| = n$とし，$E$は通信リンクの集合である．$CONGEST$モデルでは計算機はラウンドに従って同期して動作するものとする．
+\section{{\CONGEST}モデル}
+本研究で考える{\CONGEST}モデルは，単純無向連結グラフ$G = (V, E)$により表現される．ここで$V$はノードの集合で
+$|V| = n$とし，$E$は通信リンクの集合である．{\CONGEST}モデルでは計算機はラウンドに従って同期して動作するものとする．
 1ラウンド内で，隣接頂点へのメッセージ送信，隣接頂点からのメッセージ受信，内部計算を行う.各辺は単位ラウンドあたり
 $b = O(\log n)$ビットを双方向に伝送可能であり，各ノードは同一ラウンドに異なる接続辺に異なるメッセージを
 送信可能である．また，各ノードには$O(\log n)$ビットの自然数値によるIDが付与されており，
@@ -474,6 +476,121 @@ $\Omega\left(n^{2 - \frac{1}{l+1}}/l\right)$の通信ラウンド数を必要と
 \end{theorem}
 
 \begin{prf*}
+以下をを定義する．
+\begin{definition}
+証明の簡略化のために$N$の$l + 1$乗根は整数であると仮定する．このとき$M = \sqrt[l + 1]{N}$とする．
+また，自然数$i, j, h$が与えられたとき，$\alpha_{i, h}(j)$を$j$を$i$進数で表したときの$h$桁目の値と定義する．
+\end{definition}
+まず初めにアリスとボブが構築するグラフ$G = (V, E)$を図 \ref{k_G}に示す．
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=120mm]{k_G.png}
+\end{center}
+\caption{$G = (V, E)$}
+\label{k_G}
+\end{figure}
+
+図中の頂点のうち灰色のものは独立集合に含まれる頂点とする．また，四角で囲まれている部分はクリークを表す．
+図中の辺を定式化すると以下のようになる．
+\begin{itemize}
+\item $A^{1}=\{a^{1}_{1},\dots,a^{1}_{N}$\}と
+$A^{2}=\{a^{2}_{1},\dots,a^{2}_{N}\}$は$N$頂点のクリーク
+\item 任意の$1\leq i \leq l+1$に対して$B^{1}_{i}=\{b^{1,i}_{1},\dots,b^{1,i}_{N}\}$と
+$B^{2}_{i}=\{b^{2,i}_{1},\dots,b^{2,i}_{N}\}$は$N$頂点のクリーク
+\item 任意の$1\leq i \leq l+1$に対して$D^{1}_{i}=\{d^{1,i}_{1},\dots,d^{1,i}_{M}\}$と
+$D^{2}_{i}=\{d^{2,i}_{1},\dots,d^{2,i}_{M}\}$は$M$頂点のクリーク
+\item $\forall i((a_{i}^{1}, s), (a_{i}^{2}, s)) \in E$
+\item 任意の$1\leq i \leq N$と$1\leq j \leq l+1$に対して$\left(a^{1}_{i},c^{1,j}_{\alpha_{M,j}(i-1)+1}\right)$と$\left(a^{2}_{i},c^{2,j}_{\alpha_{M,j}(i-1)+1}\right)$が$E$に含まれる
+\item 任意の$1\leq i \leq N$，$1\leq j \leq l+1$と$1\leq k \leq l+1$に対して$\left(b^{1,k}_{i},e^{1,j}_{\alpha_{M,j}(i-1)+1}\right)$と$\left(b^{2,k}_{i},e^{2,j}_{\alpha_{M,j}(i-1)+1}\right)$が$E$に含まれる
+\item 任意の$1\leq i \leq M$と$1\leq j \leq l+1$に対して$(c_{i}^{1, j}, d_{i}^{1, j})$と$(e_{i}^{1, j}, d_{i}^{1, j})$が$E$に含まれる
+\item 任意の$1\leq i \leq M$と$1\leq j \leq l+1$に対して$(c_{i}^{2, j}, d_{i}^{2, j})$と$(e_{i}^{2, j}, d_{i}^{2, j})$が$E$に含まれる
+\end{itemize}
+
+このグラフが「$G$中に与えられている独立集合が，$DISJ_{N \times N} (x, y) = 1$のときのみ
+$k$-MISでない」という特性($P_{k}$)を持つように，
+$G_{A}$に構造$H_{A}$，$G_{B}$に構造$H_{B}$を追加する．$H_{A}$と$H_{B}$の中身は以下のとおりである．
+
+\begin{itemize}
+\item $H_{A}$： $E_{A}=\{(a^{1}_{i},a^{2}_{j}) \mid x_{i,j}=0, 1 \leq i \leq N, 1 \leq j \leq N\}$
+\item $H_{A}$： $E_{B}=\{(a^{1,k}_{i},a^{2,k}_{j}) \mid x_{i,j}=0, 1 \leq i \leq N, 1 \leq j \leq N, 1 \leq k \leq l+1\}$
+\end{itemize}
+
+$G = (V, E)$に辺を追加したグラフ$G^{x, y} = (V, E')$を図 \ref{k_Gxy}に示す．
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=120mm]{k_Gxy.png}
+\end{center}
+\caption{$G^{x, y} = (V, E')$}
+\label{k_Gxy}
+\end{figure}
+
+このグラフ$G^{x, y} = (V, E')$が上記の特性($P_{k}$)を満たしていることを示すために，次の2点を確認する． \\
+(i)$DISJ_{N \times N} (x, y) = 1$のとき，グラフに与えられている独立集合が$k$-MISでない： \\
+$x_{i,j}=y_{i,j}=1$であると仮定する．このとき，
+\begin{dmath*}
+I'=\{s\} \cup \bigcup_{1\leq h \leq l+1}c^{1,h}_{\alpha_{M,h}(i-1)+1} \cup 
+\bigcup_{1\leq h \leq l+1}c^{2,h}_{\alpha_{M,h}(j-1)+1} \cup 
+\bigcup_{1\leq h \leq l+1}e^{1,h}_{\alpha_{M,h}(i-1)+1} \cup 
+\bigcup_{1\leq h \leq l+1}e^{2,h}_{\alpha_{M,h}(j-1)+1}
+\end{dmath*}
+\begin{dmath*}
+S=\{a^{1}_{i} \cup a^{2}_{j}\} \cup 
+\bigcup_{1\leq h \leq l+1}b^{1,h}_{j} \cup 
+\bigcup_{1\leq h \leq l+1}b^{2,h}_{j} \cup 
+\bigcup_{1\leq h \leq l+1}d^{1,h}_{\alpha_{M,h}(i-1)+1} \cup  
+\bigcup_{1\leq h \leq l+1}d^{2,h}_{\alpha_{M,h}(j-1)+1}
+\end{dmath*}
+とすると
+$I \backslash I' \cup S$は独立点集合になる．ここで$|I'|=4l+5$で$|S|=4l+6$であることから，$I$は$k$-MISでないことが確認できる． \\
+(ii)$DISJ_{N \times N} (x, y) = 0$のとき，グラフに与えられている独立集合が$k$-MISである： \\ 
+グラフに与えられている独立集合が9-MISでないと仮定する．このとき，$I'\subseteq I$をサイズ$k$以下の独立集合，
+$S\subseteq V\backslash I$を$(I \backslash I') \cup S$が独立集合になるサイズ$|I'|+1$以上の頂点集合とする．
+また，$(A^{1}\cup A^{2}) \cap S$を満たすノードの数を$num(A)$，
+$\bigcup_{1\leq i \leq l+1}(B_{i}^{1} \cup B_{i}^{2}) \cap S$を満たすノードの数を$num(B)$，
+$\left(\bigcup_{1\leq i \leq l+1}C_{i}^{1} \cup \bigcup_{1\leq i \leq l+1}C_{i}^{2}\right) \cap S$を満たすノードの数を$num(C)$，
+$\left(\bigcup_{1\leq i \leq l+1}D_{i}^{1} \cup \bigcup_{1\leq i \leq l+1}D_{i}^{2}\right) \cap S$を満たすノードの数を$num(D)$，\\
+$\left(\bigcup_{1\leq i \leq l+1}E_{i}^{1} \cup \bigcup_{1\leq i \leq l+1}E_{i}^{2}\right) \cap S$を満たすノードの数を$num(E)$とする．
+このとき，ある$k$点を取り除くことで独立集合$S$に追加できる$k+1$個以上の頂点が存在するが，
+任意の$1\leq i \leq l+1$に対して$A^{1}$，$A^{2}$，$B^{1}_{i}$，$B^{2}_{i}$，$D^{1}_{i}$，$D^{2}_{i}$が
+それぞれクリークであるため，独立集合$S$に追加できる頂点数は高々$k+1$である．
+
+任意の$1\leq i \leq M$に対して$d^{1,1}_{M}$を追加するには$c^{1,1}_{k}$と$e^{1,1}_{k}$を....を独立点集合から取り除く必要がある．
+...従って$num(B)$は$num(E)-2$の値によって上から抑えられ，$num(D)$は$num(C)$の値によって上から抑えられる．
+従って，$k$-misでない場合独立点集合に新しく加えるものは$num(A)=2$を満たしていないといけない.
+$num(A)=2$を満たすためには$num(C)\geq 2(l+1)$である必要があり，$num(D)=2(l+1)$であるためには$num(E)\geq 2(l+1)$である必要がある．
+従って，$num(A)=2,num(B)=2l+2,num(C)=2l+2,num(D)=2l+2,num(E)=2l+2$を満たす．
+この時，$S\cap (A^{1}\cup A^{2})$に含まれるノードを$a^{1}_{i}$と$a^{2}_{j}$とする．
+このとき$I'\cap(\bigcup_{1\leq i\leq l+1}C^{1,i}\cup C^{2,l} \cup C^{2,2})=\bigcup_{1\leq i \leq l+1, a^{1}_{j}\in S\cap (A^{1}\cup A^{2})}\{c^{1,i}_{\alpha_{M,i}(j-1)}]\}$
+であり，...である．
+従って$B^{1,1}$に含まれるノードで$I'$に含まれる可能性があるノードは$b^{1,1}_{i}$のみであり，
+$B^{2,1}$に含まれるノードで$I'$に含まれる可能性があるノードは$b^{2,1}_{j}$のみである．
+しかし，$a^{1}_{i}$と$a^{2}_{j}$が両方とも追加できるのは$x_{i,j}=1$の時のみであり
+$b^{1}_{i}$と$b^{2}_{j}$が両方とも追加できるのは$y_{i,j}=1$の時のみであるが，これは$DISJ_{N\times N}(x,y)=0$に矛盾する．
+今回，$N \times N$ビットの交叉判定インスタンスをグラフに埋め込んでおり，カット辺のサイズ$|C| = 2(l + 1) \cdot M = N^{1/(l + 1)}$であることがわかる．
+{\CONGEST}モデルにおいてグラフ上に与えられた独立集合が$k$-MISであるかどうかを$r$ラウンドで判定する
+アルゴリズム$\mathcal{A}$が存在したとすると，アリスとボブは$O(r \cdot |C| \cdot \log n)$ビット通信したことになる．
+このグラフにおいてアルゴリズム$\mathcal{A}$を実行すると同時に2者間交叉判定問題も解けていることになるので，
+交叉判定問題の通信複雑性よりアリスとボブは少なくとも$\Omega (N \times N)$ビットは通信しているはずである．
+よって，$r = \Omega \left(N^{2 - \frac{1}{l + 1}} / 2( l + 1)\log n\right) = \tilde{\Omega}\left(N^{2 - \frac{1}{l + 1}}/l\right)$ラウンドの
+下界を得ることができる．
+$A, B$の頂点集合はそれぞれ$N$頂点で，$C, D, E$の頂点集合はそれぞれ$N^{1/(l + 1)}$頂点で構成されているため，
+グラフ全体の頂点数$n$は$n = O(N)$である．したがって$N = \Omega(n)$になるため，
+$\tilde{\Omega}\left(n^{2 - \frac{1}{l + 1}}/l\right)$ラウンドの下界を得ることができる．
+\end{prf*}
+\newpage
+
+%コメントここから
+\begin{comment}
+\section{$k$-MIS検証問題の下界}
+このセクションではk-MIS検証問題の下界についての議論を行う．具体的には,次の定理を証明する．
+\begin{theorem}
+{\CONGEST}モデルにおいて，任意の$l \geq 1$に対して$k = 4l + 5$としたとき$k$-MIS検証問題を解く全てのアルゴリズムは
+$\Omega\left(n^{2 - \frac{1}{l+1}}/l\right)$の通信ラウンド数を必要とする．
+\end{theorem}
+
+\begin{prf*}
 最初に$l = 1$の場合を考える．
 
 まず初めにアリスとボブが構築するグラフ$G = (V, E)$を図 \ref{k_G}に示す．
@@ -570,7 +687,8 @@ $A, B$の頂点集合はそれぞれ$N$頂点で，$C, D, E$の頂点集合は�
 グラフ全体の頂点数$n$は$n = O(N)$である．したがって$N = O(n)$になるため，
 $\tilde{\Omega}\left(n^{2 - \frac{1}{l + 1}}/l\right)$ラウンドの下界を得ることができる．
 \end{prf*}
-\newpage
+\end{comment}
+%コメントここまで
 
 \chapter{まとめと今後の課題}
 \section{まとめ}
