@@ -109,20 +109,15 @@ $\Omega \left(\frac{n^{2}}{(\log n)^{3}}\right)$ラウンドの下界 \cite{efro
 \item 2-MIS検証問題を解く任意のアルゴリズムはの最悪時実行ラウンド数は$\tilde{\Omega} (\sqrt{n})$となる．
 \item 3-MIS検証問題を解く任意のアルゴリズムの最悪時実行ラウンド数は$\tilde{\Omega}(n)$ラウンドとなる．
 \item 任意の自然数$\ell \geq 1$に対して，$(4\ell + 5)$-MIS検証問題を解く任意のアルゴリズムの
-最悪時実行ラウンド数は$\tilde{\Omega}\left((n^{2 - \frac{\ell}{\ell+1}})/\ell\right)$ラウンドとなる．
+最悪時実行ラウンド数は$\tilde{\Omega}\left((n^{2 - \frac{1}{\ell+1}})/\ell\right)$ラウンドとなる．
 \end{enumerate}
 
-\Izumi{上の一般のケースの下界の式はあっているか？$\ell$を大きくすると$\Omega(n)$に収束するのだが？あと，数式の$l$は，1との区別のために$\ell$を使うのが望ましい}
+\Izumi{数式の$l$は，1との区別のために$\ell$を使うのが望ましい}
 上記の下界はすべて，定数成功確率の乱拓アルゴリズムについても成立する．4番目の下界の結果より，
-$K=\Omega(log n)$に対して
-最初に，1-MIS検証問題が$O(1)$ラウンドで解けることを証明した．
-次に，2-MIS検証問題に対する$\tilde{\Omega} (\sqrt{n})$ラウンドの下界と
-3-MIS検証問題に対する$\tilde{\Omega} (n)$ラウンドの下界を証明した．
-最後に，任意の$l \geq 1$に対して$k = 4l + 5$としたときに$k$-MIS検証問題に対する
-$\Omega\left(n^{2 - \frac{1}{l+1}}/l\right)$ラウンドの下界を証明した．
-特に，下界の証明のアイデアは2者間通信の枠組みにおける交叉判定問題からの帰着に基づいている．
-
-
+$K=\Omega(log n)$に対して，$k$-MIS懸賞問題のラウンド複雑性はナイーブなアルゴリズムの上界である
+$O(n^2)$ラウンドにほぼ一致する($\tilde{\Omega}(n^2)$ラウンド)ことが分かる．なお，いずれの下界の証明も，
+{\CONGEST}モデルにおける下界証明の代表的な手法の一つである，2者間通信複雑性における交差判定問題からの
+帰着に基づいている．
 
 \section{関連研究} 
 {\CONGEST}モデルにおける最大独立集合問題の通信複雑性としては，最大重み付き独立集合の
@@ -144,7 +139,7 @@ $\Omega \left(\frac{\log \log n}{\log \log \log n} \right)$の下界や
 また集中型アルゴリズムについて，$P = NP$が成り立たない限り,任意の$\epsilon > 0$に対して
 最大独立集合の$n^{\frac{1}{2} - \epsilon}$近似を発見するアルゴリズムは存在しないことが知られている \cite{haastad1999clique}．
  
-本研究の下界に関する結果は2者間通信の枠組みにおける交叉判定問題からの帰着に基づいているが，
+前述の通り，本研究の下界に関する結果は2者間通信の枠組みにおける交叉判定問題からの帰着に基づいているが，
 交叉判定問題からの帰着によって下界を示すという証明方法は多くの問題に対して用いられている．
 一部の例として最小カット発見問題と最小全域木問題に対する$\Omega (D + \sqrt{n})$の下界
 ($D$はグラフの直径) \cite{sarma2012distributed}や部分グラフ$H_{k}$検出問題に対する
@@ -167,6 +162,36 @@ $\Omega \left(\frac{n^{2 - 1/k}}{bk}\right)$の下界 \cite{fischer2018possibili
 $b = O(\log n)$ビットを双方向に伝送可能であり，各ノードは同一ラウンドに異なる接続辺に異なるメッセージを
 送信可能である．また，各ノードには$O(\log n)$ビットの整数値によるIDが付与されており，
 自身の隣接ノードすべてのIDを既知であるとする．各ノードはグラフのトポロジに関する事前知識を持たないものとする．
+
+\section{$k$-極大独立集合}
+\begin{comment}
+\begin{definition}
+$I$が$k$-極大独立集合 $ \Leftrightarrow$ \\
+\begin{math}
+\lnot \left( \exists I' \subseteq I |I'| \leq k,  \\ \exists S \subseteq V |S|\geq k + 1, (I\setminus I')\cap Sが独立集合 \right)
+\end{math}
+\end{definition}
+\end{comment}
+
+\begin{definition}
+頂点集合$I$に対して，以下を満たす頂点集合$I' \subseteq I$と$S\subseteq V \backslash I$のペアが
+存在しないとき，Iを$k$-極大独立集合と呼ぶ．
+\begin{enumerate}
+\item $|I'| \leq k$
+\item $|S| \geq |I'| + 1$
+\item $(I \backslash I') \cup S$は独立集合
+\end{enumerate}
+\end{definition}
+つまり，ある独立集合$I$に対して，サイズ$k$の$I$の部分集合$I'$を取り除いてサイズ$k + 1$以上の$V$の部分集合$S$を
+$I$に追加したものが新たな独立集合になり得ないとき，$I$を$k$-極大独立集合と定義する．
+
+\section{$k$-極大独立集合検証問題}
+\begin{definition}
+入力としてグラフ$G$と独立集合$I$が与えられる．各ノードはアルゴリズム$\mathcal{A}$に従って$\{0,1\}$の
+いずれかを返し以下の条件を満たす時，アルゴリズム$\mathcal{A}$は$k$-MIS検証問題を解くアルゴリズムであると言う．\\
+1． $\forall v\in V$に対して，$v$が0を返すとき$I$は$k$-MISである．\\
+2． $\exists v \in V$に対して，$v$が1を返すとき$I$は$k$-MISではない．
+\end{definition}
 
 \section{2者間通信複雑性}
 2者間通信複雑性の枠組みでは，アリスとボブの二人のプレイヤーがそれぞれ$k$ビットの0/1のデータ列で構成される
@@ -213,35 +238,6 @@ $O(r \cdot |C| \cdot \log n)$ビット通信したことになる．これは，
 $r = \Omega (k / |C| \cdot \log n)$ラウンドの下界を得ることができる．カット辺の大きさが小さくなるほど下界が強くなる．
 %そのままにしました
 
-\section{$k$-極大独立集合}
-\begin{comment}
-\begin{definition}
-$I$が$k$-極大独立集合 $ \Leftrightarrow$ \\
-\begin{math}
-\lnot \left( \exists I' \subseteq I |I'| \leq k,  \\ \exists S \subseteq V |S|\geq k + 1, (I\setminus I')\cap Sが独立集合 \right)
-\end{math}
-\end{definition}
-\end{comment}
-
-\begin{definition}
-頂点集合$I$に対して，以下を満たす頂点集合$I' \subseteq I$と$S\subseteq V \backslash I$のペアが
-存在しないとき，Iを$k$-極大独立集合と呼ぶ．
-\begin{enumerate}
-\item $|I'| \leq k$
-\item $|S| \geq |I'| + 1$
-\item $(I \backslash I') \cup S$は独立集合
-\end{enumerate}
-\end{definition}
-つまり，ある独立集合$I$に対して，サイズ$k$の$I$の部分集合$I'$を取り除いてサイズ$k + 1$以上の$V$の部分集合$S$を
-$I$に追加したものが新たな独立集合になり得ないとき，$I$を$k$-極大独立集合と定義する．
-
-\section{$k$-極大独立集合検証問題}
-\begin{definition}
-入力としてグラフ$G$と独立集合$I$が与えられる．各ノードはアルゴリズム$\mathcal{A}$に従って$\{0,1\}$の
-いずれかを返し以下の条件を満たす時，アルゴリズム$\mathcal{A}$は$k$-MIS検証問題を解くアルゴリズムであると言う．\\
-1． $\forall v\in V$に対して，$v$が0を返すとき$I$は$k$-MISである．\\
-2． $\exists v \in V$に対して，$v$が1を返すとき$I$は$k$-MISではない．
-\end{definition}
 \newpage
 
 \chapter{1-MIS検証問題の$O(1)$ラウンドアルゴリズム}
@@ -326,10 +322,14 @@ $v.X$内の全ての頂点$u \notin I$が他の$u' \notin I$と隣接してい�
 \end{figure}
 
 図中の頂点のうち灰色のものは独立集合に含まれる頂点とする．図中の辺を定式化すると以下のようになる．
+\Izumi{まず最初に，帰着に使うグラフの形式的な定義を書く（頂点集合，辺集合をちゃんと形式的に定義する）．
+手続き的に少しづつ頂点集合や辺集合を導入していって構成する必要はない，「XXXはクリークを成している」と
+するだけで辺集合を説明するのもよくないので避ける（形式的な定義を示したのち「すなわち，XXXはクリークを構成している」と補足的に説明するのが良い．図4.1は中途半端なので，なくてもいいのでは？}
 %図中の頂点のうち,灰色のものは独立集合に含まれる頂点とする.図中で省略されている辺と$K_{W(y)}$の構造は次のとおりである.
 \begin{itemize}
 \item $\forall i((a_{i}^{1}, b_{i}^{1}), (a_{i}^{2}, b_{i}^{2})) \in E$
 \end{itemize}
+
 
 このグラフが「$G$中に与えられている独立集合が，$DISJ_{N \times N} (x, y) = 1$のときのみ2-MISでない」という特性$P_{2}$を持つように，
 $G_{A}$に構造$H_{A}$，$G_{B}$に構造$H_{B}$を追加する．
@@ -398,6 +398,7 @@ $\tilde{\Omega}(\sqrt{n})$ラウンドの下界を得ることができる．
 
 図中の頂点のうち灰色のものは独立集合に含まれる頂点とする．また，四角で囲まれている部分はクリークを表す．
 図中の辺を定式化すると以下のようになる．
+\Izumi{こちらも記述の仕方は2-MISの時と同様に}
 \begin{itemize}
 \item $A^{1}, A^{2}, B^{1}, B^{2}$は$N$頂点のクリーク$K_{N}$
 \item $\forall i((a_{i}^{1}, c_{i}^{1}), (a_{i}^{2}, c_{i}^{2}), (b_{i}^{1}, c_{i}^{1}), (b_{i}^{2}, c_{i}^{2})) \in E$
