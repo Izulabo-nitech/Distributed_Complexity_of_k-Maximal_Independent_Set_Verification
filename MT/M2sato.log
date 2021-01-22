@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  22 JAN 2021 01:33
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  22 JAN 2021 13:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -443,23 +443,23 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 File: k_Gxy.png Graphic file (type bmp)
 <k_Gxy.png>
  [17] [18] [19]
-Excluding 'comment' comment.
+[20] Excluding 'comment' comment.
 第 5 章
-[20
+[21
 
-] [21
+] [22
 
-] (./M2sato.bbl [22
+] (./M2sato.bbl [23
 
-]) [23] (./M2sato.aux) )
+]) [24] (./M2sato.aux) )
 (\end occurred when \ifx on line 2 was incomplete) 
 Here is how much of TeX's memory you used:
  3836 strings out of 479956
  49436 string characters out of 5887570
- 347639 words of memory out of 5000000
+ 350639 words of memory out of 5000000
  20962 multiletter control sequences out of 15000+600000
  563378 words of font info for 137 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  71i,13n,87p,236b,413s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on M2sato.dvi (25 pages, 82536 bytes).
+Output written on M2sato.dvi (26 pages, 88556 bytes).
