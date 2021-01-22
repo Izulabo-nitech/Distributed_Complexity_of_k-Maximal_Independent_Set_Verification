@@ -1,8 +1,8 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  22 JAN 2021 13:54
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  23 JAN 2021 00:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**M2sato.tex
+**M2sato
 (./M2sato.tex
 pLaTeX2e <2020-10-01>+1 (based on LaTeX2e <2020-10-01> patch level 2)
 L3 programming layer <2020-10-27> xparse <2020-03-03> (./thesis.cls
@@ -404,12 +404,12 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
 
 ] [2] [3] [4]
 第 2 章
-[5
+Excluding 'comment' comment. [5
 
 ]
 File: Gxy.png Graphic file (type bmp)
 <Gxy.png>
- [6] Excluding 'comment' comment. [7]
+ [6] [7]
 第 3 章
 [8
 
@@ -419,47 +419,47 @@ File: 2_G.png Graphic file (type bmp)
 <2_G.png>
 [10
 
-]
+] [11]
 File: 2_Gxy.png Graphic file (type bmp)
 <2_Gxy.png>
- [11] [12]
+ [12] [13]
 File: 3_G.png Graphic file (type bmp)
 <3_G.png>
- [13]
+ [14]
 File: 3_Gxy.png Graphic file (type bmp)
 <3_Gxy.png>
- [14] [15]
+ [15] [16]
 File: k_G.png Graphic file (type bmp)
 <k_G.png>
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 4
-97.
+92.
 
 (c:/texlive/2020/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 497.
- [16]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 492.
+ [17]
 File: k_Gxy.png Graphic file (type bmp)
 <k_Gxy.png>
- [17] [18] [19]
-[20] Excluding 'comment' comment.
+ [18] [19] [20]
+[21] Excluding 'comment' comment.
 第 5 章
-[21
+[22
 
-] [22
+] [23
 
-] (./M2sato.bbl [23
+] (./M2sato.bbl [24
 
-]) [24] (./M2sato.aux) )
+]) [25] (./M2sato.aux) )
 (\end occurred when \ifx on line 2 was incomplete) 
 Here is how much of TeX's memory you used:
- 3836 strings out of 479956
- 49436 string characters out of 5887570
- 350639 words of memory out of 5000000
- 20962 multiletter control sequences out of 15000+600000
- 563378 words of font info for 137 fonts, out of 8000000 for 9000
+ 3856 strings out of 479956
+ 49627 string characters out of 5887570
+ 350629 words of memory out of 5000000
+ 20973 multiletter control sequences out of 15000+600000
+ 566694 words of font info for 150 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 71i,13n,87p,236b,413s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,7n,87p,232b,413s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on M2sato.dvi (26 pages, 88556 bytes).
+Output written on M2sato.dvi (27 pages, 89004 bytes).

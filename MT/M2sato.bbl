@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{haastad1999clique}
+Johan H{\aa}stad.
+\newblock Clique is hard to approximate withinn 1- $\varepsilon$.
+\newblock {\em Acta Mathematica}, 182(1):105--142, 1999.
+
 \bibitem{kawarabayashi2019improved}
 Ken-ichi Kawarabayashi, Seri Khoury, Aaron Schild, and Gregory Schwartzman.
 \newblock Improved distributed approximation to maximum independent set.
@@ -34,11 +39,6 @@ Alkida Balliu, Sebastian Brandt, Juho Hirvonen, Dennis Olivetti, Mika{\"e}l
 \newblock Lower bounds for maximal matchings and maximal independent sets.
 \newblock In {\em 2019 IEEE 60th Annual Symposium on Foundations of Computer
   Science (FOCS)}, pages 481--497. IEEE, 2019.
-
-\bibitem{haastad1999clique}
-Johan H{\aa}stad.
-\newblock Clique is hard to approximate withinn 1- $\varepsilon$.
-\newblock {\em Acta Mathematica}, 182(1):105--142, 1999.
 
 \bibitem{sarma2012distributed}
 Atish~Das Sarma, Stephan Holzer, Liah Kor, Amos Korman, Danupon Nanongkai,
