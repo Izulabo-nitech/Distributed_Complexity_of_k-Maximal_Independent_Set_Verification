@@ -94,7 +94,7 @@ $n$の多項式時間で解くことは,その近似を含めて絶望的であ�
 
 そこで今回,我々は最大独立集合の
 局所最適解である$k$-極大独立集合($k$-Maximal Independet Set, $k$-MIS)について考える.
-\izumi{$k$－MISはそれほど一般的な概念ではないので，ここにラフな説明ほしい}
+\Izumi{$k$－MISはそれほど一般的な概念ではないので，ここにラフな説明ほしい}
 %独立集合のうち,$k$個の頂点をその集合から取り除いて独立集合を維持したまま$k + 1$個以上の頂点を
 %追加することができないとき,その独立集合を$k$-MISといい,
 与えられたグラフ$G=(V, E)$に対する$k$-MISの発見は，自然な局所探索により実現することが可能である．すなわち，
@@ -114,18 +114,6 @@ $k = O(1)$の場合この処理は$n$の多項式時間内で収まることが�
 最後に,任意の$l \geq 1$に対して$k = 4l + 5$としたときに$k$-MIS検証問題に対する
 $\Omega\left(n^{2 - \frac{1}{l+1}}/l\right)$ラウンドの下界を証明した．
 特に,下界の証明のアイデアは2者間通信の枠組みにおける交叉判定問題からの帰着に基づいている.
-
-\begin{table}[htb]
-  \begin{center}
-    \caption{本研究が示した$k$-MIS検証問題のラウンド複雑性}
-    \begin{tabular}{|c||c|c|c|c|} \hline
-      $k$ & 1 & 2 & 3 & $4l + 5$ \\ \hline
-      上界or下界 & 上界 & 下界 & 下界 & 下界 \\ \hline
-      結果 & $O(1)$ & $\tilde{\Omega} (\sqrt{n})$ & $\tilde{\Omega} (n)$ & $\Omega\left(n^{2 - \frac{1}{l+1}}/l\right)$ \\ \hline
-    \end{tabular}
-    \label{tab: k-MIS}
-  \end{center}
-\end{table}
 
 \begin{table}[htb]
   \begin{center}
