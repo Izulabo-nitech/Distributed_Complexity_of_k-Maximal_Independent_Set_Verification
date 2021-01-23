@@ -3,6 +3,7 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: M2sato.aux
 The style file: unsrt.bst
 Database file #1: M2sato.bib
+Warning--I didn't find a database entry for ""
 You've used 11 entries,
             1791 wiz_defined-function locations,
             513 strings with 5668 characters,
@@ -44,3 +45,4 @@ warning$ -- 0
 while$ -- 30
 width$ -- 13
 write$ -- 121
+(There was 1 warning)
