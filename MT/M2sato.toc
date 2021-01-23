@@ -11,8 +11,8 @@
 \contentsline {chapter}{\numberline {第3章}1-MIS検証問題の$O(1)$ラウンドアルゴリズム}{9}{}%
 \contentsline {chapter}{\numberline {第4章}$k$-MIS検証問題の下界}{11}{}%
 \contentsline {section}{\numberline {4.1}2-MIS検証問題の下界}{11}{}%
-\contentsline {section}{\numberline {4.2}3-MIS検証問題の下界}{15}{}%
-\contentsline {section}{\numberline {4.3}$k$-MIS検証問題の下界}{18}{}%
-\contentsline {chapter}{\numberline {第5章}まとめと今後の課題}{23}{}%
-\contentsline {section}{\numberline {5.1}まとめ}{23}{}%
-\contentsline {section}{\numberline {5.2}今後の課題}{23}{}%
+\contentsline {section}{\numberline {4.2}3-MIS検証問題の下界}{14}{}%
+\contentsline {section}{\numberline {4.3}$k$-MIS検証問題の下界}{17}{}%
+\contentsline {chapter}{\numberline {第5章}まとめと今後の課題}{22}{}%
+\contentsline {section}{\numberline {5.1}まとめ}{22}{}%
+\contentsline {section}{\numberline {5.2}今後の課題}{22}{}%
