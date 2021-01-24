@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  24 JAN 2021 02:57
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  24 JAN 2021 20:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -409,48 +409,48 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
 ] [6]
 File: Gxy.png Graphic file (type bmp)
 <Gxy.png>
- [7] [8]
+ [7] [8] [9]
 第 3 章
-[9
+[10
 
-] [10]
+] [11]
 第 4 章
-[11
+[12
 
 ]
 File: 2_Gxy.png Graphic file (type bmp)
 <2_Gxy.png>
- [12] [13] [14]
+ [13] [14] [15]
 File: 3_Gxy.png Graphic file (type bmp)
 <3_Gxy.png>
- [15] [16] [17]
+ [16] [17] [18]
 File: k_Gxy.png Graphic file (type bmp)
 <k_Gxy.png>
- [18] [19] [20]
-Overfull \hbox (15.50023pt too wide) in paragraph at lines 668--678
+ [19] [20] [21]
+Overfull \hbox (15.50023pt too wide) in paragraph at lines 676--686
 \JY1/mc/m/n/12 が存在したとすると ， 定理 \OT1/cmr/m/n/12 2.2 \JY1/mc/m/n/12 よ
 り $\OMS/cmsy/m/n/12 A$ \JY1/mc/m/n/12 は少なくとも $\OML/cmm/m/it/12 r \OT1/cm
 r/m/n/12 = 
  [] =
  []
 
-[21]
+[22]
 第 5 章
-[22
+[23
 
-] [23
+] [24
 
-] (./M2sato.bbl [24
+] (./M2sato.bbl [25
 
-]) [25] (./M2sato.aux) )
+]) [26] (./M2sato.aux) )
 (\end occurred when \ifx on line 2 was incomplete) 
 Here is how much of TeX's memory you used:
- 3831 strings out of 479956
- 49216 string characters out of 5887570
- 349621 words of memory out of 5000000
- 20954 multiletter control sequences out of 15000+600000
+ 3832 strings out of 479956
+ 49234 string characters out of 5887570
+ 349631 words of memory out of 5000000
+ 20955 multiletter control sequences out of 15000+600000
  568782 words of font info for 156 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 71i,7n,87p,233b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,10n,87p,511b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on M2sato.dvi (27 pages, 98284 bytes).
+Output written on M2sato.dvi (28 pages, 100824 bytes).
