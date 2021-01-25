@@ -110,7 +110,7 @@ $\Omega \left(\frac{n^{2}}{(\log n)^{3}}\right)$ラウンドの下界 \cite{efro
 この仮定は必ずしも現実的とはいえない．そこで本研究では，近似解の分散計算複雑性ではなく，
 (ある種の近傍の下での)局所最適解の複雑性に着目する．具体的には，
 $k$-極大独立集合($k$-Maximal Independet Set， $k$-MIS)の発見問題に対する
-{\CONGEST}モデルでのラウンド複雑性を検討する\cite{bollobas1991generalised}\Izumi{(文献引きたい)}．$k$-極大独立集合を定義するために，
+{\CONGEST}モデルでのラウンド複雑性を検討する\cite{bollobas1991generalised}．$k$-極大独立集合を定義するために，
 与えられた独立集合より高々$k$個の頂点を取り除き，他の$k+1$個以上の頂点を
 追加することで独立集合のサイズを
 一つ増加させるという近傍探索を定義する．$k$-極大独立集合は，この操作が適用不能な独立集合として定義される．
@@ -126,7 +126,7 @@ $k$-極大独立集合($k$-Maximal Independet Set， $k$-MIS)の発見問題に�
 具体的には，{\CONGEST}モデルにおける$k$-MIS検証問題に関して，以下の結果が成立することを示す．
 \begin{enumerate}
 \item 1-MIS検証問題を$O(1)$ラウンドで解くアルゴリズムが存在する．
-\item 2-MIS検証問題を解く任意のアルゴリズムはの最悪時実行ラウンド数は$\tilde{\Omega} (\sqrt{n})$となる．
+\item 2-MIS検証問題を解く任意のアルゴリズムの最悪時実行ラウンド数は$\tilde{\Omega} (\sqrt{n})$となる．
 \item 3-MIS検証問題を解く任意のアルゴリズムの最悪時実行ラウンド数は$\tilde{\Omega}(n)$ラウンドとなる．
 \item 任意の自然数$\ell \geq 1$に対して，$(4\ell + 5)$-MIS検証問題を解く任意のアルゴリズムの
 最悪時実行ラウンド数は$\tilde{\Omega}\left((n^{2 - \frac{1}{\ell+1}})/\ell\right)$ラウンドとなる．
@@ -138,7 +138,6 @@ $O(n^2)$ラウンドにほぼ一致する($\tilde{\Omega}(n^2)$ラウンド)こ�
 {\CONGEST}モデルでのラウンド数下界証明ための代表的な手法の一つである，2者間通信複雑性における交叉判定問題からの帰着に基づいている．
 
 \section{関連研究} 
-\Izumi{(上でも書いたが，$k$-MISについての先行研究についても参照したい)}
 {\CONGEST}モデルにおける最大独立集合問題の通信複雑性としては，最大重み付き独立集合の
 $(1 + \epsilon) \cdot \Delta$-近似($\Delta$は頂点の最大次数) を高確率で見つける
 アルゴリズムに対する$\left(\mathrm{poly}(\log \log n)/\epsilon \right)$ラウンドの上界
@@ -214,7 +213,7 @@ $\Inp_v = 0$であるとする．ある(乱択)アルゴリズム$\mathcal{A}$�
 確率$2/3$以上で$f(n)$ラウンド以内に以下の条件を満たして停止するとき，
 $\mathcal{A}$は$k$-MIS検証問題を解くアルゴリズムであるという．
 \begin{enumerate}
-\item $I$は$k$-MISであるならば，任意の$v \in V$について$\Out_v = 1$．
+\item $I$が$k$-MISであるならば，任意の$v \in V$について$\Out_v = 1$．
 \item $I$が$k$-MISではないならば，ある$v \in V$について$\Out_v = 0$．
 \end{enumerate}
 \end{definition}
@@ -240,7 +239,7 @@ $\epsilon$-誤り乱択プロトコルの通信複雑性として定義される
 
 2者間通信複雑性における重要な基本問題として，\emph{交叉判定問題}(set-disjointness)が
 ある．この問題では,アリスとボブはそれぞれ$x \in \{0, 1\}^{k}$と$y \in \{0, 1\}^{k}$を入力として持ち，
-目的は$DISJ_{k} (x, y) :=\bigvee_{i = 1}^{k} x_{i} \land y_{i}$を計算することである．
+目的は$\mathrm{DISJ}_{k} (x, y) :=\bigvee_{i = 1}^{k} x_{i} \land y_{i}$を計算することである．
 $k$ビットの交叉判定問題を解くために必要なアリスとボブの通信ビット数に関して，
 次の定理が成り立つ\cite{kalyanasundaram1992probabilistic}．
 \begin{theorem} \label{thm:disjointness}
@@ -256,7 +255,7 @@ $k$ビット交叉判定問題に対する2者間通信複雑性は決定性プ�
 今，{\CONGEST}モデルにおいて，問題のインスタンスがネットワークトポロジ$G = (V, E)$および
 頂点ラベリング$I : V \to \Sigma$により定義されるような問題を考える．
 このインスタンスに対する何らかの特性を表す述語$P$（例えば「グラフに与えられた
-MISが2-MISでない」)を満たすかどうかを判定する問題のラウンド複雑性下界を導きたい
+独立集合が2-MISでない」)を満たすかどうかを判定する問題のラウンド複雑性下界を導きたい
 とする．この問題を2者間交叉判定問題から帰着するために，
 交差判定問題の入力$(x, y$に対して決まる，以下に示す条件を満たすような
 入力インスタンス(\emph{下界グラフ})$G^{x, y} = (V, E)$および$I^{x, y}$を構成する
@@ -266,7 +265,7 @@ MISが2-MISでない」)を満たすかどうかを判定する問題のラウ�
 \item $V_A$により誘導される部分グラフ$G_A$および$V_B$により誘導される部分グラフ$G_B$は
 それぞれ入力文字列$x$および$y$のみに依存して決定される．
 \item $V_A$，$V_B$に対する頂点ラベリングの値はそれぞれ$x$，$y$のみに依存して決定される．
-\item $G_A$と$G_B$の間にまたがるカット辺の集合$Cut$は$x$および$y$いずれの値にも
+\item $G_A$と$G_B$の間にまたがるカット辺の集合$\mathit{Cut}$は$x$および$y$いずれの値にも
 依存しない．
 \item 構成されたインスタンス$(G^{x,y}, I^{x,y})$に対して，
 述語$P$は，$\mathrm{DISJ}_{k} (x, y)=1$，かつその時に限り真となる．
@@ -274,7 +273,6 @@ MISが2-MISでない」)を満たすかどうかを判定する問題のラウ�
 グラフ$G$に辺や頂点を追加したグラフを$G^{x, y} = (V', E')$とすると
 $V' = V \cup (V_{A} \cup V_{B}), E' = E \cup (E_{A} \cup E_{B})$と表すことができる．
 グラフ$G^{x, y}$の構造の概要を図 \ref{Gxy} に示す．
-
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[width=120mm]{Gxy.png}
@@ -282,26 +280,25 @@ $V' = V \cup (V_{A} \cup V_{B}), E' = E \cup (E_{A} \cup E_{B})$と表すこと�
 \caption{$G^{x, y} = (V', E')$}
 \label{Gxy}
 \end{figure}
-
 構成した下界グラフ$G^{x, y} = (V', E')$に関して，以下の定理が成り立つ．
 \begin{theorem}
 $G^{x,y}$および$I^{x,y}$を
-$k$を交叉判定インスタンスのビット数，$|Cut|$を$G^{x, y}$におけるカット辺のサイズとする．
+$k$を交叉判定インスタンスのビット数，$|\mathit{Cut}|$を$G^{x, y}$におけるカット辺のサイズとする．
 このとき，任意の$x, y \in \{0, 1\}^k$に対して入力インスタンス$(G^{x, y}, I^{x,y})$が述語$P$を満たすかどうかを判定する{\CONGEST}モデル上の任意のアルゴリズムは
-$\Omega (k / |Cut| \cdot \log n)$ラウンドの下界を持つ．
+$\Omega (k / |\mathit{Cut}| \cdot \log n)$ラウンドの下界を持つ．
 \label{lower}
 \end{theorem}
 \begin{prf*}
 $\mathcal{A}$を，述語$P$を満たすかどうかを判定する分散アルゴリズムであるとする．
 アリスとボブは，入力グラフ上での$\mathcal{A}$の実行をシミュレートすることで，
 $(x, y)$に対する交差判定問題を解くことができることを示す．
-まず最初に，アリスは$G_{A}$のトポロジおよびそこに含まれる頂点のラベリングを，ボブは$G_{B}$のトポロジおよびそこに含まれるのラベリングを構成する，下界グラフが満たす条件より，この構成はアリスとボブの間で通信を行うことなく局所的に計算可能である．構成結果より，アリス，ボブは互いに$V_A$および$V_B$中の頂点の初期状態を知ることが可能である．この初期状態から始まる$A$の実行をシミュレートするために，アリス及びボブはシミュレーションの実行においてカット辺$C$を通じて伝送されるメッセージを互いにやり取りする．
+まず最初に，アリスは$G_{A}$のトポロジおよびそこに含まれる頂点のラベリングを，ボブは$G_{B}$のトポロジおよびそこに含まれるのラベリングを構成する．下界グラフが満たす条件より，この構成はアリスとボブの間で通信を行うことなく局所的に計算可能である．構成結果より，アリス，ボブは互いに$V_A$および$V_B$中の頂点の初期状態を知ることが可能である．この初期状態から始まる$A$の実行をシミュレートするために，アリス及びボブはシミュレーションの実行においてカット辺$C$を通じて伝送されるメッセージを互いにやり取りする．
 $G_{A}$中の辺で送信されるメッセージ，あるいは$G_{B}$中の辺で送信されるメッセージは，
 アリスとボブがそれぞれお互いの通信なしに計算できるため，それとカット辺
-$Cut$を通じて送信されるメッセージを互いに受信できれば，$G^{x,y}$全体での$\mathcal{A}$のシミュレーションを(アリスとボブが手分けして)実行することができる．
+$\mathit{Cut}$を通じて送信されるメッセージを互いに受信できれば，$G^{x,y}$全体での$\mathcal{A}$のシミュレーションを(アリスとボブが手分けして)実行することができる．
 今アルゴリズム$\mathcal{A}$が$r$ラウンドで終了するとすると，
-アリスとボブは上述のシミュレーションにより述語$P$の判定結果を知ることが可能であり，それに必要な通信ビット数は，各辺がラウンドあたり$O(\log n)$ビットの情報を伝送可能であることより，$O(r \cdot |Cut| \cdot \log n)$ビットである．
-下界グラフの構成より，述語$P$の真偽と$x$，$y$が交差しているかどうかの真偽は同じであるため，このシミュレーションは$O(r \cdot |Cut| \cdot \log n)$ビットの通信量で交差判定$(x,y)$を解いている．定理~\ref{thm:disjointness}より，この通信量は$\Omega(k)$であり，これより$r = \Omega (k / |Cut| \cdot \log n)$の下界を得ることができる．
+アリスとボブは上述のシミュレーションにより述語$P$の判定結果を知ることが可能であり，それに必要な通信ビット数は，各辺がラウンドあたり$O(\log n)$ビットの情報を伝送可能であることより，$O(r \cdot |\mathit{Cut}| \cdot \log n)$ビットである．
+下界グラフの構成より，述語$P$の真偽と$x$，$y$が交差しているかどうかの真偽は同じであるため，このシミュレーションは$O(r \cdot |\mathit{Cut}| \cdot \log n)$ビットの通信量で交差判定$(x,y)$を解いている．定理~\ref{thm:disjointness}より，この通信量は$\Omega(k)$であり，これより$r = \Omega (k / |\mathit{Cut}| \cdot \log n)$の下界を得ることができる．
 \qed
 \end{prf*}
 
@@ -323,7 +320,7 @@ $|v.X | - 1 = u.a$であれば頂点$u$は$0$を返し，そうでなければ$u
 \end{enumerate}
 
 アルゴリズム$\mathcal{A}$の各ステップは明らかに$O(1)$ラウンドで{\CONGEST}モデルで実装できる．
-アルゴリズム$\mathcal{A}$について，以下の補題が成り立つ．
+アルゴリズム$\mathcal{A}$について，以下の定理が成り立つ．
 \begin{theorem}
 アルゴリズム$\mathcal{A}$は1-MIS検証問題を解くことができる．
 \end{theorem}
@@ -381,48 +378,28 @@ $(i, j) \in N \times N$．でインデックス付けされている$x$，$y$の
 $G^{x,y}$の頂点集合$V^{x,y}$は以下の通りに定義される．
 \begin{align*}
 V^{x,y} &= A^{1} \cup A^{2} \cup B^{1} \cup B^{2} \cup C, \quad \quad \text{ここで}\\
-&\phantom{=} \quad A^{j} = \{a^{j}_{i} \mid 1\leq i \leq N, j\} \quad \quad \text{($j \in \{1, 2\}$)}, \\
-&\phantom{=} \quad B^{j} = \{a^{j}_{i} \mid 1\leq i \leq N, j\} \quad \quad \text{($j \in \{1, 2\}$)}, \\
+&\phantom{=} \quad A^{j} = \{a^{j}_{i} \mid 1\leq i \leq N\} \quad \quad \text{($j \in \{1, 2\}$)}, \\
+&\phantom{=} \quad B^{j} = \{a^{j}_{i} \mid 1\leq i \leq N\} \quad \quad \text{($j \in \{1, 2\}$)}, \\
 &\phantom{=} \quad C = \{c_{i,j} \mid y_{i,j} = 1\}．
 \end{align*}
 アリス及びボブがシミュレーションする頂点集合$V^{x,y}_{A}$および$V^{x,y}_{B}$はそれぞれ
 $V^{x,y}_{A} = A^{1} \cup A^{2}$，$V^{x,y}_{B} = B^{1} \cup B^{2} \cup C$と定める．
-$G^{x,y}$の辺集合$E^{x,y}$は以下のように定める．\Izumi{(上に倣って定義)}
+$G^{x,y}$の辺集合$E^{x,y}$は以下のように定める．
 \begin{align*}
 E^{x,y} &= E^{1} \cup E^{2} \cup E_{A} \cup E_{B} \cup E_{C}, \quad \quad \text{ここで}\\
-&\phantom{=} \quad E^{j} = \{(a^{j}_{i}, b^{j}_{i}) \mid 1\leq i \leq N, j\} \quad \quad \text{($j \in \{1, 2\}$)}, \\
+&\phantom{=} \quad E^{j} = \{(a^{j}_{i}, b^{j}_{i}) \mid 1\leq i \leq N\} \quad \quad \text{($j \in \{1, 2\}$)}, \\
 &\phantom{=} \quad E_{A} = \{(a^{1}_{i},a^{2}_{j}) \mid x_{i,j}=0\}, \\
 &\phantom{=} \quad E_{B} = \{(c_{i,j},b^{1}_{i}) \mid y_{i,j}=1\} \cup \{(c_{i,j},b^{2}_{j}) \mid y_{i,j}=1\}, \\
 &\phantom{=} \quad E_{C} = \{(c_{i,j}, c_{i',j'}) \mid y_{i,j}=y_{i',j'}=1\} \quad \quad \text{($(i, j) \neq (i', j')$)}．
 \end{align*}
 $C$中の頂点はクリークを成している．
-アリス及びボブがシミュレーションする辺集合$E^{x,y}_A$および$E^{x,y}_B$とカット辺の集合$Cut$はそれぞれ
-$E^{x,y}_{A} = E_{A}$，$E^{x,y}_{B} = E_{B} \cup E_{C}$，$Cut = E^{1} \cup E^{2}$と定める．
+アリス及びボブがシミュレーションする辺集合$E^{x,y}_A$および$E^{x,y}_B$とカット辺の集合$\mathit{Cut}$はそれぞれ
+$E^{x,y}_{A} = E_{A}$，$E^{x,y}_{B} = E_{B} \cup E_{C}$，$\mathit{Cut} = E^{1} \cup E^{2}$と定める．
 独立集合に含まれる頂点を示すラベリング$I^{x,y}$は以下のように定める．
 \begin{align*}
 I^{x,y}(v) &= 0 \quad if \quad v \in A^{j} \cup C \quad \quad \text{($j \in \{1, 2\}$)}, \\
 I^{x,y}(v) &= 1 \quad if \quad v \in B^{j} \quad \quad \text{($j \in \{1, 2\}$)}.
 \end{align*}
-\begin{comment}
-このグラフが，「グラフ上に与えられている独立集合が$DISJ_{N \times N} (x, y) = 1$のときのみ2-MISでない」という
-特性$P_{2}$を満たすように，$G_{A}$に構造$H_{A}$，$G_{B}$に構造$H_{B}$を追加する．
-$H_{A}$と$H_{B}$の中身は以下の通りである．
-\begin{itemize}
-\item $H_{A}$： $E_{A}=\{(a^{1}_{i},a^{2}_{j}) \mid x_{i,j}=0, 1 \leq i \leq N, 1 \leq j \leq N\}$
-\item $H_{B}$： $H_{B}$は$W(y)$頂点のクリーク$K_{W(y)}$
-($W(y)$は0/1のデータ列$y$中に含まれる1の個数を表す．)と
-$K_{W(y)}$-$B^{1}$間，$K_{W(y)}$-$B^{2}$間の辺で構成される．
-$K_{W(y)}$中の頂点$c_{i, j} \in V_{B}$は$y_{i, j} = 1$であるような$(i, j)$でインデックスづけされるものとする． \\
-このとき，頂点集合$V_{B}$と辺集合$E_{B}$は以下の通りである．
-\begin{itemize}
-\item $V_{B}=\{(c_{i,j} \mid y_{i,j}=1, 1 \leq i \leq N, 1 \leq j \leq N\}$
-\item $\{(c_{i,j}, c_{i',j'}) \mid y_{i,j}=y_{i',j'}=1, 1 \leq i,i' \leq N,1 \leq j,j' \leq N((i,j) \neq (i',j'))\} \in E_{B}$，\\
-すなわち，$K_{W(y)}$はクリーク
-\item $\{(c_{i,j},b^{1}_{i}) \mid y_{i,j}=1, 1 \leq i \leq N, 1 \leq j \leq N\} \in E_{B}$
-\item $\{(c_{i,j},b^{2}_{j}) \mid y_{i,j}=1, 1 \leq i \leq N, 1 \leq j \leq N\} \in E_{B}$
-\end{itemize}
-\end{itemize}
-\end{comment}
 グラフ$G^{x, y} = (V^{x,y}, E^{x,y})$を図 \ref{2_G(x,y)}に示す．
 図中の頂点のうち灰色のものは独立集合に含まれる頂点を表す．
 
@@ -434,29 +411,28 @@ $K_{W(y)}$中の頂点$c_{i, j} \in V_{B}$は$y_{i, j} = 1$であるような$(i
 \label{2_G(x,y)}
 \end{figure}
 
-\Izumi{(以下，余計な改行は取り除く）}
-グラフ$G^{x, y} = (V', E')$は，「「$DISJ_{N \times N} (x, y) = 1$のとき，かつその時に限り$I^{x,y}$が
-み2-MISでない」」という特性を満たす．これを示すために，次の2点を確認する． \\
-(i)$DISJ_{N \times N} (x, y) = 1$のとき，グラフに与えられている独立集合が2-MISでない： 
+グラフ$G^{x, y} = (V^{x,y}, E^{x,y})$は，「「$\mathrm{DISJ}_{N \times N} (x, y) = 1$のとき，かつその時に限り$I^{x,y}$が
+2-MISでない」」という特性を満たす．これを示すために，次の2点を確認する． \\
+(i)$\mathrm{DISJ}_{N \times N} (x, y) = 1$のとき，$I^{x,y}$が2-MISでない： 
 $x_{i, j} = y_{i, j} =1$とすると，$b_{i}^{1}$と$b_{j}^{2}$の2点を取り除いて$a_{i}^{1}$， $a_{j}^{2}$， $c_{i, j}$の
 3点を追加できることから確認できる． \\
-(ii)$DISJ_{N \times N} (x, y) = 0$のとき，グラフに与えられている独立集合が2-MISである： 
+(ii)$\mathrm{DISJ}_{N \times N} (x, y) = 0$のとき，$I^{x,y}$が2-MISである： 
 グラフに与えられている独立集合が2-MISでないと仮定する．このとき，ある2点を取り除くことで独立集合に追加できる3点が存在する．
 2点の取り除き方は(1)$b_{i}^{1}$と$b_{j}^{1}(i \neq j)$， (2)$b_{i}^{2}$と$b_{j}^{2}(i \neq j)$， (3)$b_{i}^{1}$と$b_{j}^{2}$が考えられる．
 (1)では$a_{i}^{1}$と$a_{j}^{1}$の2点しか追加できる可能性がなく，(2)では$a_{i}^{2}$と$a_{j}^{2}$の2点しか追加できる可能性がない．
 (3)において，$b_{i}^{1}$を取り除いて$a_{i}^{1}$を追加し，$b_{j}^{2}$を取り除いて$a_{j}^{2}$を追加し，さらに$c_{i, j}$を追加することを考える．
 $a_{i}^{1}$と$a_{j}^{2}$が両方とも追加できるのは$x_{i, j} = 1$のときのみであり，$c_{i, j}$が追加できる($c_{i, j}$が存在する)のは
-$y_{i, j} = 1$のときのみであるが，これは$DISJ_{N \times N} (x, y) = 0$に矛盾する．したがってグラフに与えられている独立集合から2点取り除いて
-3点追加することはできないため，この独立集合は2-MISである．
+$y_{i, j} = 1$のときのみであるが，これは$\mathrm{DISJ}_{N \times N} (x, y) = 0$に矛盾する．
+したがってグラフに与えられている独立集合から2点取り除いて3点追加することはできないため，この独立集合は2-MISである．
 
 今回，$N \times N$ビットの交叉判定インスタンスをグラフに埋め込んでおり，
-カット辺のサイズ$|Cut| = 2N$であることが分かる．
+カット辺のサイズ$|\mathit{Cut}| = 2N$であることが分かる．
 {\CONGEST}モデルにおいてグラフ上に与えられた独立集合が2-MISであるかどうかを$r$ラウンドで判定する
 アルゴリズム$\mathcal{A}$が存在したとすると，定理\ref{lower}より$\mathcal{A}$は少なくとも
 $r = \Omega (N \times N/ 2N \cdot \log n) = \tilde{\Omega}(N)$ラウンド動く．図\ref{2_G(x,y)}から分かる通り，
 $A^{1}, A^{2}, B^{1}, B^{2}$はそれぞれ$N$頂点で構成されており，$C$の頂点数は$O(N^{2})$であるため，
 グラフ全体の頂点数$n$は$n = O(N + N^{2})$である．したがって$N = \Omega(\sqrt{n})$になるため，
-$\tilde{\Omega}(\sqrt{n})$ラウンドの下界を得ることができる．
+$\tilde{\Omega}(\sqrt{n})$ラウンドの下界を得ることができる． \qed
 \end{prf*}
 \newpage
 
@@ -477,13 +453,14 @@ $(i, j) \in N \times N$．でインデックス付けされている$x$，$y$の
 $G^{x,y}$の頂点集合$V^{x,y}$は以下の通りに定義される．
 \begin{align*}
 V^{x,y} &= A^{1} \cup A^{2} \cup B^{1} \cup B^{2} \cup C^{1} \cup C^{2} \cup \{s\}, \quad \quad \text{ここで}\\
-&\phantom{=} \quad A^{j} = \{a^{j}_{i} \mid 1\leq i \leq N, j\} \quad \quad \text{($j \in \{1, 2\}$)}, \\
-&\phantom{=} \quad B^{j} = \{a^{j}_{i} \mid 1\leq i \leq N, j\} \quad \quad \text{($j \in \{1, 2\}$)}, \\
-&\phantom{=} \quad C^{j} = \{a^{j}_{i} \mid 1\leq i \leq N, j\} \quad \quad \text{($j \in \{1, 2\}$)}.
+&\phantom{=} \quad A^{j} = \{a^{j}_{i} \mid 1\leq i \leq N\} \quad \quad \text{($j \in \{1, 2\}$)}, \\
+&\phantom{=} \quad B^{j} = \{a^{j}_{i} \mid 1\leq i \leq N\} \quad \quad \text{($j \in \{1, 2\}$)}, \\
+&\phantom{=} \quad C^{j} = \{a^{j}_{i} \mid 1\leq i \leq N\} \quad \quad \text{($j \in \{1, 2\}$)}.
 \end{align*}
 アリス及びボブがシミュレーションする頂点集合$V^{x,y}_{A}$および$V^{x,y}_{B}$はそれぞれ
 $V^{x,y}_{A} = A^{1} \cup A^{2}$，$V^{x,y}_{B} = B^{1} \cup B^{2} \cup C^{1} \cup C^{2} \cup \{s\}$と定める．
-$G^{x,y}$の辺集合$E^{x,y}$は以下のように定める．\Izumi{(上に倣って定義)}
+$G^{x,y}$の辺集合$E^{x,y}$は以下のように定める．
+
 \begin{align*}
 E^{x,y} &= E^{A^{1}} \cup E^{A^{2}} \cup E^{B^{1}} \cup E^{B^{2}} 
 \cup E^{CA} \cup E^{CB} \cup E^{SA} \cup E^{SB} \cup E_{A} \cup E_{B}, \quad \quad \text{ここで}\\
@@ -497,10 +474,10 @@ E^{x,y} &= E^{A^{1}} \cup E^{A^{2}} \cup E^{B^{1}} \cup E^{B^{2}}
 &\phantom{=} \quad E_{B} = \{(b^{1}_{i},b^{2}_{j}) \mid y_{i,j}=0\}.
 \end{align*}
 $A^{1}$，$A^{2}$，$B^{1}$，$B^{2}$中の頂点はクリークを成している．
-アリス及びボブがシミュレーションする辺集合$E^{x,y}_A$および$E^{x,y}_B$とカット辺の集合$Cut$はそれぞれ
+アリス及びボブがシミュレーションする辺集合$E^{x,y}_A$および$E^{x,y}_B$とカット辺の集合$\mathit{Cut}$はそれぞれ
 $E^{x,y}_{A} = E^{A^{1}} \cup E^{A^{2}} \cup E_{A}$，
 $E^{x,y}_{B} = E^{B^{1}} \cup E^{B^{2}} \cup E^{CB} \cup E^{SB} \cup E_{B}$，
-$Cut = E^{CA} \cup E^{CB}$と定める．
+$\mathit{Cut} = E^{CA} \cup E^{CB}$と定める．
 \Izumi{(論文全体をチェックして，$Cut$や$DIST$等をちゃんとmathitコマンドとmathrmコマンドで囲むようにする)}
 独立集合に含まれる頂点を示すラベリング$I^{x,y}$は以下のように定める．
 \begin{align*}
@@ -513,97 +490,31 @@ I^{x,y}(v) &= 1 \quad if \quad v \in C^{j} \cup \{s\} \quad \quad \text{($j \in 
 \begin{center}
 \includegraphics[width=120mm]{3_Gxy.png}
 \end{center}
-\caption{$G^{x, y} = (V, E')$}
+\caption{$G^{x, y} = (V^{x,y}, E^{x,y})$}
 \label{3_G(x,y)}
 \end{figure}
-グラフ$G^{x, y} = (V', E')$は，「$DISJ_{N \times N} (x, y) = 1$のとき，かつその時に限り$I^{x,y}$が
-み3-MISでない」という特性を満たす．これを示すために，次の2点を確認する． \\
-(i)$DISJ_{N \times N} (x, y) = 1$のとき，グラフに与えられている独立集合が3-MISでない： 
+グラフ$G^{x, y} = (V^{x,y}, E^{x,y})$は，「$\mathrm{DISJ}_{N \times N} (x, y) = 1$のとき，かつその時に限り$I^{x,y}$が
+3-MISでない」という特性を満たす．これを示すために，次の2点を確認する． \\
+(i)$\mathrm{DISJ}_{N \times N} (x, y) = 1$のとき，$I^{x,y}$が3-MISでない： 
 $x_{i, j} = y_{i, j} =1$とすると，$s$と$c_{i}^{1}$と$c_{j}^{2}$の3点を取り除いて
 $a_{i}^{1}$, $b_{i}^{1}$， $a_{j}^{2}$， $c_{j}^{2}$の
-4点を追加できることから確認できる。 \\
-(ii)$DISJ_{N \times N} (x, y) = 0$のとき，グラフに与えられている独立集合が3-MISである： 
+4点を追加できることから確認できる． \\
+(ii)$\mathrm{DISJ}_{N \times N} (x, y) = 0$のとき，$I^{x,y}$が3-MISである： 
 グラフに与えられている独立集合が3-MISでないと仮定する．このとき，ある3点を取り除くことで独立集合に追加できる4点が存在するが，
 $A^{1}, A^{2}, B^{1}, B^{2}$がそれぞれクリークであるため，4点を追加するためにはそれぞれから1点を選ぶ必要がある．
 $c_{i}^{1}$を取り除いて$a_{i}^{1}$と$b_{i}^{1}$を追加し，$c_{j}^{2}$を取り除いて,$a_{j}^{2}$と$b_{j}^{2}$を独立集合に追加したとする．
 $a_{i}^{1}$と$a_{j}^{2}$が両方とも追加できるのは$x_{i, j} = 1$のときのみであり，$b_{i}^{1}$と$b_{j}^{2}$が両方とも追加できるのは
-$y_{i, j} = 1$のときのみであるが，これは$DISJ_{N \times N} (x, y) = 0$に矛盾する。したがってグラフに与えられている独立集合から3点取り除いて
-4点追加することはできないため，この独立集合は3-MISである．
+$y_{i, j} = 1$のときのみであるが，これは$\mathrm{DISJ}_{N \times N} (x, y) = 0$に矛盾する。したがってグラフに与えられている
+独立集合から3点取り除いて4点追加することはできないため，この独立集合は3-MISである．
 
 今回，$N \times N$ビットの交叉判定インスタンスをグラフに埋め込んでおり，
-カット辺のサイズ$|Cut| = 4N$であることが分かる．
+カット辺のサイズ$|\mathit{Cut}| = 4N$であることが分かる．
 {\CONGEST}モデルにおいてグラフ上に与えられた独立集合が3-MISであるかどうかを$r$ラウンドで判定する
 アルゴリズム$\mathcal{A}$が存在したとすると，定理\ref{lower}より$\mathcal{A}$は少なくとも
 $r = \Omega (N \times N/ 4N \cdot \log n) = \tilde{\Omega}(N)$ラウンド動く．図\ref{3_G(x,y)}から分かる通り，
 $s$は1頂点，$A^{1}, A^{2}, B^{1}, B^{2}, C^{1}, C^{2}$はそれぞれ$N$頂点で構成されているため，
 グラフ全体の頂点数$n$は$n = O(N)$である．
-したがって$N = \Omega(n)$になるため，$\tilde{\Omega}(n)$ラウンドの下界を得ることができる．
-%コメントここから
-\begin{comment}
-\Izumi{(2-MISの証明の書き方と同様にする)}
-まず初めにアリスとボブは下界グラフ$G = (V, E)$を構築する．
-このグラフの頂点集合$V$と辺集合$E$は以下の通りである。 \\
-以下の頂点集合が$V$に含まれる．
-\begin{itemize}
-\item $s \in V$
-\item $A^{1} = \{a^{1}_{i} \mid 1\leq i \leq N\}  \in V$，$A^{2} = \{a^{2}_{i} \mid 1\leq i \leq N\} \in V$
-\item $B^{1} = \{b^{1}_{i} \mid 1\leq i \leq N\}  \in V$，$B^{2} = \{b^{2}_{i} \mid 1\leq i \leq N\} \in V$
-\item $C^{1} = \{c^{1}_{i} \mid 1\leq i \leq N\}  \in V$，$C^{2} = \{c^{2}_{i} \mid 1\leq i \leq N\} \in V$
-\end{itemize}
-以下の辺集合が$E$に含まれる．
-\begin{itemize}
-\item $\{(a^{1}_{i}, c^{1}_{i}) \mid 1\leq i \leq N\} \in E$，$\{(a^{2}_{i}, c^{2}_{i}) \mid 1\leq i \leq N\} \in E$
-\item $\{(b^{1}_{i}, c^{1}_{i}) \mid 1\leq i \leq N\} \in E$，$\{(b^{2}_{i}, c^{2}_{i}) \mid 1\leq i \leq N\} \in E$
-\item $\{(a^{1}_{i}, s) \mid 1\leq i \leq N\} \in E$，$\{(a^{2}_{i}, s) \mid 1\leq i \leq N\} \in E$
-\item $\{(b^{1}_{i}, s) \mid 1\leq i \leq N\} \in E$，$\{(b^{2}_{i}, s) \mid 1\leq i \leq N\} \in E$
-\item $\{(a^{1}_{i}, a^{1}_{j}) \mid 1\leq i,j \leq N(i \neq j)\} \in E$，すなわち$A^{1}$はクリーク
-\item $\{(a^{2}_{i}, a^{2}_{j}) \mid 1\leq i,j \leq N(i \neq j)\} \in E$，すなわち$A^{2}$はクリーク
-\item $\{(b^{1}_{i}, b^{1}_{j}) \mid 1\leq i,j \leq N(i \neq j)\} \in E$，すなわち$B^{1}$はクリーク
-\item $\{(b^{2}_{i}, b^{2}_{j}) \mid 1\leq i,j \leq N(i \neq j)\} \in E$，すなわち$B^{2}$はクリーク
-\end{itemize}
-このグラフが，「グラフ上に与えられている独立集合が$DISJ_{N \times N} (x, y) = 1$のときのみ3-MISでない」という
-特性$P_{3}$を満たすように，$G_{A}$に構造$H_{A}$，$G_{B}$に構造$H_{B}$を追加する．\\
-$H_{A}$と$H_{B}$の中身は以下の通りである．
-\begin{itemize}
-\item $H_{A}$： $E_{A}=\{(a^{1}_{i},a^{2}_{j}) \mid x_{i,j}=0, 1 \leq i \leq N, 1 \leq j \leq N\}$
-\item $H_{B}$： $E_{A}=\{(a^{1}_{i},a^{2}_{j}) \mid x_{i,j}=0, 1 \leq i \leq N, 1 \leq j \leq N\}$
-\end{itemize}
-グラフ$G^{x, y} = (V', E')$を図 \ref{3_G(x,y)}に示す．
-図中の頂点のうち灰色のものは独立集合に含まれる頂点とする．
-また，四角で囲まれている部分はクリークを表す．
-\Izumi{こちらも記述の仕方は2-MISの時と同様に}
-
-\begin{figure}[ht]
-\begin{center}
-\includegraphics[width=120mm]{3_Gxy.png}
-\end{center}
-\caption{$G^{x, y} = (V, E')$}
-\label{3_G(x,y)}
-\end{figure}
-
-このグラフ$G^{x, y} = (V, E')$が上記の特性$P_{3}$を満たしていることを示すために，次の2点を確認する． \\
-(i)$DISJ_{N \times N} (x, y) = 1$のとき，グラフに与えられている独立集合が3-MISでない： 
-$x_{i, j} = y_{i, j} =1$とすると，$s$と$c_{i}^{1}$と$c_{j}^{2}$の3点を取り除いて
-$a_{i}^{1}$, $b_{i}^{1}$， $a_{j}^{2}$， $c_{j}^{2}$の
-4点を追加できることから確認できる。 \\
-(ii)$DISJ_{N \times N} (x, y) = 0$のとき，グラフに与えられている独立集合が3-MISである： 
-グラフに与えられている独立集合が3-MISでないと仮定する．このとき，ある3点を取り除くことで独立集合に追加できる4点が存在するが，
-$A^{1}, A^{2}, B^{1}, B^{2}$がそれぞれクリークであるため，4点を追加するためにはそれぞれから1点を選ぶ必要がある．
-$c_{i}^{1}$を取り除いて$a_{i}^{1}$と$b_{i}^{1}$を追加し，$c_{j}^{2}$を取り除いて,$a_{j}^{2}$と$b_{j}^{2}$を独立集合に追加したとする．
-$a_{i}^{1}$と$a_{j}^{2}$が両方とも追加できるのは$x_{i, j} = 1$のときのみであり，$b_{i}^{1}$と$b_{j}^{2}$が両方とも追加できるのは
-$y_{i, j} = 1$のときのみであるが，これは$DISJ_{N \times N} (x, y) = 0$に矛盾する。したがってグラフに与えられている独立集合から3点取り除いて
-4点追加することはできないため，この独立集合は3-MISである．
-
-今回，$N \times N$ビットの交叉判定インスタンスをグラフに埋め込んでおり，
-カット辺のサイズ$|C| = 4N$であることが分かる．
-{\CONGEST}モデルにおいてグラフ上に与えられた独立集合が3-MISであるかどうかを$r$ラウンドで判定する
-アルゴリズム$\mathcal{A}$が存在したとすると，定理\ref{lower}より$\mathcal{A}$は少なくとも
-$r = \Omega (N \times N/ 4N \cdot \log n) = \tilde{\Omega}(N)$ラウンド動く．図\ref{3_G(x,y)}から分かる通り，
-$s$は1頂点，$A^{1}, A^{2}, B^{1}, B^{2}, C^{1}, C^{2}$はそれぞれ$N$頂点で構成されているため，
-グラフ全体の頂点数$n$は$n = O(N)$である．
-したがって$N = \Omega(n)$になるため，$\tilde{\Omega}(n)$ラウンドの下界を得ることができる．
-\end{comment}
-%コメントここまで
+したがって$N = \Omega(n)$になるため，$\tilde{\Omega}(n)$ラウンドの下界を得ることができる． \qed
 \end{prf*}
 \newpage
 
@@ -617,64 +528,63 @@ $s$は1頂点，$A^{1}, A^{2}, B^{1}, B^{2}, C^{1}, C^{2}$はそれぞれ$N$頂�
 \begin{prf*}
 これ以降，$k = 4\ell +5$とする．証明の簡略化のために$N$の$\ell + 1$乗根は整数であると仮定する．このとき$M = \sqrt[\ell + 1]{N}$とする．
 また，自然数$i, j, h$が与えられたとき，$\alpha_{i, h}(j)$を$j$を$i$進数で表したときの$h$桁目の値と定義する．
-まず初めにアリスとボブは下界グラフ$G = (V, E)$を構築する．
-以下の頂点集合が$V$に含まれる．
-\Izumi{(ここも同様に直す)}
-\begin{itemize}
-\item $s \in V$
-\item $A^{1} = \{a^{1}_{i} \mid 1\leq i \leq N\}  \in V$，$A^{2} = \{a^{2}_{i} \mid 1\leq i \leq N\} \in V$
-\item $B^{1}_{j} = \{b^{1,j}_{i} \mid 1\leq i \leq N,1\leq i \leq \ell+1\} \in V$，
-$B^{2}_{j} = \{b^{2,j}_{i} \mid 1\leq i \leq N,1\leq i \leq \ell+1\} \in V$
-\item $C^{1}_{j} = \{c^{1,j}_{i} \mid 1\leq i \leq N,1\leq i \leq \ell+1\} \in V$，
-$C^{2}_{j} = \{c^{2,j}_{i} \mid 1\leq i \leq N,1\leq i \leq \ell+1\} \in V$
-\item $D^{1}_{j} = \{d^{1,j}_{i} \mid 1\leq i \leq N,1\leq i \leq \ell+1\} \in V$，
-$D^{2}_{j} = \{d^{2,j}_{i} \mid 1\leq i \leq N,1\leq i \leq \ell+1\} \in V$
-\item $E^{1}_{j} = \{e^{1,j}_{i} \mid 1\leq i \leq N,1\leq i \leq \ell+1\} \in V$，
-$E^{2}_{j} = \{e^{2,j}_{i} \mid 1\leq i \leq N,1\leq i \leq \ell+1\} \in V$
-\end{itemize}
-以下の辺集合が$E$に含まれる．
-\begin{itemize}
-\item $\{(a^{1}_{i}, a^{1}_{j}) \mid 1\leq i,j \leq N(i \neq j)\} \in E$，すなわち$A^{1}$はクリーク
-\item $\{(a^{2}_{i}, a^{2}_{j}) \mid 1\leq i,j \leq N(i \neq j)\} \in E$，すなわち$A^{2}$はクリーク
-\item $\{(b^{1,j}_{i}, b^{1,j}_{h}) \mid 1\leq i,h \leq N(i \neq h),1\leq i,h \leq \ell+1\} \in E$，
-すなわち$B^{1}_{j}(1\leq j \leq \ell+1)$はクリーク
-\item $\{(b^{2,j}_{i}, b^{2,j}_{h}) \mid 1\leq i,h \leq N(i \neq h),1\leq i,h \leq \ell+1\} \in E$，
-すなわち$B^{2}_{j}(1\leq j \leq \ell+1)$はクリーク
-\item $\{(d^{1,j}_{i}, d^{1,j}_{h}) \mid 1\leq i,h \leq N(i \neq h),1\leq i,h \leq \ell+1\} \in E$，
-すなわち$D^{1}_{j}(1\leq j \leq \ell+1)$はクリーク
-\item $\{(d^{2,j}_{i}, d^{2,j}_{h}) \mid 1\leq i,h \leq N(i \neq h),1\leq i,h \leq \ell+1\} \in E$，
-すなわち$D^{2}_{j}(1\leq j \leq \ell+1)$はクリーク
-\item $\{(a^{1}_{i}, s) \mid 1\leq i \leq N\} \in E$，$\{(a^{2}_{i}, s) \mid 1\leq i \leq N\} \in E$
-\item 任意の$1\leq i \leq M$と$1\leq j \leq \ell+1$に対して$(c_{i}^{1, j}, d_{i}^{1, j}) \in E$，
-$(e_{i}^{1, j}, d_{i}^{1, j}) \in E$
-\item 任意の$1\leq i \leq M$と$1\leq j \leq \ell+1$に対して$(c_{i}^{2, j}, d_{i}^{2, j}) \in E$，
-$(e_{i}^{2, j}, d_{i}^{2, j}) \in E$
-\item 任意の$1\leq i \leq N$と$1\leq j \leq \ell+1$に対して \\
-$\left(a^{1}_{i},c^{1,j}_{\alpha_{M,j}(i-1)+1}\right) \in E$，$\left(a^{2}_{i},c^{2,j}_{\alpha_{M,j}(i-1)+1}\right) \in E$
-\item 任意の$1\leq i \leq N$，$1\leq j \leq \ell+1$と$1\leq h \leq \ell+1$に対して \\
-$\left(b^{1,h}_{i},e^{1,j}_{\alpha_{M,j}(i-1)+1}\right) \in E$，$\left(b^{2,h}_{i},e^{2,j}_{\alpha_{M,j}(i-1)+1}\right) \in E$
-\end{itemize}
-このグラフが「$G$中に与えられている独立集合が，$DISJ_{N \times N} (x, y) = 1$のときのみ
-$k$-MISでない」という特性($P_{k}$)を持つように，
-$G_{A}$に構造$H_{A}$，$G_{B}$に構造$H_{B}$を追加する．$H_{A}$と$H_{B}$の中身は以下の通りである．
-\begin{itemize}
-\item $H_{A}$： $E_{A}=\{(a^{1}_{i},a^{2}_{j}) \mid x_{i,j}=0, 1 \leq i \leq N, 1 \leq j \leq N\}$
-\item $H_{A}$： $E_{B}=\{(a^{1,h}_{i},a^{2,h}_{j}) \mid x_{i,j}=0, 1 \leq i \leq N, 1 \leq j \leq N, 1 \leq h \leq \ell+1\}$
-\end{itemize}
-$G = (V, E)$に辺を追加したグラフ$G^{x, y} = (V, E')$を図 \ref{k_Gxy}に示す．
-図中の頂点のうち灰色のものは独立集合に含まれる頂点とする．
-また，四角で囲まれている部分はクリークを表す．
+まず初めにアリスとボブは下界グラフのインスタンス$G^{x,y} = (V^{x,y}, E^{x,y})$, 
+$I^{x,y} : V^{x,y} \to \{0, 1\}$を構築する．このインスタンスにおいて，
+頂点ラベリング関数$I^{x,y}(v)$は$v$が検証されるべき独立集合に含まれるとき1，そうでないときに0を返す関数とする．
+記述の容易さのため，帰着の元となる交差判定問題のビット数を$N^2$とし，
+インスタンス$(x, y)$の各ビットは$N\times N$の要素でインデックス付けされているものとする．
+$(i, j) \in N \times N$．でインデックス付けされている$x$，$y$のビットを$x_{i,j}$および$y_{i,j}$で表すものとする．
+また，$x$，$y$に含まれる1のビットの個数を$|x|$，$|y|$で表すとする．
+$G^{x,y}$の頂点集合$V^{x,y}$は以下の通りに定義される．
+\begin{align*}
+V^{x,y} &= A^{h} \cup B^{h}_{j} \cup C^{h}_{j} \cup D^{h}_{j} \cup E^{h}_{j} \cup \{s\} \quad \quad (1\leq j \leq \ell+1, h \in \{1, 2\}) \quad \text{ここで}\\
+&\phantom{=} \quad A^{h} = \{a^{h}_{i} \mid 1\leq i \leq N\} \quad \quad \text{($h \in \{1, 2\}$)}, \\
+&\phantom{=} \quad B^{h}_{j} = \{b^{h,j}_{i} \mid 1\leq i \leq N,1\leq i \leq \ell+1\} \quad \quad \text{($h \in \{1, 2\}$)}, \\
+&\phantom{=} \quad C^{h}_{j} = \{c^{h,j}_{i} \mid 1\leq i \leq M,1\leq i \leq \ell+1\} \quad \quad \text{($h \in \{1, 2\}$)}, \\
+&\phantom{=} \quad D^{h}_{j} = \{d^{h,j}_{i} \mid 1\leq i \leq M,1\leq i \leq \ell+1\} \quad \quad \text{($h \in \{1, 2\}$)}, \\
+&\phantom{=} \quad E^{h}_{j} = \{e^{h,j}_{i} \mid 1\leq i \leq M,1\leq i \leq \ell+1\} \quad \quad \text{($h \in \{1, 2\}$)}, \\
+\end{align*}
+アリス及びボブがシミュレーションする頂点集合$V^{x,y}_{A}$および$V^{x,y}_{B}$はそれぞれ
+$V^{x,y}_{A} = A^{h} \cup C^{h}_{j} \cup \{s\}$，$V^{x,y}_{B} = B^{h}_{j} \cup D^{h}_{j} \cup E^{h}_{j}$
+($1\leq j \leq \ell+1, h \in \{1, 2\}$)と定める．
+$G^{x,y}$の辺集合$E^{x,y}$は以下のように定める．
 
+\begin{align*}
+E^{x,y} &= E^{A} \cup E^{B} \cup E^{D} \cup E^{SA} \cup E^{AC} 
+\cup E^{BE} \cup E^{CD} \cup E^{ED} \cup E_{A} \cup E_{B}, \quad \quad \text{ここで}\\
+&\phantom{=} \quad E^{A} = \{(a^{h}_{i}, a^{h}_{i'})  \mid i \neq i'\} \quad \quad \text{($h \in \{1, 2\}$)}, \\
+&\phantom{=} \quad E^{B} = \{(b^{h,j}_{i}, b^{h,j}_{i'})  \mid i \neq i'\} \quad \quad \text{($1\leq j \leq \ell+1, h \in \{1, 2\}$)}, \\
+&\phantom{=} \quad E^{D} = \{(d^{h,j}_{i}, d^{h,j}_{i'})  \mid i \neq i'\} \quad \quad \text{($1\leq j \leq \ell+1, h \in \{1, 2\}$)}, \\
+&\phantom{=} \quad E^{SA} = \{(a^{h}_{i}, s) \mid 1\leq i \leq N\}  \quad \quad \text{($h \in \{1, 2\}$)}, \\
+&\phantom{=} \quad E^{AC} = \left\{ \left(a^{h}_{i},c^{h,j}_{\alpha_{M,j}(i-1)+1}\right) \mid 1\leq i \leq N,1\leq j \leq \ell+1\right\} \quad \quad \text{($h \in \{1, 2\}$)}, \\
+&\phantom{=} \quad E^{BE} = \left\{ \left(b^{h,g}_{i},c^{h,j}_{\alpha_{M,j}(i-1)+1}\right) \mid 1\leq i \leq N,1\leq g,j \leq \ell+1\right\} \quad \quad \text{($h \in \{1, 2\}$)}, \\
+&\phantom{=} \quad E^{CD} = \{(c^{h, j}_{i}, d^{h, j}_{i}) \mid 1\leq i \leq M,1\leq j \leq \ell+1\} \quad \quad \text{($h \in \{1, 2\}$)}, \\
+&\phantom{=} \quad E^{ED} = \{(e^{h, j}_{i}, d^{h, j}_{i}) \mid 1\leq i \leq M,1\leq j \leq \ell+1\} \quad \quad \text{($h \in \{1, 2\}$)}, \\
+&\phantom{=} \quad E_{A} = \{(a^{1}_{i},a^{2}_{j}) \mid x_{i,j}=0\}, \\
+&\phantom{=} \quad E_{B} = \{(b^{1}_{i},b^{2}_{j}) \mid y_{i,j}=0\}.
+\end{align*}
+$A^{h}$，$B^{h}_{j}$，$D^{h}_{j}$中の頂点はクリークを成している($1\leq j \leq \ell+1, h \in \{1, 2\})$．
+アリス及びボブがシミュレーションする辺集合$E^{x,y}_A$および$E^{x,y}_B$とカット辺の集合$\mathit{Cut}$はそれぞれ
+$E^{x,y}_{A} = E^{A} \cup E^{SA} \cup E^{AC} \cup E_{A}$，
+$E^{x,y}_{B} = E^{B} \cup E^{D} \cup E^{BE} \cup E^{ED} \cup E_{B}$，
+$\mathit{Cut} = E^{CD}$と定める．
+独立集合に含まれる頂点を示すラベリング$I^{x,y}$は以下のように定める．
+\begin{align*}
+I^{x,y}(v) &= 0 \quad if \quad v \in A^{h} \cup B^{h}_{j} \cup D^{h}_{j} \quad \quad \text{($1\leq j \leq \ell+1, h \in \{1, 2\}$)}, \\
+I^{x,y}(v) &= 1 \quad if \quad v \in C^{h}_{j} \cup E^{h}_{j} \cup \{s\} \quad \quad \text{($1\leq j \leq \ell+1, h \in \{1, 2\}$)}.
+\end{align*}
+グラフ$G^{x, y} = (V^{x,y}, E^{x,y})$を図 \ref{k_G(x,y)}に示す．
+図中の頂点のうち灰色のものは独立集合に含まれる頂点を表す．
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[width=120mm]{k_Gxy.png}
 \end{center}
-\caption{$G^{x, y} = (V, E')$}
-\label{k_Gxy}
+\caption{$G^{x, y} = (V^{x,y}, E^{x,y})$}
+\label{k_G(x,y)}
 \end{figure}
-
-このグラフ$G^{x, y} = (V, E')$が上記の特性($P_{k}$)を満たしていることを示すために，次の2点を確認する． \\
-(i)$DISJ_{N \times N} (x, y) = 1$のとき，グラフに与えられている独立集合が$k$-MISでない： \\
+グラフ$G^{x, y} = (V^{x,y}, E^{x,y})$は，「$\mathrm{DISJ}_{N \times N} (x, y) = 1$のとき，かつその時に限り$I^{x,y}$が
+みk-MISでない」という特性を満たす．これを示すために，次の2点を確認する． \\
+(i)$\mathrm{DISJ}_{N \times N} (x, y) = 1$のとき，$I^{x,y}$が$k$-MISでない： \\
 $x_{i,j}=y_{i,j}=1$であると仮定する．このとき，
 \begin{dmath*}
 I'=\{s\} \cup \bigcup_{1\leq h \leq \ell+1}c^{1,h}_{\alpha_{M,h}(i-1)+1} \cup 
@@ -692,7 +602,7 @@ S=\{a^{1}_{i} \cup a^{2}_{j}\} \cup
 とすると
 $I \backslash I' \cup S$は独立集合になる．ここで$|I'|=4\ell+5$で$|S|=4\ell+6$であることから，
 $k=4\ell+5$に対して$I$は$k$-MISでないことが確認できる． \\
-(ii)$DISJ_{N \times N} (x, y) = 0$のとき，グラフに与えられている独立集合が$k$-MISである： \\ 
+(ii)$\mathrm{DISJ}_{N \times N} (x, y) = 0$のとき，$I^{x,y}$が$k$-MISである： \\ 
 グラフに与えられている独立集合が$k$-MISでないと仮定する．このとき，$I'\subseteq I$をサイズ$k$以下の独立集合，
 $S\subseteq V\backslash I$を$(I \backslash I') \cup S$が独立集合になるサイズ$|I'|+1$以上の頂点集合とする．
 また，$(A^{1}\cup A^{2}) \cap S$を満たす頂点の数を$num(A)$，
@@ -756,15 +666,15 @@ $\bigcup_{1\leq h \leq \ell+1} e^{1,h}_{\alpha_{M,h}(i-1)+1}\cup
 $b^{1,1}_{i}$と$b^{2,1}_{j}$だけである．$b^{1,1}_{i}$と$b^{2,1}_{j}$の両方を独立集合に加えられるのは
 $b^{1,1}_{i}$と$b^{2,1}_{j}$の間に辺が存在しないときでありこれは$y_{i,j}=1$を意味する．
 また，$a^{1}_{i}$と$a^{2}_{j}$が独立集合に含まれることから，$a^{1}_{i}$と$a^{2}_{j}$の間に辺が存在しない．
-これは$x_{i,j}=1$を意味するが$DISJ_{N\times N}(x,y)=0$に矛盾する．
+これは$x_{i,j}=1$を意味するが$\mathrm{DISJ}_{N\times N}(x,y)=0$に矛盾する．
 
 今回，$N \times N$ビットの交叉判定インスタンスをグラフに埋め込んでおり，
-カット辺のサイズ$|Cut| = 2(\ell + 1) \cdot M = 2(\ell + 1) \cdot N^{1/(\ell + 1)}$であることが分かる．
+カット辺のサイズ$|\mathit{Cut}| = 2(\ell + 1) \cdot M = 2(\ell + 1) \cdot N^{1/(\ell + 1)}$であることが分かる．
 {\CONGEST}モデルにおいてグラフ上に与えられた独立集合が$k$-MISであるかどうかを$r$ラウンドで判定する
 アルゴリズム$\mathcal{A}$が存在したとすると，定理\ref{lower}より$\mathcal{A}$は少なくとも \\
 $r = \Omega \left(N \times N/2(\ell + 1) \cdot N^{1/(\ell + 1)} \cdot \log n\right)=\tilde{\Omega}\left(N^{2 - \frac{1}{\ell + 1}}/\ell \right)$ラウンドで動く．
-$s$は1頂点，任意の$1\leq i \leq 2$と$1\leq j \leq l+1$に対して頂点集合$A^{i}, B^{i}_{j}$はそれぞれ$N$頂点で，
-$C^{i}_{j},D^{i}_{j},E^{i}_{j}$の頂点集合はそれぞれ$M=N^{1/(\ell + 1)}$頂点で構成されているため，
+$s$は1頂点，任意の$1\leq j \leq \ell+1, h \in \{1, 2\})$に対して頂点集合$A^{h}, B^{h}_{j}$はそれぞれ$N$頂点で，
+$C^{h}_{j},D^{h}_{j},E^{h}_{j}$の頂点集合はそれぞれ$M=N^{1/(\ell + 1)}$頂点で構成されているため，
 グラフ全体の頂点数$n$は$n = O(N)$である．したがって$N = \Omega(n)$になるため，
 $\tilde{\Omega}\left(n^{2 - \frac{1}{\ell + 1}}/\ell \right)$ラウンドの下界を得ることができる．
 \end{prf*}
@@ -780,7 +690,7 @@ $k$-MIS検証問題($k = 4\ell + 5, \ell \geq 1$)に対する$\tilde{\Omega}\lef
 
 \section{今後の課題}
 4.3節で一般の$k$に対する$k$-MIS検証問題の下界を証明したが，$k = 4,...,8$については現在
-3-MIS検証問題と同じ下界しか得られていない．この下界をよりタイトにできるかが今後の課題である．
+$k=3$同じ下界しか得られていない．この下界をよりタイトにできるかが今後の課題である．
 \newpage
 
 \chapter*{謝辞}

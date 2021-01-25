@@ -1,8 +1,8 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  25 JAN 2021 17:15
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  25 JAN 2021 20:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**M2sato.tex
+**M2sato
 (./M2sato.tex
 pLaTeX2e <2020-10-01>+1 (based on LaTeX2e <2020-10-01> patch level 2)
 L3 programming layer <2020-10-27> xparse <2020-03-03> (./thesis.cls
@@ -422,14 +422,13 @@ File: Gxy.png Graphic file (type bmp)
 第 4 章
 [12
 
-] Excluding 'comment' comment.
+]
 File: 2_Gxy.png Graphic file (type bmp)
 <2_Gxy.png>
  [13] [14] [15]
 File: 3_Gxy.png Graphic file (type bmp)
 <3_Gxy.png>
- [16]
-Excluding 'comment' comment. [17] [18]
+ [16] [17] [18]
 File: k_Gxy.png Graphic file (type bmp)
 <k_Gxy.png>
  [19] [20] [21] [22]
@@ -442,12 +441,12 @@ File: k_Gxy.png Graphic file (type bmp)
 
 ]) [26] (./M2sato.aux) ) 
 Here is how much of TeX's memory you used:
- 3884 strings out of 479956
- 50591 string characters out of 5887570
- 349388 words of memory out of 5000000
- 21003 multiletter control sequences out of 15000+600000
+ 3883 strings out of 479956
+ 50584 string characters out of 5887570
+ 361388 words of memory out of 5000000
+ 21002 multiletter control sequences out of 15000+600000
  568782 words of font info for 156 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 78i,12n,87p,511b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 78i,12n,87p,507b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on M2sato.dvi (28 pages, 104220 bytes).
+Output written on M2sato.dvi (28 pages, 104160 bytes).
