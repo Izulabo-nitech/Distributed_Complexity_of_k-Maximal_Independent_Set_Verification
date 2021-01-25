@@ -1,8 +1,8 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  25 JAN 2021 12:59
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  25 JAN 2021 17:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**M2sato
+**M2sato.tex
 (./M2sato.tex
 pLaTeX2e <2020-10-01>+1 (based on LaTeX2e <2020-10-01> patch level 2)
 L3 programming layer <2020-10-27> xparse <2020-03-03> (./thesis.cls
@@ -46,11 +46,29 @@ File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
 (c:/texlive/2020/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 ))
-\@minsofar=\count185
-\@min=\count186
-\@cite@temp=\count187
-) (./jdummy.def)
-(c:/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+(c:/texlive/2020/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(c:/texlive/2020/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-10-27 L3 programming layer (loader) 
+
+(c:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+File: l3backend-dvips.def 2020-09-24 L3 backend support: dvips
+\l__pdf_internal_box=\box64
+\g__pdf_backend_object_int=\count185
+\l__pdf_backend_content_box=\box65
+\l__pdf_backend_model_box=\box66
+\g__pdf_backend_annotation_int=\count186
+\g__pdf_backend_link_int=\count187
+\g__pdf_backend_link_sf_int=\count188
+))
+Package: xparse 2020-10-27 L3 Experimental document command parser
+
+(c:/texlive/2020/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex))
+\c@@secnumdepth=\count189
+\@minsofar=\count190
+\@min=\count191
+\@cite@temp=\count192
+)
+(./jdummy.def) (c:/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
 
 (c:/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
@@ -94,30 +112,30 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (c:/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count188
+\inf@bad=\count193
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count189
-\leftroot@=\count190
+\uproot@=\count194
+\leftroot@=\count195
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count191
-\DOTSCASE@=\count192
+\classnum@=\count196
+\DOTSCASE@=\count197
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box64
-\strutbox@=\box65
+\Mathstrutbox@=\box67
+\strutbox@=\box68
 \big@size=\dimen161
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count193
-\c@MaxMatrixCols=\count194
+\macc@depth=\count198
+\c@MaxMatrixCols=\count199
 \dotsspace@=\muskip16
-\c@parentequation=\count195
-\dspbrk@lvl=\count196
+\c@parentequation=\count266
+\dspbrk@lvl=\count267
 \tag@help=\toks18
-\row@=\count197
-\column@=\count198
-\maxfields@=\count199
+\row@=\count268
+\column@=\count269
+\maxfields@=\count270
 \andhelp@=\toks19
 \eqnshift@=\dimen162
 \alignsep@=\dimen163
@@ -152,23 +170,23 @@ Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
  (c:/texlive/2020/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count266
+\c@float@type=\count271
 \float@exts=\toks22
-\float@box=\box66
+\float@box=\box69
 \@float@everytoks=\toks23
-\@floatcapt=\box67
+\@floatcapt=\box70
 )
 (c:/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks24
-\c@algorithm=\count267
+\c@algorithm=\count272
 ) (./algorithmic.sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
-\c@ALC@unique=\count268
-\c@ALC@line=\count269
-\c@ALC@rem=\count270
-\c@ALC@depth=\count271
+\c@ALC@unique=\count273
+\c@ALC@line=\count274
+\c@ALC@rem=\count275
+\c@ALC@depth=\count276
 \ALC@tlm=\skip52
 \algorithmicindent=\skip53
 )
@@ -196,19 +214,6 @@ Package: amsthm 2020/05/29 v2.20.6
 \dth@everypar=\toks30
 )
 (c:/texlive/2020/texmf-dist/tex/latex/breqn/breqn.sty
-(c:/texlive/2020/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2020-10-27 L3 programming layer (loader) 
-
-(c:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
-File: l3backend-dvips.def 2020-09-24 L3 backend support: dvips
-\l__pdf_internal_box=\box68
-\g__pdf_backend_object_int=\count272
-\l__pdf_backend_content_box=\box69
-\l__pdf_backend_model_box=\box70
-\g__pdf_backend_annotation_int=\count273
-\g__pdf_backend_link_int=\count274
-\g__pdf_backend_link_sf_int=\count275
-))
 Package: breqn 2020/09/24 v0.98k Breaking equations
 
 (c:/texlive/2020/texmf-dist/tex/latex/breqn/flexisym.sty
@@ -252,19 +257,19 @@ LaTeX Info: Redefining \genfrac on input line 149.
 ))
 (c:/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count276
-\calc@Bcount=\count277
+\calc@Acount=\count277
+\calc@Bcount=\count278
 \calc@Adimen=\dimen168
 \calc@Bdimen=\dimen169
 \calc@Askip=\skip57
 \calc@Bskip=\skip58
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count278
+\calc@Ccount=\count279
 \calc@Cskip=\skip59
 )
-\inf@bad=\count279
-\maxint=\count280
+\inf@bad=\count280
+\maxint=\count281
 \listwidth=\dimen170
 \eqnumsep=\dimen171
 \eqmargin=\dimen172
@@ -275,12 +280,12 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \eqdelimoffset=\muskip18
 \eqindentstep=\dimen174
 \eqstyle=\toks31
-\eqbreakdepth=\count281
-\eqinterlinepenalty=\count282
-\intereqpenalty=\count283
+\eqbreakdepth=\count282
+\eqinterlinepenalty=\count283
+\intereqpenalty=\count284
 \intereqskip=\skip62
-\prerelpenalty=\count284
-\prebinoppenalty=\count285
+\prerelpenalty=\count285
+\prebinoppenalty=\count286
 \Dmedmuskip=\muskip19
 \Dthickmuskip=\muskip20
 \eqleftskip=\skip63
@@ -293,10 +298,10 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \eq@wdNum=\dimen175
 \GRP@numbox=\box74
 \grp@wdNum=\dimen176
-\eq@lines=\count286
-\eq@curline=\count287
-\eq@badness=\count288
-\EQ@vims=\count289
+\eq@lines=\count287
+\eq@curline=\count288
+\eq@badness=\count289
+\EQ@vims=\count290
 \eq@dp=\dimen177
 \eq@wdL=\dimen178
 \eq@wdT=\dimen179
@@ -313,16 +318,16 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \eq@hshift=\dimen190
 \eq@given@sidespace=\dimen191
 \mathindent=\dimen192
-\eq@final@linecount=\count290
+\eq@final@linecount=\count291
 \eq@wdR=\dimen193
 \EQ@continue=\toks32
-\lr@level=\count291
+\lr@level=\count292
 \GRP@queue=\toks33
 \GRP@box=\box75
 \GRP@wholebox=\box76
 \darraycolsep=\skip66
-\cur@row=\count292
-\cur@col=\count293
+\cur@row=\count293
+\cur@col=\count294
 \conditionsep=\skip67
 )
 (c:/texlive/2020/texmf-dist/tex/generic/ulem/ulem.sty
@@ -331,16 +336,16 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \UL@skip=\skip68
 \UL@hook=\toks34
 \UL@height=\dimen194
-\UL@pe=\count294
+\UL@pe=\count295
 \UL@pixel=\dimen195
 \ULC@box=\box79
 Package: ulem 2019/11/18
 \ULdepth=\dimen196
 )
-\c@theorem=\count295
-\c@lemma=\count296
-\c@definition=\count297
-\c@fact=\count298
+\c@theorem=\count296
+\c@lemma=\count297
+\c@definition=\count298
+\c@fact=\count299
  (./M2sato.aux)
 \openout1 = `M2sato.aux'.
 
@@ -362,8 +367,8 @@ LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 45.
 LaTeX Font Info:    ... okay on input line 45.
 LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 45.
 LaTeX Font Info:    ... okay on input line 45.
-\@enteryear=\count299
-\@gradyear=\count300
+\@enteryear=\count300
+\@gradyear=\count301
 LaTeX Font Info:    Trying to load font information for U+msa on input line 59.
 
 
@@ -435,15 +440,14 @@ File: k_Gxy.png Graphic file (type bmp)
 
 ] (./M2sato.bbl [25
 
-]) [26] (./M2sato.aux) )
-(\end occurred when \ifx on line 2 was incomplete) 
+]) [26] (./M2sato.aux) ) 
 Here is how much of TeX's memory you used:
- 3839 strings out of 479956
- 49357 string characters out of 5887570
- 348651 words of memory out of 5000000
- 20962 multiletter control sequences out of 15000+600000
+ 3884 strings out of 479956
+ 50591 string characters out of 5887570
+ 349388 words of memory out of 5000000
+ 21003 multiletter control sequences out of 15000+600000
  568782 words of font info for 156 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 71i,12n,87p,507b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 78i,12n,87p,511b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on M2sato.dvi (28 pages, 104172 bytes).
+Output written on M2sato.dvi (28 pages, 104220 bytes).

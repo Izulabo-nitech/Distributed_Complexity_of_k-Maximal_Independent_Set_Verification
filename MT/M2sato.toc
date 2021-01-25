@@ -15,3 +15,5 @@
 \contentsline {chapter}{\numberline {第5章}まとめと今後の課題}{23}{}%
 \contentsline {section}{\numberline {5.1}まとめ}{23}{}%
 \contentsline {section}{\numberline {5.2}今後の課題}{23}{}%
+\contentsline {chapter}{謝辞}{24}{}%
+\contentsline {chapter}{参考文献}{25}{}%
