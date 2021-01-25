@@ -110,7 +110,7 @@ $\Omega \left(\frac{n^{2}}{(\log n)^{3}}\right)$ラウンドの下界 \cite{efro
 この仮定は必ずしも現実的とはいえない．そこで本研究では，近似解の分散計算複雑性ではなく，
 (ある種の近傍の下での)局所最適解の複雑性に着目する．具体的には，
 $k$-極大独立集合($k$-Maximal Independet Set， $k$-MIS)の発見問題に対する
-{\CONGEST}モデルでのラウンド複雑性を検討する\cite{}\Izumi{(文献引きたい)}．$k$-極大独立集合を定義するために，
+{\CONGEST}モデルでのラウンド複雑性を検討する\cite{bollobas1991generalised}\Izumi{(文献引きたい)}．$k$-極大独立集合を定義するために，
 与えられた独立集合より高々$k$個の頂点を取り除き，他の$k+1$個以上の頂点を
 追加することで独立集合のサイズを
 一つ増加させるという近傍探索を定義する．$k$-極大独立集合は，この操作が適用不能な独立集合として定義される．
@@ -147,7 +147,11 @@ $\Omega \left(\frac{n^{2}}{(\log n)^{2}}\right)$ラウンドの下界 \cite{cens
 最大独立集合の$(\frac{1}{2} + \epsilon)$-近似を見つけるアルゴリズムに対する
 $\Omega \left(\frac{n}{(\log n)^{3}}\right)$ラウンドの下界，
 $(\frac{3}{4} + \epsilon)$-近似を見つけるアルゴリズムに対する
-$\Omega \left(\frac{n^{2}}{(\log n)^{3}}\right)$ラウンドの下界 \cite{efron2020beyond} が知られている．\\
+$\Omega \left(\frac{n^{2}}{(\log n)^{3}}\right)$ラウンドの下界 \cite{efron2020beyond} が知られている．
+$k$-MISの概念自体はBollbasらにより初めて提示された\cite{bollobas1991generalised}．
+$k$-MISを解く分散アルゴリズムは主に自己安定アルゴリズムの分野においていくつかの結果が知られているが~\cite{turau2007linear,tanaka2019self}，
+それらは{\CONGEST}モデル上での結果ではない．一部のアルゴリズムは改変することなく{\CONGEST}モデルで
+動作させることが可能であるが，$\Omega(n)$ラウンドの計算時間を必要とする．
 極大独立集合(0-MIS)問題の複雑性に関して，{\CONGEST}モデルにおいては$O(\log n)$ラウンドの
 乱択アルゴリズム\cite{luby1986simple}や$poly(\log n)$ラウンドの
 決定性アルゴリズム\cite{rozhovn2020polylogarithmic}が知られている．
@@ -244,8 +248,9 @@ $k$ビットの交叉判定問題を解くために必要なアリスとボブ�
 \end{theorem}
 
 {\CONGEST}モデルにおいて，様々な問題のラウンド数下界が2者間通信複雑性における
-交叉判定問題からの帰着により得られている(一部の例として，~\cite{sarma2012distributed,fischer2018possibilities,czumaj2020detecting}) (\Izumi{ほかにもある})．
-本研究では，Frischknechtら\cite{}により初めて提示され，その後Bachrachら\cite{}により定式化された，
+交叉判定問題からの帰着により得られている(一部の例として，~\cite{sarma2012distributed,fischer2018possibilities,czumaj2020detecting})．
+本研究では，Frischknechtら\cite{frischknecht2012networks}により初めて提示され，
+その後Bachrachら\cite{bacrach2019hardness}により定式化された，
 \emph{下界グラフ}と呼ばれるグラフの構成問題に基づく帰着手法を用いる．
 
 今，{\CONGEST}モデルにおいて，問題のインスタンスがネットワークトポロジ$G = (V, E)$および

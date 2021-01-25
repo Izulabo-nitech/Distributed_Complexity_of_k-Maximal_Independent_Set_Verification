@@ -3,46 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: M2sato.aux
 The style file: unsrt.bst
 Database file #1: M2sato.bib
-Warning--I didn't find a database entry for ""
-You've used 11 entries,
+You've used 16 entries,
             1791 wiz_defined-function locations,
-            513 strings with 5668 characters,
-and the built_in function-call counts, 2959 in all, are:
-= -- 271
-> -- 128
-< -- 3
-+ -- 47
-- -- 36
-* -- 202
-:= -- 455
-add.period$ -- 34
-call.type$ -- 11
-change.case$ -- 11
+            542 strings with 6764 characters,
+and the built_in function-call counts, 4766 in all, are:
+= -- 452
+> -- 191
+< -- 8
++ -- 70
+- -- 54
+* -- 313
+:= -- 697
+add.period$ -- 52
+call.type$ -- 16
+change.case$ -- 16
 chr.to.int$ -- 0
-cite$ -- 11
-duplicate$ -- 132
-empty$ -- 281
-format.name$ -- 36
-if$ -- 664
+cite$ -- 16
+duplicate$ -- 226
+empty$ -- 455
+format.name$ -- 54
+if$ -- 1103
 int.to.chr$ -- 0
-int.to.str$ -- 11
-missing$ -- 11
-newline$ -- 58
-num.names$ -- 11
-pop$ -- 32
+int.to.str$ -- 16
+missing$ -- 16
+newline$ -- 83
+num.names$ -- 16
+pop$ -- 56
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 72
+skip$ -- 134
 stack$ -- 0
-substring$ -- 233
-swap$ -- 41
-text.length$ -- 3
+substring$ -- 380
+swap$ -- 86
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 30
-width$ -- 13
-write$ -- 121
-(There was 1 warning)
+while$ -- 49
+width$ -- 18
+write$ -- 180
