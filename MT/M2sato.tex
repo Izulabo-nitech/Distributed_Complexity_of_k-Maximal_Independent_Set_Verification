@@ -110,7 +110,8 @@ $\Omega \left(\frac{n^{2}}{(\log n)^{3}}\right)$ラウンドの下界 \cite{efro
 この仮定は必ずしも現実的とはいえない．そこで本研究では，近似解の分散計算複雑性ではなく，
 (ある種の近傍の下での)局所最適解の複雑性に着目する．具体的には，
 $k$-極大独立集合($k$-Maximal Independet Set， $k$-MIS)の発見問題に対する
-{\CONGEST}モデルでのラウンド複雑性を検討する\cite{bollobas1991generalised}．$k$-極大独立集合を定義するために，
+{\CONGEST}モデルでのラウンド複雑性を検討する\cite{bollobas1991generalised}．
+$k$-極大独立集合を定義するために，
 与えられた独立集合より高々$k$個の頂点を取り除き，他の$k+1$個以上の頂点を
 追加することで独立集合のサイズを
 一つ増加させるという近傍探索を定義する．$k$-極大独立集合は，この操作が適用不能な独立集合として定義される．
@@ -241,24 +242,24 @@ $\epsilon$-誤り乱択プロトコルの通信複雑性として定義される
 ある．この問題では,アリスとボブはそれぞれ$x \in \{0, 1\}^{k}$と$y \in \{0, 1\}^{k}$を入力として持ち，
 目的は$\mathrm{DISJ}_{k} (x, y) :=\bigvee_{i = 1}^{k} x_{i} \land y_{i}$を計算することである．
 $k$ビットの交叉判定問題を解くために必要なアリスとボブの通信ビット数に関して，
-次の定理が成り立つ\cite{kalyanasundaram1992probabilistic}．
-\begin{theorem} \label{thm:disjointness}
-$k$ビット交叉判定問題に対する2者間通信複雑性は決定性プロトコル，$1/3$-誤り乱択プロトコルともに$\Theta(k)$である．
+次の定理が成り立つ．
+\begin{theorem}[Kalyyanasudaram et al. \cite{kalyanasundaram1992probabilistic}] \label{thm:disjointness}
+$k$ビット交叉判定問題に対する$1/3$-誤り乱択通信複雑性は$\Theta(k)$である．
 \end{theorem}
 
 {\CONGEST}モデルにおいて，様々な問題のラウンド数下界が2者間通信複雑性における
 交叉判定問題からの帰着により得られている(一部の例として，~\cite{sarma2012distributed,fischer2018possibilities,czumaj2020detecting})．
 本研究では，Frischknechtら\cite{frischknecht2012networks}により初めて提示され，
 その後Bachrachら\cite{bacrach2019hardness}により定式化された，
-\emph{下界グラフ}と呼ばれるグラフの構成問題に基づく帰着手法を用いる．
+\emph{下界グラフ}と呼ばれるグラフの構成法に基づく帰着手法を用いる．
 
 今，{\CONGEST}モデルにおいて，問題のインスタンスがネットワークトポロジ$G = (V, E)$および
 頂点ラベリング$I : V \to \Sigma$により定義されるような問題を考える．
 このインスタンスに対する何らかの特性を表す述語$P$（例えば「グラフに与えられた
 独立集合が2-MISでない」)を満たすかどうかを判定する問題のラウンド複雑性下界を導きたい
 とする．この問題を2者間交叉判定問題から帰着するために，
-交差判定問題の入力$(x, y$に対して決まる，以下に示す条件を満たすような
-入力インスタンス(\emph{下界グラフ})$G^{x, y} = (V, E)$および$I^{x, y}$を構成する
+交差判定問題の入力$(x, y)$に対して決まる，以下に示す条件を満たすような
+入力インスタン$G^{x, y} = (V, E)$および$I^{x, y}$を構成する
 
 \begin{itemize}
 \item $V$ はある互いに疎な頂点集合$V_A$，$V_B$に分割される．
@@ -281,6 +282,7 @@ $V' = V \cup (V_{A} \cup V_{B}), E' = E \cup (E_{A} \cup E_{B})$と表すこと�
 \label{Gxy}
 \end{figure}
 構成した下界グラフ$G^{x, y} = (V', E')$に関して，以下の定理が成り立つ．
+\Izumi{(Cutはちゃんとmathitで囲む．論文全体直すこと)}
 \begin{theorem}
 $G^{x,y}$および$I^{x,y}$を
 $k$を交叉判定インスタンスのビット数，$|\mathit{Cut}|$を$G^{x, y}$におけるカット辺のサイズとする．
@@ -303,7 +305,7 @@ $\mathit{Cut}$を通じて送信されるメッセージを互いに受信でき
 \end{prf*}
 
 \chapter{1-MIS検証問題の$O(1)$ラウンドアルゴリズム}
-この章では，1-MIS検証問題を$O(1)$ラウンドで解くアルゴリズムついて述べる．本章のアルゴリズムの結果は，\cite{tanaka2019self}おいて示されている手法と同様のアイデアを{\CONGEST}モデル向けに書き換えただけものであるが，論文の完結性のために本稿においてもアルゴリズムおよび正当性を示しておく．
+この章では，1-MIS検証問題を$O(1)$ラウンドで解くアルゴリズムついて述べる．本章のアルゴリズムの結果は，\cite{tanaka2019self}において示されている手法と同様のアイデアを{\CONGEST}モデル向けに書き換えただけものであるが，論文の完結性のために本稿においてもアルゴリズムおよび正当性を示しておく．
 {\CONGEST}モデルにおいて，入力としてグラフ$G$と独立集合$I$が与えられたとき，
 1-MIS検証問題を解くために次のようなアルゴリズム$\mathcal{A}$を実行する．
 \begin{enumerate}
@@ -402,7 +404,6 @@ I^{x,y}(v) &= 1 \quad if \quad v \in B^{j} \quad \quad \text{($j \in \{1, 2\}$)}
 \end{align*}
 グラフ$G^{x, y} = (V^{x,y}, E^{x,y})$を図 \ref{2_G(x,y)}に示す．
 図中の頂点のうち灰色のものは独立集合に含まれる頂点を表す．
-
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[width=120mm]{2_Gxy.png}
@@ -410,7 +411,6 @@ I^{x,y}(v) &= 1 \quad if \quad v \in B^{j} \quad \quad \text{($j \in \{1, 2\}$)}
 \caption{$G^{x, y} = (V^{x,y}, E^{x,y})$}
 \label{2_G(x,y)}
 \end{figure}
-
 グラフ$G^{x, y} = (V^{x,y}, E^{x,y})$は，「「$\mathrm{DISJ}_{N \times N} (x, y) = 1$のとき，かつその時に限り$I^{x,y}$が
 2-MISでない」」という特性を満たす．これを示すために，次の2点を確認する． \\
 (i)$\mathrm{DISJ}_{N \times N} (x, y) = 1$のとき，$I^{x,y}$が2-MISでない： 
@@ -429,10 +429,10 @@ $y_{i, j} = 1$のときのみであるが，これは$\mathrm{DISJ}_{N \times N}
 カット辺のサイズ$|\mathit{Cut}| = 2N$であることが分かる．
 {\CONGEST}モデルにおいてグラフ上に与えられた独立集合が2-MISであるかどうかを$r$ラウンドで判定する
 アルゴリズム$\mathcal{A}$が存在したとすると，定理\ref{lower}より$\mathcal{A}$は少なくとも
-$r = \Omega (N \times N/ 2N \cdot \log n) = \tilde{\Omega}(N)$ラウンド動く．図\ref{2_G(x,y)}から分かる通り，
+$r = \Omega (N \times N/ 2N \cdot \log n) = \tilde{\Omega}(N)$ラウンドを必要とする．図\ref{2_G(x,y)}から分かる通り，
 $A^{1}, A^{2}, B^{1}, B^{2}$はそれぞれ$N$頂点で構成されており，$C$の頂点数は$O(N^{2})$であるため，
-グラフ全体の頂点数$n$は$n = O(N + N^{2})$である．したがって$N = \Omega(\sqrt{n})$になるため，
-$\tilde{\Omega}(\sqrt{n})$ラウンドの下界を得ることができる． \qed
+グラフ全体の頂点数$n$は$n = O(N + N^{2})$である．したがって$N = \Omega(\sqrt{n})$となるため，
+$\tilde{\Omega}(\sqrt{n})$ラウンドの下界を得ることができる．\qed
 \end{prf*}
 \newpage
 
@@ -460,7 +460,6 @@ V^{x,y} &= A^{1} \cup A^{2} \cup B^{1} \cup B^{2} \cup C^{1} \cup C^{2} \cup \{s
 アリス及びボブがシミュレーションする頂点集合$V^{x,y}_{A}$および$V^{x,y}_{B}$はそれぞれ
 $V^{x,y}_{A} = A^{1} \cup A^{2}$，$V^{x,y}_{B} = B^{1} \cup B^{2} \cup C^{1} \cup C^{2} \cup \{s\}$と定める．
 $G^{x,y}$の辺集合$E^{x,y}$は以下のように定める．
-
 \begin{align*}
 E^{x,y} &= E^{A^{1}} \cup E^{A^{2}} \cup E^{B^{1}} \cup E^{B^{2}} 
 \cup E^{CA} \cup E^{CB} \cup E^{SA} \cup E^{SB} \cup E_{A} \cup E_{B}, \quad \quad \text{ここで}\\
