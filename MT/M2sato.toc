@@ -5,7 +5,7 @@
 \contentsline {section}{\numberline {1.4}論文の構成}{4}{}%
 \contentsline {chapter}{\numberline {第2章}諸定義}{5}{}%
 \contentsline {section}{\numberline {2.1}{\textsf {CONGEST}}モデル}{5}{}%
-\contentsline {section}{\numberline {2.2}$k$-極大独立集合検証問題}{5}{}%
+\contentsline {section}{\numberline {2.2}$k$-極大独立点集合検証問題}{5}{}%
 \contentsline {section}{\numberline {2.3}2者間通信複雑性}{6}{}%
 \contentsline {chapter}{\numberline {第3章}1-MIS検証問題の$O(1)$ラウンドアルゴリズム}{10}{}%
 \contentsline {chapter}{\numberline {第4章}$k$-MIS検証問題の下界}{12}{}%

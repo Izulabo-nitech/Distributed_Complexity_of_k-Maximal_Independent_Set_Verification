@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  28 JAN 2021 02:34
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  28 JAN 2021 14:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -432,37 +432,28 @@ File: 3_Gxy.png Graphic file (type bmp)
 File: k_Gxy.png Graphic file (type bmp)
 <k_Gxy.png>
  [19]
-Underfull \hbox (badness 2951) in paragraph at lines 619--691
+Underfull \hbox (badness 1286) in paragraph at lines 619--691
 []\OT1/cmr/m/n/12 (ii)$[][](\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) = 0$ \JY1/mc
 /m/n/12 のとき ， $\OML/cmm/m/it/12 I[]$ \JY1/mc/m/n/12 が $\OML/cmm/m/it/12 k$
-\OT1/cmr/m/n/12 -MIS \JY1/mc/m/n/12 である ： グラフに与えられている
+\OT1/cmr/m/n/12 -MIS \JY1/mc/m/n/12 である ： グラフに与えられている独
  []
 
 
 Underfull \hbox (badness 2735) in paragraph at lines 619--691
-\JY1/mc/m/n/12 独立集合が $\OML/cmm/m/it/12 k$\OT1/cmr/m/n/12 -MIS \JY1/mc/m/n/
+\JY1/mc/m/n/12 立点集合が $\OML/cmm/m/it/12 k$\OT1/cmr/m/n/12 -MIS \JY1/mc/m/n/
 12 でないと仮定する ． このとき ， $\OML/cmm/m/it/12 I[] \OMS/cmsy/m/n/12 ^^R \
 OML/cmm/m/it/12 I$ \JY1/mc/m/n/12 をサイズ $\OML/cmm/m/it/12 k$ \JY1/mc/m/n/12 
 以下の独
  []
 
 
-Underfull \hbox (badness 4096) in paragraph at lines 619--691
-\JY1/mc/m/n/12 立集合 ， $\OML/cmm/m/it/12 S \OMS/cmsy/m/n/12 ^^R \OML/cmm/m/it
-/12 V\OMS/cmsy/m/n/12 n\OML/cmm/m/it/12 I$ \JY1/mc/m/n/12 を $\OT1/cmr/m/n/12 (
-\OML/cmm/m/it/12 I\OMS/cmsy/m/n/12 n\OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 ) \OMS/
-cmsy/m/n/12 [ \OML/cmm/m/it/12 S$ \JY1/mc/m/n/12 が独立集合になるサイズ $\OMS/c
-msy/m/n/12 j\OML/cmm/m/it/12 I[]\OMS/cmsy/m/n/12 j\OT1/cmr/m/n/12 +1$ \JY1/mc/m
-/n/12 以上の頂点
- []
-
-
-Underfull \hbox (badness 2671) in paragraph at lines 619--691
-\JY1/mc/m/n/12 集合とする ． また ， $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A[] \OM
-S/cmsy/m/n/12 [ \OML/cmm/m/it/12 A[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 \ \OML/c
-mm/m/it/12 S$ \JY1/mc/m/n/12 を満たす頂点の数を $[]\OT1/cmr/m/n/12 (\OML/cmm/m/
-it/12 A\OT1/cmr/m/n/12 )$\JY1/mc/m/n/12 ， $[][]\OT1/cmr/m/n/12 (\OML/cmm/m/it/
-12 B[] \OMS/cmsy/m/n/12 [
+Underfull \hbox (badness 2310) in paragraph at lines 619--691
+\JY1/mc/m/n/12 立点集合 ， $\OML/cmm/m/it/12 S \OMS/cmsy/m/n/12 ^^R \OML/cmm/m/
+it/12 V\OMS/cmsy/m/n/12 n\OML/cmm/m/it/12 I$ \JY1/mc/m/n/12 を $\OT1/cmr/m/n/12
+ (\OML/cmm/m/it/12 I\OMS/cmsy/m/n/12 n\OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 ) \OM
+S/cmsy/m/n/12 [ \OML/cmm/m/it/12 S$ \JY1/mc/m/n/12 が独立点集合になるサイズ $\O
+MS/cmsy/m/n/12 j\OML/cmm/m/it/12 I[]\OMS/cmsy/m/n/12 j\OT1/cmr/m/n/12 +1$ \JY1/
+mc/m/n/12 以上の頂
  []
 
 
@@ -485,10 +476,10 @@ c/m/n/12 ，
 Here is how much of TeX's memory you used:
  3882 strings out of 479956
  50585 string characters out of 5887570
- 351388 words of memory out of 5000000
+ 352388 words of memory out of 5000000
  21001 multiletter control sequences out of 15000+600000
  568782 words of font info for 156 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  78i,12n,87p,250b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on M2sato.dvi (28 pages, 105308 bytes).
+Output written on M2sato.dvi (28 pages, 105700 bytes).
