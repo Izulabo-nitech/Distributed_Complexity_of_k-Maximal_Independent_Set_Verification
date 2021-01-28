@@ -1,0 +1,95 @@
+\begin{thebibliography}{10}
+
+\bibitem{haastad1999clique}
+Johan H{\aa}stad.
+\newblock Clique is hard to approximate withinn 1- $\varepsilon$.
+\newblock {\em Acta Mathematica}, 182(1):105--142, 1999.
+
+\bibitem{kawarabayashi2019improved}
+Ken-ichi Kawarabayashi, Seri Khoury, Aaron Schild, and Gregory Schwartzman.
+\newblock Improved distributed approximation to maximum independent set.
+\newblock {\em arXiv preprint arXiv:1906.11524}, 2019.
+
+\bibitem{censor2017quadratic}
+Keren Censor-Hillel, Seri Khoury, and Ami Paz.
+\newblock Quadratic and near-quadratic lower bounds for the congest model.
+\newblock {\em arXiv preprint arXiv:1705.05646}, 2017.
+
+\bibitem{efron2020beyond}
+Yuval Efron, Ofer Grossman, and Seri Khoury.
+\newblock Beyond alice and bob: Improved inapproximability for maximum
+  independent set in congest.
+\newblock {\em arXiv preprint arXiv:2003.07427}, 2020.
+
+\bibitem{bollobas1991generalised}
+B{\'e}la Bollob{\'a}s, Ernest~J Cockayne, and Christina~M Mynhardt.
+\newblock On generalised minimal domination parameters for paths.
+\newblock In {\em Annals of Discrete Mathematics}, volume~48, pages 89--97.
+  Elsevier, 1991.
+
+\bibitem{turau2007linear}
+Volker Turau.
+\newblock Linear self-stabilizing algorithms for the independent and dominating
+  set problems using an unfair distributed scheduler.
+\newblock {\em Information Processing Letters}, 103(3):88--93, 2007.
+
+\bibitem{tanaka2019self}
+Hideyuki Tanaka, Yuichi Sudo, Hirotsugu Kakugawa, and Toshimitsu Masuzawa.
+\newblock A self-stabilizing 1-maximal independent set algorithm.
+\newblock {\em Information Processing}, 2020.
+
+\bibitem{luby1986simple}
+Michael Luby.
+\newblock A simple parallel algorithm for the maximal independent set problem.
+\newblock {\em SIAM journal on computing}, 15(4):1036--1053, 1986.
+
+\bibitem{rozhovn2020polylogarithmic}
+V{\'a}clav Rozho{\v{n}} and Mohsen Ghaffari.
+\newblock Polylogarithmic-time deterministic network decomposition and
+  distributed derandomization.
+\newblock In {\em Proceedings of the 52nd Annual ACM SIGACT Symposium on Theory
+  of Computing}, pages 350--363, 2020.
+
+\bibitem{balliu2019lower}
+Alkida Balliu, Sebastian Brandt, Juho Hirvonen, Dennis Olivetti, Mika{\"e}l
+  Rabie, and Jukka Suomela.
+\newblock Lower bounds for maximal matchings and maximal independent sets.
+\newblock In {\em 2019 IEEE 60th Annual Symposium on Foundations of Computer
+  Science (FOCS)}, pages 481--497. IEEE, 2019.
+
+\bibitem{sarma2012distributed}
+Atish~Das Sarma, Stephan Holzer, Liah Kor, Amos Korman, Danupon Nanongkai,
+  Gopal Pandurangan, David Peleg, and Roger Wattenhofer.
+\newblock Distributed verification and hardness of distributed approximation.
+\newblock {\em SIAM Journal on Computing}, 41(5):1235--1265, 2012.
+
+\bibitem{fischer2018possibilities}
+Orr Fischer, Tzlil Gonen, Fabian Kuhn, and Rotem Oshman.
+\newblock Possibilities and impossibilities for distributed subgraph detection.
+\newblock In {\em Proceedings of the 30th on Symposium on Parallelism in
+  Algorithms and Architectures}, pages 153--162, 2018.
+
+\bibitem{czumaj2020detecting}
+Artur Czumaj and Christian Konrad.
+\newblock Detecting cliques in congest networks.
+\newblock {\em Distributed Computing}, 33(6):533--543, 2020.
+
+\bibitem{kalyanasundaram1992probabilistic}
+Bala Kalyanasundaram and Georg Schintger.
+\newblock The probabilistic communication complexity of set intersection.
+\newblock {\em SIAM Journal on Discrete Mathematics}, 5(4):545--557, 1992.
+
+\bibitem{frischknecht2012networks}
+Silvio Frischknecht, Stephan Holzer, and Roger Wattenhofer.
+\newblock Networks cannot compute their diameter in sublinear time.
+\newblock In {\em Proceedings of the twenty-third annual ACM-SIAM symposium on
+  Discrete Algorithms}, pages 1150--1162. SIAM, 2012.
+
+\bibitem{bacrach2019hardness}
+Nir Bacrach, Keren Censor-Hillel, Michal Dory, Yuval Efron, Dean Leitersdorf,
+  and Ami Paz.
+\newblock Hardness of distributed optimization.
+\newblock In {\em Proceedings of the 2019 ACM Symposium on Principles of
+  Distributed Computing}, pages 238--247, 2019.
+
+\end{thebibliography}

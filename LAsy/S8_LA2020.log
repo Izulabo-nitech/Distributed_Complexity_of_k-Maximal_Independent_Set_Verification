@@ -1,9 +1,9 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  28 JAN 2021 11:19
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  28 JAN 2021 13:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**S18_LA2020.tex
-(./S18_LA2020.tex
+**S8_LA2020
+(./S8_LA2020.tex
 pLaTeX2e <2020-10-01>+1 (based on LaTeX2e <2020-10-01> patch level 2)
 L3 programming layer <2020-10-27> xparse <2020-03-03>
 (c:/texlive/2020/texmf-dist/tex/platex/base/jarticle.cls
@@ -320,8 +320,8 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \c@lemma=\count291
 \c@definition=\count292
 \c@fact=\count293
- (./S18_LA2020.aux)
-\openout1 = `S18_LA2020.aux'.
+ (./S8_LA2020.aux)
+\openout1 = `S8_LA2020.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 114.
 LaTeX Font Info:    ... okay on input line 114.
@@ -497,7 +497,7 @@ Underfull \hbox (badness 2790) in paragraph at lines 759--768
 \JY1/mc/m/n/10 をグラフに埋め込んでおり， カ ッ ト辺のサイズ
  []
 
-[11] (./S18_LA2020.bbl
+[11] (./S8_LA2020.bbl
 Underfull \hbox (badness 3713) in paragraph at lines 25--29
 []\OT1/cmr/m/n/10 B^^Sela Bol-lob^^Sas, Ernest J Cock-ayne, and
  []
@@ -547,14 +547,14 @@ Underfull \hbox (badness 1931) in paragraph at lines 89--94
 []\OT1/cmr/m/n/10 Nir Bacrach, Keren Censor-Hillel, Michal
  []
 
-) [13] (./S18_LA2020.aux) ) 
+) [13] (./S8_LA2020.aux) ) 
 Here is how much of TeX's memory you used:
  3660 strings out of 479956
- 47333 string characters out of 5887570
- 364715 words of memory out of 5000000
+ 47320 string characters out of 5887570
+ 364712 words of memory out of 5000000
  20796 multiletter control sequences out of 15000+600000
  562270 words of font info for 131 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 71i,12n,87p,237b,407s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,12n,87p,232b,407s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on S18_LA2020.dvi (13 pages, 96652 bytes).
+Output written on S8_LA2020.dvi (13 pages, 96652 bytes).
