@@ -1,8 +1,8 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  28 JAN 2021 13:43
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  29 JAN 2021 01:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**S8_LA2020
+**S8_LA2020.tex
 (./S8_LA2020.tex
 pLaTeX2e <2020-10-01>+1 (based on LaTeX2e <2020-10-01> patch level 2)
 L3 programming layer <2020-10-27> xparse <2020-03-03>
@@ -555,6 +555,6 @@ Here is how much of TeX's memory you used:
  20796 multiletter control sequences out of 15000+600000
  562270 words of font info for 131 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 71i,12n,87p,232b,407s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,12n,87p,236b,407s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on S8_LA2020.dvi (13 pages, 96652 bytes).
