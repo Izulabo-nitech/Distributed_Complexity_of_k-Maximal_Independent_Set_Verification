@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  28 JAN 2021 14:11
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.11.14)  28 JAN 2021 22:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -384,9 +384,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <24.88> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 64.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 71.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <24.88> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 64.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 71.
  (./M2sato.toc
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
@@ -402,9 +402,9 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
 ]
 第 1 章
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 74.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 80.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 74.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 80.
 [1
 
 ] [2] [3] [4]
@@ -432,14 +432,14 @@ File: 3_Gxy.png Graphic file (type bmp)
 File: k_Gxy.png Graphic file (type bmp)
 <k_Gxy.png>
  [19]
-Underfull \hbox (badness 1286) in paragraph at lines 619--691
+Underfull \hbox (badness 1286) in paragraph at lines 625--697
 []\OT1/cmr/m/n/12 (ii)$[][](\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) = 0$ \JY1/mc
 /m/n/12 のとき ， $\OML/cmm/m/it/12 I[]$ \JY1/mc/m/n/12 が $\OML/cmm/m/it/12 k$
 \OT1/cmr/m/n/12 -MIS \JY1/mc/m/n/12 である ： グラフに与えられている独
  []
 
 
-Underfull \hbox (badness 2735) in paragraph at lines 619--691
+Underfull \hbox (badness 2735) in paragraph at lines 625--697
 \JY1/mc/m/n/12 立点集合が $\OML/cmm/m/it/12 k$\OT1/cmr/m/n/12 -MIS \JY1/mc/m/n/
 12 でないと仮定する ． このとき ， $\OML/cmm/m/it/12 I[] \OMS/cmsy/m/n/12 ^^R \
 OML/cmm/m/it/12 I$ \JY1/mc/m/n/12 をサイズ $\OML/cmm/m/it/12 k$ \JY1/mc/m/n/12 
@@ -447,7 +447,7 @@ OML/cmm/m/it/12 I$ \JY1/mc/m/n/12 をサイズ $\OML/cmm/m/it/12 k$ \JY1/mc/m/n/
  []
 
 
-Underfull \hbox (badness 2310) in paragraph at lines 619--691
+Underfull \hbox (badness 2310) in paragraph at lines 625--697
 \JY1/mc/m/n/12 立点集合 ， $\OML/cmm/m/it/12 S \OMS/cmsy/m/n/12 ^^R \OML/cmm/m/
 it/12 V\OMS/cmsy/m/n/12 n\OML/cmm/m/it/12 I$ \JY1/mc/m/n/12 を $\OT1/cmr/m/n/12
  (\OML/cmm/m/it/12 I\OMS/cmsy/m/n/12 n\OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 ) \OM
@@ -457,7 +457,7 @@ mc/m/n/12 以上の頂
  []
 
 
-Underfull \hbox (badness 2103) in paragraph at lines 619--691
+Underfull \hbox (badness 2103) in paragraph at lines 625--697
 \JY1/mc/m/n/12 点の数を $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 C\OT1/cmr/m/n/12 )
 $\JY1/mc/m/n/12 ， $[] \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 S$ \JY1/mc/m/n/12 を
 満たす頂点の数を $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 D\OT1/cmr/m/n/12 )$\JY1/m
@@ -476,10 +476,10 @@ c/m/n/12 ，
 Here is how much of TeX's memory you used:
  3882 strings out of 479956
  50585 string characters out of 5887570
- 352388 words of memory out of 5000000
+ 351388 words of memory out of 5000000
  21001 multiletter control sequences out of 15000+600000
  568782 words of font info for 156 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  78i,12n,87p,250b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on M2sato.dvi (28 pages, 105700 bytes).
+Output written on M2sato.dvi (28 pages, 105688 bytes).

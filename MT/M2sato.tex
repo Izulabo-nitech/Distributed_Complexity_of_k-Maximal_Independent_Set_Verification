@@ -61,9 +61,15 @@
 % 目次
 \pagestyle{myheadings}	% ページ番号を右上につける
 \pagenumbering{roman}	% ページ番号をローマ数字で
+%\tableofcontents
+%\newpage
+%目次のページ番号を消去
+{\makeatletter
+\let\ps@jpl@in\ps@empty
+\makeatother
+\pagestyle{empty}
 \tableofcontents
-
-\newpage
+\newpage}
 
 \allowdisplaybreaks[2]
 % 本文
