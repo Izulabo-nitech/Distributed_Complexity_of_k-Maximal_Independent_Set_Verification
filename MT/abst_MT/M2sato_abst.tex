@@ -38,12 +38,10 @@
 分散グラフアルゴリズムとは，計算機を頂点，通信リンクを辺とみなしてネットワークをモデル化したグラフ上において，
 そのネットワーク自身を入力として定義されるグラフアルゴリズム上の諸問題を解く枠組みである．本研究では，
 分散アルゴリズムにおける代表的なモデルのひとつである{{\CONGEST}}モデルについて考える．
-{\CONGEST}モデルにおいては，ある1つのノードにグラフ全体のトポロジの情報を集め，そのノード上で
-逐次アルゴリズムを実行するという愚直なアプローチにより，任意の問題に対して自明に
-$O (n^{2})$ラウンドの上界を得ることができる．従って，分散グラフアルゴリズムにおける複雑性について，
-$\tilde{\Omega}(n^2)$ラウンドの下界を持つような問題は「最も難しい」問題ととらえることができる
-\footnote{$\tilde{\Omega}(\cdot)$は，通常の$\Omega(\cdot)$記法から，
-$\mathrm{polylog}(n)$の項を(相対的に十分小さい項として)無視した記法である．}．
+%{\CONGEST}モデルにおいては，ある1つのノードにグラフ全体のトポロジの情報を集め，そのノード上で
+%逐次アルゴリズムを実行するという愚直なアプローチにより，任意の問題に対して自明に
+%$O (n^{2})$ラウンドの上界を得ることができる．従って，分散グラフアルゴリズムにおける複雑性について，
+%$\tilde{\Omega}(n^2)$ラウンドの下界を持つような問題は「最も難しい」問題ととらえることができる．
 
 本研究ではグラフ上の最適化問題の一つである，最大独立点集合問題に注目する．
 逐次計算の文脈において，最大独立点集合問題はグラフ理論における重要な基本問題としてよく知られているが，
@@ -76,7 +74,8 @@ $k$-MISは多項式時間のローカル計算のみを許容する{\CONGEST}ア
 {\CONGEST}モデルにおける$k$-MIS検証問題に関して，以下の結果が成立することを示した．
 \begin{enumerate}
 \item 1-MIS検証問題を$O(1)$ラウンドで解くアルゴリズムが存在する．
-\item 2-MIS検証問題を解く任意のアルゴリズムの最悪時実行ラウンド数は$\tilde{\Omega} (\sqrt{n})$となる．
+\item 2-MIS検証問題を解く任意のアルゴリズムの最悪時実行ラウンド数は$\tilde{\Omega} (\sqrt{n})$となる\footnote{$\tilde{\Omega}(\cdot)$は，通常の$\Omega(\cdot)$記法から，
+$\mathrm{polylog}(n)$の項を(相対的に十分小さい項として)無視した記法である．}．
 \item 3-MIS検証問題を解く任意のアルゴリズムの最悪時実行ラウンド数は$\tilde{\Omega}(n)$ラウンドとなる．
 \item 任意の自然数$\ell \geq 1$に対して，$(4\ell + 5)$-MIS検証問題を解く任意のアルゴリズムの
 最悪時実行ラウンド数は$\tilde{\Omega}\left((n^{2 - \frac{1}{\ell+1}})/\ell\right)$ラウンドとなる．
@@ -116,7 +115,7 @@ $b = O(\log n)$ビットを双方向に伝送可能であり，各ノードは�
 この問題では,アリスとボブはそれぞれ$x \in \{0, 1\}^{k}$と$y \in \{0, 1\}^{k}$を入力として持ち，
 目的は$\mathrm{DISJ}_{k} (x, y) :=\bigvee_{i = 1}^{k} x_{i} \land y_{i}$を計算することである．
 $k$ビットの交叉判定問題を解くためにアリスとボブは通信によって$\Omega(k)$ビット交換する必要が
-あることが知られており,この事実を用いて様々な下界の証明がされている．
+あることが知られており\cite{kalyanasundaram1992probabilistic}，この事実を用いて様々な下界の証明がされている．
 
 \section{下界の証明の流れ}
 本研究の下界の証明は下界グラフと呼ばれるグラフの構成法に基づく帰着手法を用いる．以下の条件を満たす下界グラフ$G^{x,y}=(V, E)$を構成する．
@@ -132,7 +131,7 @@ $k$ビットの交叉判定問題を解くためにアリスとボブは通信�
 グラフ$G^{x, y}$の構造の概要を図 \ref{Gxy} に示す．
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[width=40mm]{Gxy.png}
+\includegraphics[width=60mm]{Gxy.png}
 \end{center}
 \caption{$G^{x, y} = (V, E)$}
 \label{Gxy}
@@ -151,14 +150,29 @@ $G^{x,y}$全体での$\mathcal{A}$のシミュレーションを(アリスとボ
 $k$ビットの交叉判定問題を解くため必要な通信量は$\Omega(k)$であり，
 これより$r = \Omega (k / |\mathit{Cut}| \cdot \log n)$の下界を得ることができる．
 
-本研究では$k=2, 3, 4\ell(\ell \geq 1)$それぞれに対して「$\mathrm{DISJ}_{k} (x, y)=1$のときかつそのときのみ
+本研究では$k=2, 3, 4\ell+5(\ell \geq 1)$それぞれに対して「$\mathrm{DISJ}_{k} (x, y)=1$のときかつそのときのみ
 $G^{x,y}$中に与えられている独立点集合が$k$-MISでない」という特性$P_{k}$を持つよう下界グラフ$G_{x,y}$の構成法を提案し，その正当性を証明した．
 \section{まとめと今後の課題}
 本研究では，{\CONGEST}モデルにおける$k$-極大独立集合検証問題の計算複雑性を示した．$k=4, \ldots, 8$については
 現在$k=3$と同じ下界しか得られていないため，このギャップを埋められるかが今後の課題である．
 
-\bibliographystyle{plain}
-\bibliography{M2sato_abst}
+\bibliographystyle{junsrt}
+\begin{thebibliography}{6}
+    \bibitem{haastad1999clique} Johan H{\aa}stad. Clique is hard to approximate withinn 1- $\epsilon$. Acta Mathematica, 182(1):105–142, 1999.
+    \bibitem{kawarabayashi2019improved} Ken-ichi Kawarabayashi, Seri Khoury, Aaron Schild, and Gregory Schwartzman.
+Improved distributed approximation to maximum independent set. arXiv preprint arXiv:1906.11524, 2019.
+    \bibitem{censor2017quadratic} Keren Censor-Hillel, Seri Khoury, and Ami Paz. Quadratic and near-quadratic lower
+bounds for the congest model. arXiv preprint arXiv:1705.05646, 2017.
+    \bibitem{efron2020beyond} Yuval Efron, Ofer Grossman, and Seri Khoury. Beyond Alice and Bob: Improved
+inapproximability for maximum independent set in congest. arXiv preprint arXiv:2003.07427, 2020.
+    \bibitem{bollobas1991generalised} B{\'e}la Bollob{\'a}s, Ernest J Cockayne, and Christina M Mynhardt. On generalised minimal
+domination parameters for paths. In Annals of Discrete Mathematics, volume 48, pages 89–97. Elsevier, 1991.
+    \bibitem{kalyanasundaram1992probabilistic} Bala Kalyanasundaram and Georg Schintger. The probabilistic communication complexity
+of set intersection. SIAM Journal on Discrete Mathematics, 5(4):545–557,
+1992.
+\end{thebibliography}
+%\bibliographystyle{unsrt}
+%\bibliography{M2sato_abst}
 
 \clearpage
 \end{論文概要}

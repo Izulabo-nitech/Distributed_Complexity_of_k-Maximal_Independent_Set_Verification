@@ -1,10 +1,14 @@
 \begin{thebibliography}{1}
 
-\bibitem{bollobas1991generalised}
-B{\'e}la Bollob{\'a}s, Ernest~J Cockayne, and Christina~M Mynhardt.
-\newblock On generalised minimal domination parameters for paths.
-\newblock In {\em Annals of Discrete Mathematics}, volume~48, pages 89--97.
-  Elsevier, 1991.
+\bibitem{haastad1999clique}
+Johan H{\aa}stad.
+\newblock Clique is hard to approximate withinn 1- $\varepsilon$.
+\newblock {\em Acta Mathematica}, 182(1):105--142, 1999.
+
+\bibitem{kawarabayashi2019improved}
+Ken-ichi Kawarabayashi, Seri Khoury, Aaron Schild, and Gregory Schwartzman.
+\newblock Improved distributed approximation to maximum independent set.
+\newblock {\em arXiv preprint arXiv:1906.11524}, 2019.
 
 \bibitem{censor2017quadratic}
 Keren Censor-Hillel, Seri Khoury, and Ami Paz.
@@ -17,14 +21,15 @@ Yuval Efron, Ofer Grossman, and Seri Khoury.
   independent set in congest.
 \newblock {\em arXiv preprint arXiv:2003.07427}, 2020.
 
-\bibitem{haastad1999clique}
-Johan H{\aa}stad.
-\newblock Clique is hard to approximate withinn 1- $\varepsilon$.
-\newblock {\em Acta Mathematica}, 182(1):105--142, 1999.
+\bibitem{bollobas1991generalised}
+B{\'e}la Bollob{\'a}s, Ernest~J Cockayne, and Christina~M Mynhardt.
+\newblock On generalised minimal domination parameters for paths.
+\newblock In {\em Annals of Discrete Mathematics}, volume~48, pages 89--97.
+  Elsevier, 1991.
 
-\bibitem{kawarabayashi2019improved}
-Ken-ichi Kawarabayashi, Seri Khoury, Aaron Schild, and Gregory Schwartzman.
-\newblock Improved distributed approximation to maximum independent set.
-\newblock {\em arXiv preprint arXiv:1906.11524}, 2019.
+\bibitem{kalyanasundaram1992probabilistic}
+Bala Kalyanasundaram and Georg Schintger.
+\newblock The probabilistic communication complexity of set intersection.
+\newblock {\em SIAM Journal on Discrete Mathematics}, 5(4):545--557, 1992.
 
 \end{thebibliography}
